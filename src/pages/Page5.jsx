@@ -6,7 +6,7 @@ import stockUpIcon from '../assets/images/5/stock-up-icon.svg';
 
 const Page5 = () => {
   return (
-    <BaseLayout currentPage={5} showLogo={false}>
+    <BaseLayout currentPage={5} showLogo={false} hideNext={false}>
       <HeaderWithLogo contentPosition="center">
         <div 
           className="rounded-3xl px-6 pb-6 pt-2 flex flex-col items-center w-full max-w-md"

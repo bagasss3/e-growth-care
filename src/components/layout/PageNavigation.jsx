@@ -8,6 +8,9 @@ const PAGE_ROUTES = {
   3: '/pertumbuhan-perkembangan',
   4: '/apa-itu-bblr',
   5: '/definisi-bblr',
+  6: '/penyebab-bblr',
+  7: '/usia-koreksi',
+  8: '/buku-kia',
 };
 
 const PageNavigation = ({ currentPage, hidePrevious = false, hideNext = false, showBackToMenu = false }) => {
