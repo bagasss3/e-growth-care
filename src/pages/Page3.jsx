@@ -17,7 +17,7 @@ const Page3 = () => {
       title: 'Perkembangan Bayi',
       image: perkembanganImg,
       outlineColor: '#4e6aff',
-      path: '/perkembangan',
+      path: '/pertumbuhan-bayi',
     },
   ];
 

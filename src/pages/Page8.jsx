@@ -5,7 +5,7 @@ import bukuKBKImg from '../assets/images/8/BukuKBK.png';
 
 const Page8 = () => {
   return (
-    <BaseLayout currentPage={8} showLogo={false} showBackToMenu={true}>
+    <BaseLayout currentPage={8} showLogo={false} showBackToMenu={true} hideNext={true}>
       <HeaderWithLogo contentPosition="center">
         <div 
           className="rounded-2xl px-6 py-4 w-full max-w-3xl"
