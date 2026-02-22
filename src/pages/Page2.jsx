@@ -25,7 +25,7 @@ const Page2 = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             <a
-              href="/pertumbuhan-perkembangan"
+              href="/apa-itu-bblr"
               className="rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-md hover:shadow-xl transition-all transform hover:scale-105 min-h-[360px]"
               style={{ backgroundColor: '#ffde59' }}
             >
@@ -65,7 +65,7 @@ const Page2 = () => {
 
           <div className="w-full md:w-1/2">
             <a
-              href="/tanda-bahaya"
+              href="/tanda-bahaya-bblr"
               className="rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-md hover:shadow-xl transition-all transform hover:scale-105 min-h-[360px] relative"
               style={{ backgroundColor: '#00c99f' }}
             >

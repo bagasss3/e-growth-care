@@ -36,7 +36,7 @@ const Page21 = () => {
   ];
 
   return (
-    <BaseLayout currentPage={21} showLogo={false} showBackToMenu={true} hideNext={true}>
+    <BaseLayout currentPage={21} showLogo={false} hideNext={false}>
       <HeaderWithLogo contentPosition="center">
         <div className="flex items-center gap-4">
           <div 

@@ -10,7 +10,7 @@ const Page3 = () => {
       title: 'Pertumbuhan Bayi',
       image: pertumbuhanImg,
       outlineColor: '#ff2828',
-      path: '/apa-itu-bblr',
+      path: '/apa-itu-kurva-fenton',
     },
     {
       id: 2,
@@ -40,29 +40,54 @@ const Page3 = () => {
         <div className="flex-1 flex items-center justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-4xl w-full">
             {sections.map((section) => (
-              <a
-                key={section.id}
-                href={section.path}
-                className="rounded-3xl p-8 flex flex-col items-center justify-center text-center hover:shadow-xl transition-all transform hover:scale-105 min-h-[400px]"
-                style={{ 
-                  backgroundColor: 'transparent',
-                  border: `4px solid ${section.outlineColor}`
-                }}
-              >
-                <div className="w-48 h-48 sm:w-56 sm:h-56 mb-6 flex items-center justify-center">
-                  <img 
-                    src={section.image} 
-                    alt={section.title}
-                    style={{ width: '220px', height: '220px', objectFit: 'contain' }}
-                  />
+              section.path ? (
+                <a
+                  key={section.id}
+                  href={section.path}
+                  className="rounded-3xl p-8 flex flex-col items-center justify-center text-center hover:shadow-xl transition-all transform hover:scale-105 min-h-[400px]"
+                  style={{ 
+                    backgroundColor: 'transparent',
+                    border: `4px solid ${section.outlineColor}`
+                  }}
+                >
+                  <div className="w-48 h-48 sm:w-56 sm:h-56 mb-6 flex items-center justify-center">
+                    <img 
+                      src={section.image} 
+                      alt={section.title}
+                      style={{ width: '220px', height: '220px', objectFit: 'contain' }}
+                    />
+                  </div>
+                  
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
+                    <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
+                      {section.title}
+                    </span>
+                  </h3>
+                </a>
+              ) : (
+                <div
+                  key={section.id}
+                  className="rounded-3xl p-8 flex flex-col items-center justify-center text-center min-h-[400px] opacity-60"
+                  style={{ 
+                    backgroundColor: 'transparent',
+                    border: `4px solid ${section.outlineColor}`
+                  }}
+                >
+                  <div className="w-48 h-48 sm:w-56 sm:h-56 mb-6 flex items-center justify-center">
+                    <img 
+                      src={section.image} 
+                      alt={section.title}
+                      style={{ width: '220px', height: '220px', objectFit: 'contain' }}
+                    />
+                  </div>
+                  
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
+                    <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
+                      {section.title}
+                    </span>
+                  </h3>
                 </div>
-                
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
-                  <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
-                    {section.title}
-                  </span>
-                </h3>
-              </a>
+              )
             ))}
           </div>
         </div>
