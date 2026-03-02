@@ -10,9 +10,10 @@ const Page2 = () => {
     <BaseLayout currentPage={2} hideNext={true} showLogo={false}>
       <HeaderWithLogo contentPosition="center">
         <h1 
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold"
+          className="font-bold animate-slide-up"
           style={{ 
             color: '#004aad',
+            fontSize: '61.7px',
             fontFamily: '"ITC Motter Corpus", "Motter Corpus", Georgia, serif'
           }}
         >
@@ -33,10 +34,10 @@ const Page2 = () => {
                 <img 
                   src={bblrImg} 
                   alt="Bayi Berat Badan Lahir Rendah"
-                  style={{ width: '220px', height: '220px', objectFit: 'contain' }}
+                  style={{ width: '409.5px', height: '231.3px', objectFit: 'contain' }}
                 />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 leading-tight">
+              <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: '20.3px', fontFamily: '"Open Sans", sans-serif' }}>
                 <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
                   Bayi Berat Lahir Rendah (BBLR)
                 </span>
@@ -52,10 +53,10 @@ const Page2 = () => {
                 <img 
                   src={tumbuhKembangImg} 
                   alt="Tumbuh Kembang Bayi"
-                  style={{ width: '220px', height: '220px', objectFit: 'contain' }}
+                  style={{ width: '409.5px', height: '231.3px', objectFit: 'contain' }}
                 />
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 leading-tight">
+              <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: '20.3px', fontFamily: '"Open Sans", sans-serif' }}>
                 <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
                   Tumbuh Kembang Bayi Berat Badan Lahir Rendah (BBLR)
                 </span>
@@ -73,7 +74,7 @@ const Page2 = () => {
                 <img 
                   src={tandaBahayaImg} 
                   alt="Tanda Bahaya BBLR"
-                  style={{ width: '400px', height: '220px', objectFit: 'contain', marginLeft: '-40px', marginTop: '-20px' }}
+                  style={{ width: '409.5px', height: '231.3px', objectFit: 'contain', marginLeft: '-30px', marginTop: '-15px' }}
                 />
               </div>
               
@@ -83,7 +84,7 @@ const Page2 = () => {
                   alt="Warning" 
                   className="w-7 h-7"
                 />
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-800 leading-tight">
+                <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: '20.3px', fontFamily: '"Open Sans", sans-serif' }}>
                   <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
                     Tanda Bahaya BBLR
                   </span>

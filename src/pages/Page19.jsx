@@ -29,12 +29,17 @@ const Page19 = () => {
       <HeaderWithLogo contentPosition="center">
         <div className="flex items-center gap-4">
           <div 
-            className="rounded-2xl px-8 py-4  mt-8"
-            style={{ backgroundColor: '#2ebbbf' }}
+            className="rounded-2xl px-8 py-3 flex items-center justify-center"
+            style={{ 
+              backgroundColor: '#2ebbbf',
+              width: '806.6px'
+            }}
           >
             <h1 
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"
+              className="font-bold text-white"
               style={{ 
+                fontSize: '47.7px',
+                fontFamily: 'Poppins, sans-serif',
                 WebkitTextStroke: '1px #000000'
               }}
             >
@@ -45,35 +50,44 @@ const Page19 = () => {
           <img 
             src={babyImg} 
             alt="Baby"
-            className="w-48 h-48 sm:w-32 sm:h-32 lg:w-50 lg:h-32"
+            className="animate-slide-left"
+            style={{ width: '276.5px', height: '249.2px', objectFit: 'contain' }}
           />
         </div>
       </HeaderWithLogo>
 
       <div className="flex-1 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full">
+        <div className="flex gap-6">
           {boxes.map((box) => (
             <div 
               key={box.id}
               className="overflow-hidden flex flex-col"
+              style={{ width: '519.9px', height: '519.9px' }}
             >
               <div 
-                className="p-6 text-center"
-                style={{ backgroundColor: '#5d7dff' }}
+                className="p-4 text-center flex items-center justify-center"
+                style={{ backgroundColor: '#5d7dff', height: '35%' }}
               >
                 <h2 
-                  className="text-white text-xl sm:text-2xl lg:text-3xl font-bold whitespace-pre-line"
-                  style={{ WebkitTextStroke: '0.5px #000000', fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif' }}
+                  className="text-white whitespace-pre-line"
+                  style={{ 
+                    fontSize: '46.3px',
+                    fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
+                    WebkitTextStroke: '0.5px #000000'
+                  }}
                 >
                   {box.title}
                 </h2>
               </div>
               
               <div 
-                className="p-8 flex-1 flex items-center justify-center"
-                style={{ backgroundColor: box.bodyColor }}
+                className="p-8 flex items-center justify-center"
+                style={{ backgroundColor: box.bodyColor, height: '65%' }}
               >
-                <p className="text-white text-lg sm:text-xl lg:text-2xl text-center leading-relaxed">
+                <p 
+                  className="text-white text-center leading-relaxed font-bold"
+                  style={{ fontSize: '31.2px', fontFamily: '"Open Sans", sans-serif' }}
+                >
                   {box.body}
                 </p>
               </div>

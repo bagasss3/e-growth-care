@@ -6,52 +6,92 @@ import posterImg from '../assets/images/9/poster.png';
 const Page9 = () => {
   return (
     <BaseLayout currentPage={9} showLogo={false}>
-      <div className="flex-1 flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 py-8 gap-8">
-        <div className="flex-1 flex flex-col justify-center items-center">
+      <div className="flex-1 flex flex-row px-4 sm:px-8 lg:px-16 py-8 gap-8">
+        {/* Left Column */}
+        <div className="flex-1 flex flex-col">
+          {/* Title - Top Left */}
           <h1 
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8"
-            style={{ color: '#16b4a9' }}
+            className="font-bold mb-6 animate-slide-left"
+            style={{ 
+              color: '#000000',
+              fontSize: '52.2px',
+              fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
+            }}
           >
-            Cara Perawatan Bayi BBLR<br />
-            agar Tumbuh Kembang<br />
-            Optimal
+            CARA PERAWATAN BAYI BBLR<br />
+            AGAR TUMBUH KEMBANG<br />
+            OPTIMAL
           </h1>
 
-          <div className="flex items-center justify-center gap-4 mb-6">
+          {/* Number 1 + Text Row */}
+          <div className="flex items-center gap-4 mb-6">
             <img 
               src={number1Img} 
               alt="Number 1"
-              className="w-16 h-16 sm:w-20 sm:h-20"
+              style={{ width: '88.8px', height: '88.8px' }}
             />
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800">
-              Pemberian Nutrisi Bayi
+            <h2 
+              className="font-bold text-gray-800"
+              style={{ 
+                fontSize: '39.5px',
+                fontFamily: '"Open Sans", sans-serif'
+              }}
+            >
+              Pemberian Nutrisi dan meningkatkan daya tahan tubuh bayi
             </h2>
           </div>
 
-          <div className="mb-4 flex justify-center">
+          {/* QR Code + Box Row - Centered */}
+          <div className="flex items-center justify-center gap-6 mb-4">
             <img 
               src={qrImg} 
               alt="QR Code"
-              className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64"
+              style={{ width: '402.3px', height: '410.2px' }}
             />
+            
+            <div 
+              className="flex items-center justify-center p-4 rounded-2xl"
+              style={{ 
+                backgroundColor: '#ffc2a4',
+                width: '420px',
+                height: '200px'
+              }}
+            >
+              <p 
+                className="text-gray-800 leading-relaxed"
+                style={{ 
+                  fontSize: '17.2px',
+                  fontFamily: 'Poppins, sans-serif'
+                }}
+              >
+                Bayi dapat diberikan ASI saat setelah lahir dan untuk memastikan asupan yang cukup, ibu perlu menyusui secara teratur setiap sekitar 4 jam sekali.
+              </p>
+            </div>
           </div>
 
+          {/* Link under QR */}
           <a 
             href="https://bit.ly/CaraMenyusuiYangBenar"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 underline text-sm sm:text-base hover:text-blue-800 text-center"
+            className="text-center hover:opacity-80 transition-opacity underline"
+            style={{ 
+              color: '#000000',
+              fontSize: '21.8px',
+              fontFamily: '"Open Sans", sans-serif'
+            }}
           >
             https://bit.ly/CaraMenyusuiYangBenar
           </a>
         </div>
 
-        <div className="flex-1 flex flex-col items-center justify-center">
+        {/* Right Column - Poster */}
+        <div className="flex flex-col items-center justify-center">
           <div className="relative">
             <img 
               src={posterImg} 
               alt="Poster"
-              className="w-full max-w-md h-auto max-h-[70vh] object-contain"
+              style={{ width: '634.3px', height: '896.5px', objectFit: 'contain' }}
             />
             <p className="absolute bottom-2 left-2 text-sm font-bold text-gray-800">
               (RSI, 2026)

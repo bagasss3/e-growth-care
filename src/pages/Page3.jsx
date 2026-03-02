@@ -7,17 +7,19 @@ const Page3 = () => {
   const sections = [
     {
       id: 1,
-      title: 'Pertumbuhan Bayi',
+      title: 'PERTUMBUHAN BAYI',
       image: pertumbuhanImg,
       outlineColor: '#ff2828',
       path: '/apa-itu-kurva-fenton',
+      animationClass: 'animate-slide-up-delay-1',
     },
     {
       id: 2,
-      title: 'Perkembangan Bayi',
+      title: 'PERKEMBANGAN BAYI',
       image: perkembanganImg,
       outlineColor: '#4e6aff',
       path: '/pertumbuhan-bayi',
+      animationClass: 'animate-slide-up-delay-2',
     },
   ];
 
@@ -25,9 +27,10 @@ const Page3 = () => {
     <BaseLayout currentPage={3} showLogo={false} hideNext={true}>
       <HeaderWithLogo contentPosition="center">
         <h1 
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center"
+          className="font-bold text-center animate-slide-up"
           style={{ 
             color: '#004aad',
+            fontSize: '42.3px',
             fontFamily: '"ITC Motter Corpus", "Motter Corpus", Georgia, serif'
           }}
         >
@@ -44,7 +47,7 @@ const Page3 = () => {
                 <a
                   key={section.id}
                   href={section.path}
-                  className="rounded-3xl p-8 flex flex-col items-center justify-center text-center hover:shadow-xl transition-all transform hover:scale-105 min-h-[400px]"
+                  className={`rounded-3xl p-8 flex flex-col items-center justify-center text-center hover:shadow-xl transition-all transform hover:scale-105 min-h-[400px] ${section.animationClass}`}
                   style={{ 
                     backgroundColor: 'transparent',
                     border: `4px solid ${section.outlineColor}`
@@ -58,7 +61,13 @@ const Page3 = () => {
                     />
                   </div>
                   
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
+                  <h3 
+                    className="font-bold text-gray-800"
+                    style={{ 
+                      fontSize: '31.3px',
+                      fontFamily: 'Poppins, sans-serif'
+                    }}
+                  >
                     <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
                       {section.title}
                     </span>
@@ -67,7 +76,7 @@ const Page3 = () => {
               ) : (
                 <div
                   key={section.id}
-                  className="rounded-3xl p-8 flex flex-col items-center justify-center text-center min-h-[400px] opacity-60"
+                  className={`rounded-3xl p-8 flex flex-col items-center justify-center text-center min-h-[400px] opacity-60 ${section.animationClass}`}
                   style={{ 
                     backgroundColor: 'transparent',
                     border: `4px solid ${section.outlineColor}`
@@ -81,7 +90,13 @@ const Page3 = () => {
                     />
                   </div>
                   
-                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
+                  <h3 
+                    className="font-bold text-gray-800"
+                    style={{ 
+                      fontSize: '31.3px',
+                      fontFamily: 'Poppins, sans-serif'
+                    }}
+                  >
                     <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
                       {section.title}
                     </span>

@@ -60,15 +60,17 @@ const Page23 = () => {
   return (
     <BaseLayout currentPage={23} showLogo={false}>
       <HeaderWithLogo contentPosition="center">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mt-4">
           <img 
             src={warningImg} 
             alt="Warning" 
-            className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+            className="animate-slide-up"
+            style={{ width: '142.7px', height: '124.2px', objectFit: 'contain' }}
           />
           
           <h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black"
+            className="font-bold text-black animate-slide-up"
+            style={{ fontSize: '64px', fontFamily: '"Open Sans", sans-serif' }}
           >
             TANDA BAHAYA
           </h1>
@@ -76,7 +78,8 @@ const Page23 = () => {
           <img 
             src={warningImg} 
             alt="Warning" 
-            className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+            className="animate-slide-up"
+            style={{ width: '142.7px', height: '124.2px', objectFit: 'contain' }}
           />
           
           <img 
@@ -88,14 +91,21 @@ const Page23 = () => {
       </HeaderWithLogo>
 
       <div className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl w-full items-stretch">
-          {boxes.map((box) => (
-            <div key={box.id} className="flex flex-col h-full">
-              <h2 
-                className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 text-black"
-              >
-                {box.title}
-              </h2>
+        <div className="flex gap-6 max-w-7xl w-full items-stretch">
+          {boxes.map((box, index) => (
+            <div 
+              key={box.id} 
+              className={`flex flex-col flex-1 ${index === 0 ? 'animate-slide-up-delay-1' : index === 1 ? 'animate-slide-up-delay-2' : index === 2 ? 'animate-slide-up-delay-3' : 'animate-slide-up-delay-4'}`}
+              style={{ width: '406px' }}
+            >
+              <div style={{ height: '90px', display: 'flex', alignItems: 'flex-end' }} className="animate-slide-up-delay-1">
+                <h2 
+                  className="font-bold mb-2 text-black"
+                  style={{ fontSize: '32.7px', fontFamily: '"Open Sans", sans-serif' }}
+                >
+                  {box.title}
+                </h2>
+              </div>
               
               <div 
                 className="p-6 flex flex-col flex-1 rounded-2xl"
@@ -108,14 +118,18 @@ const Page23 = () => {
                         key={index}
                         src={img.src} 
                         alt={img.alt}
-                        className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 object-contain rounded-xl"
+                        style={{ width: '275.4px', height: '134.1px', objectFit: 'contain' }}
+                        className="rounded-xl"
                       />
                     ))}
                   </div>
                 )}
                 
                 {box.type === 'list' && box.id === 2 && (
-                  <ul className="text-black text-base sm:text-lg lg:text-xl font-bold space-y-2">
+                  <ul 
+                    className="text-black font-bold space-y-2"
+                    style={{ fontSize: '21.1px', fontFamily: '"Open Sans", sans-serif' }}
+                  >
                     {box.items.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span>•</span>
@@ -126,7 +140,10 @@ const Page23 = () => {
                 )}
                 
                 {box.type === 'list' && box.id === 4 && (
-                  <ul className="text-white text-base sm:text-lg lg:text-xl font-bold space-y-2">
+                  <ul 
+                    className="text-white font-bold space-y-2"
+                    style={{ fontSize: '23px', fontFamily: '"Open Sans", sans-serif' }}
+                  >
                     {box.items.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span>•</span>
@@ -137,7 +154,10 @@ const Page23 = () => {
                 )}
                 
                 {box.type === 'text' && (
-                  <p className="text-black text-base sm:text-lg lg:text-xl font-bold">
+                  <p 
+                    className="text-black font-bold"
+                    style={{ fontSize: '33px', fontFamily: '"Open Sans", sans-serif' }}
+                  >
                     {box.text}
                   </p>
                 )}

@@ -41,38 +41,53 @@ const Page6 = () => {
       <HeaderWithLogo contentPosition="center">
         <div className="flex items-center gap-4">
           <h1 
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold"
-            style={{ color: '#004aad' }}
+            className="font-bold"
+            style={{ 
+              color: '#004aad',
+              fontSize: '52.2px',
+              fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
+            }}
           >
             HAL HAL YANG MENYEBABKAN BBLR
           </h1>
           <img 
             src={pregnantImg} 
             alt="Pregnant woman illustration" 
-            className="w-16 h-16 sm:w-20 sm:h-20"
+            style={{ width: '161.9px', height: '258.7px' }}
           />
         </div>
       </HeaderWithLogo>
 
       <div className="flex-1 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full">
-          {boxes.map((box) => (
+          {boxes.map((box, index) => (
             <div 
               key={box.id}
-              className="rounded-3xl p-6 flex flex-col"
-              style={{ backgroundColor: '#16b4a9' }}
+              className={`rounded-3xl flex flex-col overflow-hidden ${
+                index === 1 ? 'animate-slide-left' : index === 2 ? 'animate-slide-right-delay' : 'animate-slide-left-delay'
+              }`}
+              style={{ 
+                backgroundColor: '#16b4a9',
+                border: '2px solid #000000'
+              }}
             >
               {/* Title */}
               <h2 
-                className="text-white text-lg sm:text-xl font-bold text-center mb-4"
-                style={{ fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif' }}
+                className="text-white font-bold text-center p-4"
+                style={{ 
+                  fontSize: '39.4px',
+                  fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
+                }}
               >
                 {box.title}
               </h2>
               
-              <div className="w-full h-px bg-white mb-4"></div>
+              <div className="w-full h-px" style={{ backgroundColor: '#000000' }}></div>
               
-              <ul className="text-white text-sm sm:text-base space-y-2 flex-1">
+              <ul 
+                className="text-white space-y-2 flex-1 p-4"
+                style={{ fontSize: '21.6px', fontFamily: 'Poppins, sans-serif' }}
+              >
                 {box.items.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
                     <span>•</span>

@@ -1,4 +1,198 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lilita+One&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-slide-up-delay-1 {
+  animation: slideUp 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-slide-up-delay-2 {
+  animation: slideUp 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-slide-up-delay-3 {
+  animation: slideUp 0.6s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.animate-slide-up-delay-4 {
+  animation: slideUp 0.6s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+.animate-slide-up-delay-2 {
+  animation: slideUp 0.6s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-left {
+  animation: slideFromLeft 0.7s ease-out forwards;
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-right {
+  animation: slideFromRight 0.7s ease-out forwards;
+}
+
+.animate-slide-left-delay {
+  animation: slideFromLeft 0.7s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-slide-left-delay-1 {
+  animation: slideFromLeft 0.7s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-slide-left-delay-2 {
+  animation: slideFromLeft 0.7s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.animate-slide-right-delay {
+  animation: slideFromRight 0.7s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-slide-right-delay-1 {
+  animation: slideFromRight 0.7s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-slide-right-delay-2 {
+  animation: slideFromRight 0.7s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+@keyframes revealLeftToRight {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-reveal-left-right {
+  animation: revealLeftToRight 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-delay-1 {
+  animation: fadeIn 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-2 {
+  animation: fadeIn 0.6s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-3 {
+  animation: fadeIn 0.6s ease-out 0.9s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-4 {
+  animation: fadeIn 0.6s ease-out 1.2s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-5 {
+  animation: fadeIn 0.6s ease-out 1.5s forwards;
+  opacity: 0;
+}
+
+.animate-fade-in-delay-6 {
+  animation: fadeIn 0.6s ease-out 1.8s forwards;
+  opacity: 0;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-pop-in {
+  animation: popIn 0.5s ease-out forwards;
+}
+
+.animate-pop-in-delay-1 {
+  animation: popIn 0.5s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-pop-in-delay-2 {
+  animation: popIn 0.5s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.animate-pop-in-delay-3 {
+  animation: popIn 0.5s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.animate-slide-right-header {
+  animation: slideFromRight 0.6s ease-out forwards;
+}
 
 @theme {
   --color-primary: #16b4a9;

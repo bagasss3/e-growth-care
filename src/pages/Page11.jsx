@@ -5,33 +5,53 @@ import posterImg from '../assets/images/11/poster.png';
 const Page11 = () => {
   return (
     <BaseLayout currentPage={11} showLogo={false}>
-      <div className="flex-1 flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 py-8 gap-8">
-        <div className="flex-1 flex flex-col justify-center items-center">
+      <div className="flex-1 flex flex-row px-4 sm:px-8 lg:px-16 py-8 gap-8">
+        {/* Left Column */}
+        <div className="flex-1 flex flex-col">
+          {/* Title - Top Left */}
           <h1 
-            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8"
-            style={{ color: '#16b4a9' }}
+            className="font-bold mb-6 animate-slide-left"
+            style={{ 
+              color: '#000000',
+              fontSize: '52.2px',
+              fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
+            }}
           >
-            Cara Perawatan Bayi BBLR<br />
-            agar Tumbuh Kembang<br />
-            Optimal
+            CARA PERAWATAN BAYI BBLR<br />
+            AGAR TUMBUH KEMBANG<br />
+            OPTIMAL
           </h1>
 
-          <div className="flex items-center justify-center gap-4 mb-6">
+          {/* Number 3 + Text Row */}
+          <div className="flex items-center gap-4 mb-6">
             <img 
               src={number3Img} 
               alt="Number 3"
-              className="w-16 h-16 sm:w-20 sm:h-20"
+              style={{ width: '88.8px', height: '88.8px' }}
             />
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800">
-              Pemberian Nutrisi Bayi
+            <h2 
+              className="font-bold text-gray-800"
+              style={{ 
+                fontSize: '39.5px',
+                fontFamily: '"Open Sans", sans-serif'
+              }}
+            >
+              Pencegahan Infeksi
             </h2>
           </div>
 
+          {/* Content Box */}
           <div 
-            className="rounded-2xl p-8 w-full max-w-lg mb-4 border-4 border-black"
-            style={{ backgroundColor: '#ffc2a4' }}
+            className="rounded-3xl p-8 border-4 border-black"
+            style={{ 
+              backgroundColor: '#ffc2a4',
+              width: '770.8px'
+            }}
           >
-            <ul className="text-gray-800 text-base sm:text-lg space-y-3">
+            <ul 
+              className="text-gray-800 space-y-3"
+              style={{ fontSize: '25px', fontFamily: '"Open Sans", sans-serif' }}
+            >
               <li className="flex items-start gap-2">
                 <span>•</span>
                 <span>Jauhkan bayi dari orang yang sedang sakit</span>
@@ -52,12 +72,13 @@ const Page11 = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col items-center justify-center">
+        {/* Right Column - Poster */}
+        <div className="flex flex-col items-center justify-center">
           <div className="relative">
             <img 
               src={posterImg} 
               alt="Poster"
-              className="w-full max-w-md h-auto max-h-[70vh] object-contain"
+              style={{ width: '634.3px', height: '896.5px', objectFit: 'contain' }}
             />
           </div>
         </div>

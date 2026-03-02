@@ -9,12 +9,12 @@ const Page15 = () => {
     <BaseLayout 
       currentPage={15} 
       showLogo={false}
-      footerText={<em>Kemenkes, 2021</em>}
+      footerText={<em className="animate-fade-in-delay-2">Kemenkes, 2021</em>}
     >
       <HeaderWithLogo contentPosition="center">
         <h1 
-          className="font-bold text-center leading-tight"
-          style={{ color: '#000000', fontSize: '42px' }}
+          className="font-bold text-center leading-tight mt-4 animate-fade-in"
+          style={{ color: '#000000', fontSize: '42px', fontFamily: '"Open Sans", sans-serif' }}
         >
           CARA MENGUKUR ANTROPOMETRI YANG BENAR
         </h1>
@@ -23,13 +23,13 @@ const Page15 = () => {
       <div className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16 py-4">
         {/* Title */}
         <h2 
-          className="font-bold mb-8"
-          style={{ color: '#000000', fontSize: '35.8px' }}
+          className="mb-8 animate-fade-in-delay-1"
+          style={{ color: '#000000', fontSize: '35.8px', fontFamily: '"Open Sans", sans-serif' }}
         >
           PENGUKURAN PANJANG BADAN
         </h2>
 
-        <div className="flex items-start justify-center gap-2 w-full">
+        <div className="flex items-start justify-center gap-2 w-full animate-fade-in-delay-2">
           <div className="flex-1 flex flex-col items-center">
             <img 
               src={image1} 
@@ -38,7 +38,7 @@ const Page15 = () => {
             />
             <p 
               className="text-gray-800 text-center leading-relaxed mt-4 px-2"
-              style={{ fontSize: '20px' }}
+              style={{ fontSize: '20px', fontFamily: 'Poppins, sans-serif' }}
             >
               Gunakan alat ukur panjang badan yang terstandar.
             </p>
@@ -52,7 +52,7 @@ const Page15 = () => {
             />
             <p 
               className="text-gray-800 text-center leading-relaxed mt-4 px-2"
-              style={{ fontSize: '20px' }}
+              style={{ fontSize: '20px', fontFamily: 'Poppins, sans-serif' }}
             >
               Kepala bayi dipegang dengan kedua tangan dan menempel pada titik nol alat ukur. Luruskan kedua kaki bayi.
             </p>
@@ -66,7 +66,7 @@ const Page15 = () => {
             />
             <p 
               className="text-gray-800 text-center leading-relaxed mt-4 px-2"
-              style={{ fontSize: '20px' }}
+              style={{ fontSize: '20px', fontFamily: 'Poppins, sans-serif' }}
             >
               Kedua tumit harus menempel, usahakan hingga 90°. Lakukan pengukuran panjang badan 2-3 kali dan catat nilai reratanya.
             </p>

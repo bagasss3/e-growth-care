@@ -16,17 +16,33 @@ const Page1 = () => {
           
           <div className="flex-1 w-full lg:w-1/2 text-center lg:text-left flex flex-col justify-center items-center lg:items-start z-10">
             <h1 
-              className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 lg:mb-6"
-              style={{ color: '#16b4a9' }}
+              className="font-bold mb-4 lg:mb-6"
+              style={{ 
+                color: '#16b4a9',
+                fontSize: '76px',
+                fontFamily: '"Archivo Black", sans-serif'
+              }}
             >
               E-GROWTHCARE
             </h1>
             
-            <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-black mb-6 lg:mb-8">
+            <p 
+              className="font-bold text-black mb-6 lg:mb-8"
+              style={{
+                fontSize: '34px',
+                fontFamily: 'Poppins, sans-serif'
+              }}
+            >
               GROW SMART, CARE BETTER
             </p>
             
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p 
+              className="text-gray-700 mb-8 lg:mb-12 max-w-2xl mx-auto lg:mx-0 leading-relaxed italic"
+              style={{
+                fontSize: '20px',
+                fontFamily: 'Poppins, sans-serif'
+              }}
+            >
               Panduan praktis untuk memantau pertumbuhan dan perkembangan 
               Bayi Berat Lahir Rendah (BBLR) secara mandiri, mudah, dan berkelanjutan
             </p>
@@ -44,7 +60,9 @@ const Page1 = () => {
                 <span 
                   className="underline underline-offset-4"
                   style={{
-                    textShadow: '3px 3px 0px #000000, 6px 6px 0px rgba(0,0,0,0.4)'
+                    textShadow: '3px 3px 0px #000000, 6px 6px 0px rgba(0,0,0,0.4)',
+                    fontSize: '58.4px',
+                    fontFamily: '"Lilita One", cursive'
                   }}
                 >
                   MULAI

@@ -46,6 +46,7 @@ const SPECIAL_NEXT_PAGES = {
 };
 
 const SPECIAL_PREV_PAGES = {
+  4: 2,    // Page 4 -> back to Page 2 (Menu)
   9: 7,    // Page 9 -> back to Page 7
   8: 12,   // Page 8 -> back to Page 12
   13: 3,   // Page 13 -> back to Page 3

@@ -9,16 +9,27 @@ const Page5 = () => {
     <BaseLayout currentPage={5} showLogo={false} hideNext={false}>
       <HeaderWithLogo contentPosition="center">
         <div 
-          className="rounded-3xl px-6 pb-6 pt-2 flex flex-col items-center w-full max-w-md"
-          style={{ backgroundColor: '#16b4a9', marginTop: '24px' }}
+          className="rounded-3xl px-6 pb-6 pt-4 flex flex-col items-center gap-4 animate-slide-left"
+          style={{ 
+            backgroundColor: '#16b4a9', 
+            marginTop: '24px',
+            width: '848.2px'
+          }}
         >
           <img 
             src={babyImg} 
             alt="Baby illustration"
-            className="w-48 h-48 sm:w-56 sm:h-56 lg:w-400 lg:h-64 object-contain"
+            style={{ width: '550.8px', height: '201.2px', objectFit: 'contain' }}
           />
           
-          <p className="text-white text-base sm:text-lg leading-relaxed text-center">
+          <p 
+            className="text-white leading-relaxed text-center"
+            style={{ 
+              fontSize: '22px', 
+              fontFamily: 'Poppins, sans-serif',
+              width: '550.8px'
+            }}
+          >
             Bayi Berat Badan Lahir Rendah (BBLR) adalah bayi yang lahir dengan berat badan kurang dari 2.500 gram
           </p>
         </div>
@@ -26,15 +37,19 @@ const Page5 = () => {
 
       <div className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16 py-4 mt-8">
         <div 
-          className="rounded-3xl p-6 w-full max-w-4xl"
-          style={{ backgroundColor: '#16b4a9' }}
+          className="rounded-3xl p-6 animate-slide-right"
+          style={{ 
+            backgroundColor: '#16b4a9',
+            width: '1499.6px'
+          }}
         >
           <div className="flex flex-col md:flex-row">
             <div className="flex-1 p-4">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <h3 
-                  className="text-white text-lg sm:text-xl lg:text-2xl font-bold"
+                  className="text-white font-bold"
                   style={{ 
+                    fontSize: '31.8px',
                     fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
                     textShadow: '2px 2px 0px rgba(0,0,0,0.5)'
                   }}
@@ -48,7 +63,7 @@ const Page5 = () => {
                 />
               </div>
               
-              <ul className="text-white text-base sm:text-lg lg:text-xl space-y-2">
+              <ul className="text-white space-y-2" style={{ fontSize: '30.1px', fontFamily: 'Poppins, sans-serif' }}>
                 <li className="flex items-start gap-2">
                   <span>•</span>
                   <span>Hipotermia</span>
@@ -78,8 +93,9 @@ const Page5 = () => {
             <div className="flex-1 p-4">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <h3 
-                  className="text-white text-lg sm:text-xl lg:text-2xl font-bold"
+                  className="text-white font-bold"
                   style={{ 
+                    fontSize: '31.8px',
                     fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
                     textShadow: '2px 2px 0px rgba(0,0,0,0.5)'
                   }}
@@ -93,7 +109,7 @@ const Page5 = () => {
                 />
               </div>
               
-              <ul className="text-white text-base sm:text-lg lg:text-xl space-y-2">
+              <ul className="text-white space-y-2" style={{ fontSize: '30.1px', fontFamily: 'Poppins, sans-serif' }}>
                 <li className="flex items-start gap-2">
                   <span>•</span>
                   <span>Keterlambatan Perkembangan</span>

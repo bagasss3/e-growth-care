@@ -39,12 +39,17 @@ const Page20 = () => {
       <HeaderWithLogo contentPosition="center">
         <div className="flex items-center gap-4">
           <div 
-            className="rounded-2xl px-8 py-4 mt-8"
-            style={{ backgroundColor: '#2ebbbf' }}
+            className="rounded-2xl px-8 py-3 flex items-center justify-center"
+            style={{ 
+              backgroundColor: '#2ebbbf',
+              width: '806.6px'
+            }}
           >
             <h1 
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white"
+              className="font-bold text-white"
               style={{ 
+                fontSize: '47.7px',
+                fontFamily: 'Poppins, sans-serif',
                 WebkitTextStroke: '1px #000000'
               }}
             >
@@ -55,25 +60,31 @@ const Page20 = () => {
           <img 
             src={babyImg} 
             alt="Baby"
-            className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32"
+            className="animate-slide-left"
+            style={{ width: '276.5px', height: '249.2px', objectFit: 'contain' }}
           />
         </div>
       </HeaderWithLogo>
 
       <div className="flex-1 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full">
+        <div className="flex gap-6" style={{ alignItems: 'stretch' }}>
           {boxes.map((box) => (
             <div 
               key={box.id}
-              className="overflow-hidden flex flex-col"
+              className="overflow-hidden flex flex-col flex-1"
+              style={{ width: '519.9px' }}
             >
               <div 
-                className="p-6 text-center"
+                className="p-4 text-center flex items-center justify-center"
                 style={{ backgroundColor: '#5d7dff' }}
               >
                 <h2 
-                  className="text-white text-xl sm:text-2xl lg:text-3xl font-bold whitespace-pre-line"
-                  style={{ fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif', WebkitTextStroke: '1px #000000' }}
+                  className="text-white whitespace-pre-line"
+                  style={{ 
+                    fontSize: '46.3px',
+                    fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
+                    WebkitTextStroke: '0.5px #000000'
+                  }}
                 >
                   {box.title}
                 </h2>
@@ -83,9 +94,12 @@ const Page20 = () => {
                 className="p-8 flex-1 flex items-center justify-center"
                 style={{ backgroundColor: box.bodyColor }}
               >
-                <ul className="text-white text-lg sm:text-xl lg:text-2xl text-left leading-relaxed space-y-2">
+                <ul 
+                  className="text-white text-left leading-relaxed space-y-2"
+                  style={{ fontSize: '31.2px', fontFamily: '"Open Sans", sans-serif' }}
+                >
                   {box.items.map((item, index) => (
-                    <li key={index} className="flex items-start gap-2">
+                    <li key={index} className="flex items-start gap-2 font-bold">
                       <span>•</span>
                       <span>{item}</span>
                     </li>

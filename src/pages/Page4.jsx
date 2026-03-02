@@ -46,7 +46,7 @@ const Page4 = () => {
             <img 
               src={questionMarkBox} 
               alt="Question mark illustration"
-              className="w-full max-w-sm lg:max-w-md h-auto"
+              className="w-full max-w-sm lg:max-w-md h-auto animate-slide-left"
             />
           </div>
         </div>

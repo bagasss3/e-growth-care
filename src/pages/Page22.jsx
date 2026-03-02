@@ -19,8 +19,8 @@ const Page22 = () => {
     >
       <HeaderWithLogo contentPosition="center">
         <h1 
-          className="font-bold text-center leading-tight"
-          style={{ color: '#000000', fontSize: '42px' }}
+          className="font-bold text-center leading-tight mt-4"
+          style={{ color: '#000000', fontSize: '39.2px', fontFamily: 'Poppins, sans-serif' }}
         >
           BEBERAPA REKOMENDASI VIDEO STIMULASI BAYI
         </h1>
@@ -28,20 +28,23 @@ const Page22 = () => {
 
       <div className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16 py-8">
         {/* 3x2 Grid of YouTube Videos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
-          {videos.map((video) => (
+        <div className="grid grid-cols-3 gap-x-8 gap-y-6 w-full" style={{ maxWidth: '1800px' }}>
+          {videos.map((video, index) => (
             <a
               key={video.id}
               href={`https://www.youtube.com/watch?v=${video.id}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block"
+              className={`group block ${index === 0 ? 'animate-fade-in' : index === 1 ? 'animate-fade-in-delay-1' : index === 2 ? 'animate-fade-in-delay-2' : index === 3 ? 'animate-fade-in-delay-3' : index === 4 ? 'animate-fade-in-delay-4' : 'animate-fade-in-delay-5'}`}
             >
-              <div className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div 
+                className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                style={{ width: '551.2px', height: '309.8px' }}
+              >
                 <img
                   src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}
                   alt={video.title}
-                  className="w-full h-auto aspect-video object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
                   <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
