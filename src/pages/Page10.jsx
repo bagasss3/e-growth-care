@@ -6,15 +6,15 @@ import posterImg from '../assets/images/10/poster.png';
 const Page10 = () => {
   return (
     <BaseLayout currentPage={10} showLogo={false}>
-      <div className="flex-1 flex flex-row px-4 sm:px-8 lg:px-16 py-8 gap-8">
+      <div className="flex-1 flex flex-col lg:flex-row px-4 sm:px-8 lg:px-16 py-4 gap-6 overflow-hidden">
         {/* Left Column */}
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col min-w-0">
           {/* Title - Top Left */}
           <h1 
-            className="font-bold mb-6 animate-slide-left"
+            className="font-bold mb-4 animate-slide-left"
             style={{ 
               color: '#000000',
-              fontSize: '52.2px',
+              fontSize: 'clamp(32px, 4vw, 52.2px)',
               fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
             }}
           >
@@ -24,16 +24,16 @@ const Page10 = () => {
           </h1>
 
           {/* Number 2 + Text Row */}
-          <div className="flex items-center gap-4 mb-6">
+          <div className="flex items-center gap-3 mb-4">
             <img 
               src={number2Img} 
               alt="Number 2"
-              style={{ width: '88.8px', height: '88.8px' }}
+              style={{ width: 'clamp(60px, 6vw, 88.8px)', height: 'clamp(60px, 6vw, 88.8px)' }}
             />
             <h2 
               className="font-bold text-gray-800"
               style={{ 
-                fontSize: '39.5px',
+                fontSize: 'clamp(20px, 3vw, 39.5px)',
                 fontFamily: '"Open Sans", sans-serif'
               }}
             >
@@ -42,11 +42,11 @@ const Page10 = () => {
           </div>
 
           {/* QR Code - Centered */}
-          <div className="flex items-center justify-center mb-4">
+          <div className="flex items-center justify-center mb-3">
             <img 
               src={qrImg} 
               alt="QR Code"
-              style={{ width: '402.3px', height: '410.2px' }}
+              style={{ width: 'clamp(250px, 30vw, 402.3px)', height: 'auto', aspectRatio: '1/1' }}
             />
           </div>
 
@@ -58,7 +58,7 @@ const Page10 = () => {
             className="text-center hover:opacity-80 transition-opacity underline"
             style={{ 
               color: '#000000',
-              fontSize: '21.8px',
+              fontSize: 'clamp(16px, 2vw, 21.8px)',
               fontFamily: '"Open Sans", sans-serif'
             }}
           >
@@ -72,7 +72,12 @@ const Page10 = () => {
             <img 
               src={posterImg} 
               alt="Poster"
-              style={{ width: '634.3px', height: '896.5px', objectFit: 'contain' }}
+              style={{ 
+                width: 'auto', 
+                height: 'clamp(400px, 70vh, 896.5px)', 
+                objectFit: 'contain',
+                maxWidth: 'clamp(300px, 30vw, 634.3px)'
+              }}
             />
             <p className="absolute bottom-2 left-2 text-sm font-bold text-gray-800">
               (RSI, 2026)

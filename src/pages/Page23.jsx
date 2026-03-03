@@ -70,7 +70,7 @@ const Page23 = () => {
           
           <h1 
             className="font-bold text-black animate-slide-up"
-            style={{ fontSize: '64px', fontFamily: '"Open Sans", sans-serif' }}
+            style={{ fontSize: 'clamp(36px, 5vw, 64px)', fontFamily: '"Open Sans", sans-serif' }}
           >
             TANDA BAHAYA
           </h1>
@@ -96,12 +96,12 @@ const Page23 = () => {
             <div 
               key={box.id} 
               className={`flex flex-col flex-1 ${index === 0 ? 'animate-slide-up-delay-1' : index === 1 ? 'animate-slide-up-delay-2' : index === 2 ? 'animate-slide-up-delay-3' : 'animate-slide-up-delay-4'}`}
-              style={{ width: '406px' }}
+              style={{ width: 'clamp(280px, 22vw, 406px)', maxWidth: '100%', flexShrink: 0 }}
             >
               <div style={{ height: '90px', display: 'flex', alignItems: 'flex-end' }} className="animate-slide-up-delay-1">
                 <h2 
                   className="font-bold mb-2 text-black"
-                  style={{ fontSize: '32.7px', fontFamily: '"Open Sans", sans-serif' }}
+                  style={{ fontSize: 'clamp(20px, 2.5vw, 32.7px)', fontFamily: '"Open Sans", sans-serif' }}
                 >
                   {box.title}
                 </h2>
@@ -118,7 +118,7 @@ const Page23 = () => {
                         key={index}
                         src={img.src} 
                         alt={img.alt}
-                        style={{ width: '275.4px', height: '134.1px', objectFit: 'contain' }}
+                        style={{ width: 'clamp(180px, 20vw, 275.4px)', height: 'auto', maxHeight: '134.1px', objectFit: 'contain' }}
                         className="rounded-xl"
                       />
                     ))}
@@ -128,7 +128,7 @@ const Page23 = () => {
                 {box.type === 'list' && box.id === 2 && (
                   <ul 
                     className="text-black font-bold space-y-2"
-                    style={{ fontSize: '21.1px', fontFamily: '"Open Sans", sans-serif' }}
+                    style={{ fontSize: 'clamp(14px, 1.8vw, 21.1px)', fontFamily: '"Open Sans", sans-serif' }}
                   >
                     {box.items.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
@@ -142,7 +142,7 @@ const Page23 = () => {
                 {box.type === 'list' && box.id === 4 && (
                   <ul 
                     className="text-white font-bold space-y-2"
-                    style={{ fontSize: '23px', fontFamily: '"Open Sans", sans-serif' }}
+                    style={{ fontSize: 'clamp(14px, 1.8vw, 23px)', fontFamily: '"Open Sans", sans-serif' }}
                   >
                     {box.items.map((item, index) => (
                       <li key={index} className="flex items-start gap-2">
@@ -156,7 +156,7 @@ const Page23 = () => {
                 {box.type === 'text' && (
                   <p 
                     className="text-black font-bold"
-                    style={{ fontSize: '33px', fontFamily: '"Open Sans", sans-serif' }}
+                    style={{ fontSize: 'clamp(18px, 2.5vw, 33px)', fontFamily: '"Open Sans", sans-serif' }}
                   >
                     {box.text}
                   </p>

@@ -55,12 +55,22 @@ const Page13 = () => {
             <img 
               src={kurvaPerempuanImg} 
               alt="Kurva Perempuan"
-              style={{ width: '500px', height: '685px', objectFit: 'contain' }}
+              style={{ 
+                width: 'clamp(250px, 45vw, 500px)', 
+                height: 'auto',
+                maxHeight: '70vh',
+                objectFit: 'contain' 
+              }}
             />
             <img 
               src={kurvaLakiImg} 
               alt="Kurva Laki-laki"
-              style={{ width: '500px', height: '685px', objectFit: 'contain' }}
+              style={{ 
+                width: 'clamp(250px, 45vw, 500px)', 
+                height: 'auto',
+                maxHeight: '70vh',
+                objectFit: 'contain' 
+              }}
             />
           </div>
         </div>

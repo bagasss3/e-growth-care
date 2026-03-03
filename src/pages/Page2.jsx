@@ -7,19 +7,36 @@ import tandaBahayaImg from '../assets/images/2/Tanda Bahaya BBLR.png';
 
 const Page2 = () => {
   return (
-    <BaseLayout currentPage={2} hideNext={true} showLogo={false}>
-      <HeaderWithLogo contentPosition="center">
+    <BaseLayout currentPage={2} hideNext={true} showLogo={true}>
+      {/* Desktop Header - Hidden on mobile */}
+      <div className="hidden lg:block">
+        <HeaderWithLogo contentPosition="center">
+          <h1 
+            className="font-bold animate-slide-up"
+            style={{ 
+              color: '#004aad',
+              fontSize: '61.7px',
+              fontFamily: '"ITC Motter Corpus", "Motter Corpus", Georgia, serif'
+            }}
+          >
+            MENU UTAMA
+          </h1>
+        </HeaderWithLogo>
+      </div>
+
+      {/* Mobile Header - Hidden on desktop */}
+      <div className="lg:hidden text-center py-4">
         <h1 
           className="font-bold animate-slide-up"
           style={{ 
             color: '#004aad',
-            fontSize: '61.7px',
+            fontSize: 'clamp(36px, 10vw, 61.7px)',
             fontFamily: '"ITC Motter Corpus", "Motter Corpus", Georgia, serif'
           }}
         >
           MENU UTAMA
         </h1>
-      </HeaderWithLogo>
+      </div>
 
       <div className="flex-1 flex flex-col px-4 sm:px-8 lg:px-16 py-4">
         <div className="flex-1 flex flex-col items-center justify-center gap-6 max-w-5xl mx-auto w-full">
@@ -34,10 +51,15 @@ const Page2 = () => {
                 <img 
                   src={bblrImg} 
                   alt="Bayi Berat Badan Lahir Rendah"
-                  style={{ width: '409.5px', height: '231.3px', objectFit: 'contain' }}
+                  style={{ 
+                    width: 'clamp(200px, 80vw, 409.5px)', 
+                    height: 'auto',
+                    maxHeight: '231.3px',
+                    objectFit: 'contain' 
+                  }}
                 />
               </div>
-              <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: '20.3px', fontFamily: '"Open Sans", sans-serif' }}>
+              <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: 'clamp(16px, 5vw, 20.3px)', fontFamily: '"Open Sans", sans-serif' }}>
                 <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
                   Bayi Berat Lahir Rendah (BBLR)
                 </span>
@@ -53,10 +75,15 @@ const Page2 = () => {
                 <img 
                   src={tumbuhKembangImg} 
                   alt="Tumbuh Kembang Bayi"
-                  style={{ width: '409.5px', height: '231.3px', objectFit: 'contain' }}
+                  style={{ 
+                    width: 'clamp(200px, 80vw, 409.5px)', 
+                    height: 'auto',
+                    maxHeight: '231.3px',
+                    objectFit: 'contain' 
+                  }}
                 />
               </div>
-              <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: '20.3px', fontFamily: '"Open Sans", sans-serif' }}>
+              <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: 'clamp(16px, 5vw, 20.3px)', fontFamily: '"Open Sans", sans-serif' }}>
                 <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
                   Tumbuh Kembang Bayi Berat Badan Lahir Rendah (BBLR)
                 </span>
@@ -74,7 +101,12 @@ const Page2 = () => {
                 <img 
                   src={tandaBahayaImg} 
                   alt="Tanda Bahaya BBLR"
-                  style={{ width: '409.5px', height: '231.3px', objectFit: 'contain', marginLeft: '-30px', marginTop: '-15px' }}
+                  style={{ 
+                    width: 'clamp(200px, 80vw, 409.5px)', 
+                    height: 'auto',
+                    maxHeight: '231.3px',
+                    objectFit: 'contain' 
+                  }}
                 />
               </div>
               
@@ -82,9 +114,9 @@ const Page2 = () => {
                 <img 
                   src={alertLogo} 
                   alt="Warning" 
-                  className="w-7 h-7"
+                  style={{ width: 'clamp(20px, 6vw, 28px)', height: 'clamp(20px, 6vw, 28px)' }}
                 />
-                <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: '20.3px', fontFamily: '"Open Sans", sans-serif' }}>
+                <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: 'clamp(16px, 5vw, 20.3px)', fontFamily: '"Open Sans", sans-serif' }}>
                   <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
                     Tanda Bahaya BBLR
                   </span>

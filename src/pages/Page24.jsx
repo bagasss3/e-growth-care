@@ -10,7 +10,7 @@ const Page24 = () => {
           <div className="relative">
             <p 
               className="text-black font-bold leading-tight"
-              style={{ fontSize: '39.9px', fontFamily: '"Open Sans", sans-serif' }}
+              style={{ fontSize: 'clamp(20px, 3.5vw, 39.9px)', fontFamily: '"Open Sans", sans-serif' }}
             >
               APABILA MENEMUKAN{' '}
               <span className="text-red-600 relative inline-block">
@@ -20,18 +20,19 @@ const Page24 = () => {
                   alt="Exclamation"
                   className="absolute animate-slide-up-delay-1"
                   style={{ 
-                    width: '175.4px', 
-                    height: '147.6px', 
+                    width: 'clamp(80px, 12vw, 175.4px)', 
+                    height: 'auto',
+                    maxHeight: '147.6px',
                     transform: 'rotate(25deg)',
-                    top: '-140px',
-                    right: '-60px'
+                    top: 'clamp(-100px, -10vw, -140px)',
+                    right: 'clamp(-30px, -5vw, -60px)'
                   }}
                 />
               </span>
             </p>
             <p 
               className="text-black font-bold leading-tight"
-              style={{ fontSize: '39.9px', fontFamily: '"Open Sans", sans-serif' }}
+              style={{ fontSize: 'clamp(20px, 3.5vw, 39.9px)', fontFamily: '"Open Sans", sans-serif' }}
             >
               SEGERA LAPOR KE FASILITAS KESEHATAN TERDEKAT
             </p>

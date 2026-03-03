@@ -13,21 +13,30 @@ const Page5 = () => {
           style={{ 
             backgroundColor: '#16b4a9', 
             marginTop: '24px',
-            width: '848.2px'
+            width: 'clamp(320px, 80vw, 848.2px)',
+            maxWidth: '100%'
           }}
         >
           <img 
             src={babyImg} 
             alt="Baby illustration"
-            style={{ width: '550.8px', height: '201.2px', objectFit: 'contain' }}
+            style={{ 
+              width: '100%', 
+              maxWidth: '550.8px',
+              height: 'auto', 
+              maxHeight: '201.2px',
+              objectFit: 'contain' 
+            }}
           />
           
           <p 
             className="text-white leading-relaxed text-center"
             style={{ 
-              fontSize: '22px', 
+              fontSize: 'clamp(16px, 2.5vw, 22px)', 
               fontFamily: 'Poppins, sans-serif',
-              width: '550.8px'
+              width: '100%',
+              maxWidth: '550.8px',
+              wordWrap: 'break-word'
             }}
           >
             Bayi Berat Badan Lahir Rendah (BBLR) adalah bayi yang lahir dengan berat badan kurang dari 2.500 gram
@@ -40,7 +49,8 @@ const Page5 = () => {
           className="rounded-3xl p-6 animate-slide-right"
           style={{ 
             backgroundColor: '#16b4a9',
-            width: '1499.6px'
+            width: 'clamp(320px, 95vw, 1499.6px)',
+            maxWidth: '100%'
           }}
         >
           <div className="flex flex-col md:flex-row">
@@ -49,7 +59,7 @@ const Page5 = () => {
                 <h3 
                   className="text-white font-bold"
                   style={{ 
-                    fontSize: '31.8px',
+                    fontSize: 'clamp(20px, 3vw, 31.8px)',
                     fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
                     textShadow: '2px 2px 0px rgba(0,0,0,0.5)'
                   }}
@@ -59,11 +69,18 @@ const Page5 = () => {
                 <img 
                   src={clockIcon} 
                   alt="Clock icon" 
-                  className="w-8 h-8"
+                  style={{ width: 'clamp(24px, 3vw, 32px)', height: 'clamp(24px, 3vw, 32px)' }}
                 />
               </div>
               
-              <ul className="text-white space-y-2" style={{ fontSize: '30.1px', fontFamily: 'Poppins, sans-serif' }}>
+              <ul 
+                className="text-white space-y-2" 
+                style={{ 
+                  fontSize: 'clamp(16px, 2.5vw, 30.1px)', 
+                  fontFamily: 'Poppins, sans-serif',
+                  wordWrap: 'break-word'
+                }}
+              >
                 <li className="flex items-start gap-2">
                   <span>•</span>
                   <span>Hipotermia</span>
@@ -95,7 +112,7 @@ const Page5 = () => {
                 <h3 
                   className="text-white font-bold"
                   style={{ 
-                    fontSize: '31.8px',
+                    fontSize: 'clamp(20px, 3vw, 31.8px)',
                     fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
                     textShadow: '2px 2px 0px rgba(0,0,0,0.5)'
                   }}
@@ -105,11 +122,18 @@ const Page5 = () => {
                 <img 
                   src={stockUpIcon} 
                   alt="Stock up icon" 
-                  className="w-8 h-8"
+                  style={{ width: 'clamp(24px, 3vw, 32px)', height: 'clamp(24px, 3vw, 32px)' }}
                 />
               </div>
               
-              <ul className="text-white space-y-2" style={{ fontSize: '30.1px', fontFamily: 'Poppins, sans-serif' }}>
+              <ul 
+                className="text-white space-y-2" 
+                style={{ 
+                  fontSize: 'clamp(16px, 2.5vw, 30.1px)', 
+                  fontFamily: 'Poppins, sans-serif',
+                  wordWrap: 'break-word'
+                }}
+              >
                 <li className="flex items-start gap-2">
                   <span>•</span>
                   <span>Keterlambatan Perkembangan</span>

@@ -20,7 +20,12 @@ const Page22 = () => {
       <HeaderWithLogo contentPosition="center">
         <h1 
           className="font-bold text-center leading-tight mt-4"
-          style={{ color: '#000000', fontSize: '39.2px', fontFamily: 'Poppins, sans-serif' }}
+          style={{ 
+            color: '#000000', 
+            fontSize: 'clamp(20px, 3.5vw, 39.2px)', 
+            fontFamily: 'Poppins, sans-serif',
+            wordWrap: 'break-word'
+          }}
         >
           BEBERAPA REKOMENDASI VIDEO STIMULASI BAYI
         </h1>
@@ -28,7 +33,10 @@ const Page22 = () => {
 
       <div className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16 py-8">
         {/* 3x2 Grid of YouTube Videos */}
-        <div className="grid grid-cols-3 gap-x-8 gap-y-6 w-full" style={{ maxWidth: '1800px' }}>
+        <div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 lg:gap-x-8 gap-y-6 w-full" 
+          style={{ maxWidth: '1800px' }}
+        >
           {videos.map((video, index) => (
             <a
               key={video.id}
@@ -38,8 +46,12 @@ const Page22 = () => {
               className={`group block ${index === 0 ? 'animate-fade-in' : index === 1 ? 'animate-fade-in-delay-1' : index === 2 ? 'animate-fade-in-delay-2' : index === 3 ? 'animate-fade-in-delay-3' : index === 4 ? 'animate-fade-in-delay-4' : 'animate-fade-in-delay-5'}`}
             >
               <div 
-                className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-                style={{ width: '551.2px', height: '309.8px' }}
+                className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow mx-auto"
+                style={{ 
+                  width: 'clamp(280px, 100%, 551.2px)', 
+                  maxWidth: '100%',
+                  aspectRatio: '551.2 / 309.8'
+                }}
               >
                 <img
                   src={`https://img.youtube.com/vi/${video.id}/mqdefault.jpg`}

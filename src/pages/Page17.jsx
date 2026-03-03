@@ -13,7 +13,12 @@ const Page17 = () => {
       <HeaderWithLogo contentPosition="center">
         <h1 
           className="font-bold text-center leading-tight mt-4 animate-slide-up"
-          style={{ color: '#000000', fontSize: '42px', fontFamily: '"Open Sans", sans-serif' }}
+          style={{ 
+            color: '#000000', 
+            fontSize: 'clamp(24px, 4vw, 42px)', 
+            fontFamily: '"Open Sans", sans-serif',
+            wordWrap: 'break-word'
+          }}
         >
           MENGUKUR ANTROPOMETRI BAYI KECIL
         </h1>
@@ -23,7 +28,14 @@ const Page17 = () => {
         <img 
           src={qrImg} 
           alt="QR Code Antropometri BBLR"
-          style={{ width: '626.6px', height: '626.6px', objectFit: 'contain', marginBottom: '32px' }}
+          style={{ 
+            width: 'clamp(200px, 50vw, 626.6px)', 
+            height: 'auto',
+            maxHeight: '50vh',
+            objectFit: 'contain', 
+            marginBottom: '32px',
+            flexShrink: 0 
+          }}
         />
 
         <a 
@@ -31,7 +43,12 @@ const Page17 = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="underline hover:opacity-80 transition-opacity"
-          style={{ fontSize: '34px', color: '#000000', fontFamily: '"Open Sans", sans-serif' }}
+          style={{ 
+            fontSize: 'clamp(16px, 3vw, 34px)', 
+            color: '#000000', 
+            fontFamily: '"Open Sans", sans-serif',
+            wordWrap: 'break-word'
+          }}
         >
           https://bit.ly/AntropometriBBLR
         </a>

@@ -30,7 +30,8 @@ const BaseLayout = ({
           <img 
             src={kemenkesLogo} 
             alt="Kemenkes Logo" 
-            className="h-20 sm:h-24 lg:h-28 w-auto cursor-pointer hover:opacity-80 transition-opacity"
+            className="w-auto cursor-pointer hover:opacity-80 transition-opacity"
+            style={{ height: 'clamp(80px, 12vh, 112px)' }}
             onClick={handleLogoClick}
           />
         </div>

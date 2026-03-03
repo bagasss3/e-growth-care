@@ -11,12 +11,17 @@ const Page8 = () => {
           className="rounded-2xl px-6 py-4 flex items-center justify-center animate-slide-up"
           style={{ 
             backgroundColor: '#004aad',
-            width: '1185.6px'
+            width: 'clamp(320px, 85vw, 1185.6px)',
+            maxWidth: '100%'
           }}
         >
           <p 
             className="text-white leading-relaxed text-center"
-            style={{ fontSize: '20px', fontFamily: 'Poppins, sans-serif' }}
+            style={{ 
+              fontSize: 'clamp(14px, 2vw, 20px)', 
+              fontFamily: 'Poppins, sans-serif',
+              wordWrap: 'break-word'
+            }}
           >
             Buku KIA Khusus Bayi Kecil (Buku KBK) adalah panduan tambahan bagi ibu/pengasuh bayi dengan berat lahir &lt;2500 gram dengan usia kehamilan &lt;37 minggu, yang berisi pencatatan dan edukasi khusus, serta digunakan bersama dengan Buku KIA. jika bayi BBLR yang lahir cukup bulan tetap menggunakan Buku KIA untuk pemantauan tumbuh kembang dan kesehatan bayi.
           </p>
@@ -24,26 +29,31 @@ const Page8 = () => {
       </HeaderWithLogo>
 
       <div className="flex-1 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-8">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-40 max-w-7xl w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-40 max-w-7xl w-full">
           
           {/* Buku KIA Column */}
-          <div className="flex items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
             <h2 
               className="text-center font-bold animate-slide-left-delay-2"
               style={{ 
                 color: '#000000',
-                fontSize: '32px',
+                fontSize: 'clamp(20px, 3vw, 32px)',
                 fontFamily: '"Open Sans", sans-serif'
               }}
             >
               BUKU KIA
             </h2>
             <div className="flex flex-col items-center gap-6 animate-slide-left-delay-1">
-              <div style={{ width: '459.2px', height: '658.6px' }}>
+              <div style={{ 
+                width: 'clamp(200px, 30vw, 459.2px)', 
+                height: 'auto',
+                maxHeight: '60vh',
+                flexShrink: 0 
+              }}>
                 <img 
                   src={bookKiaImg} 
                   alt="Buku KIA"
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  style={{ width: '100%', height: 'auto', maxHeight: '60vh', objectFit: 'contain' }}
                 />
               </div>
               <a 
@@ -53,7 +63,7 @@ const Page8 = () => {
                 className="underline hover:opacity-80 transition-opacity"
                 style={{ 
                   color: '#000000',
-                  fontSize: '20px',
+                  fontSize: 'clamp(14px, 2vw, 20px)',
                   fontFamily: '"Open Sans", sans-serif'
                 }}
               >
@@ -63,13 +73,18 @@ const Page8 = () => {
           </div>
 
           {/* Buku KBK Column */}
-          <div className="flex items-center gap-8">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8">
             <div className="flex flex-col items-center gap-6 animate-slide-right-delay-1">
-              <div style={{ width: '459.2px', height: '658.6px' }}>
+              <div style={{ 
+                width: 'clamp(200px, 30vw, 459.2px)', 
+                height: 'auto',
+                maxHeight: '60vh',
+                flexShrink: 0 
+              }}>
                 <img 
                   src={bukuKBKImg} 
                   alt="Buku KIA Khusus Bayi Kecil"
-                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                  style={{ width: '100%', height: 'auto', maxHeight: '60vh', objectFit: 'contain' }}
                 />
               </div>
               <a 
@@ -79,7 +94,7 @@ const Page8 = () => {
                 className="underline hover:opacity-80 transition-opacity"
                 style={{ 
                   color: '#000000',
-                  fontSize: '20px',
+                  fontSize: 'clamp(14px, 2vw, 20px)',
                   fontFamily: '"Open Sans", sans-serif'
                 }}
               >
@@ -90,7 +105,7 @@ const Page8 = () => {
               className="text-center font-bold animate-slide-right-delay-2"
               style={{ 
                 color: '#000000',
-                fontSize: '25.3px',
+                fontSize: 'clamp(16px, 2.5vw, 25.3px)',
                 fontFamily: '"Open Sans", sans-serif'
               }}
             >

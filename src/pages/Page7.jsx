@@ -14,7 +14,7 @@ const Page7 = () => {
             className="font-bold animate-slide-right-header"
             style={{ 
               color: '#000000',
-              fontSize: '52.2px',
+              fontSize: 'clamp(28px, 5vw, 52.2px)',
               fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
             }}
           >
@@ -29,12 +29,17 @@ const Page7 = () => {
           style={{ 
             backgroundColor: '#16b4a9',
             border: '2px solid #000000',
-            width: '1529.7px'
+            width: 'clamp(320px, 95vw, 1529.7px)',
+            maxWidth: '100%'
           }}
         >
           <p 
             className="text-white leading-relaxed text-center mb-6"
-            style={{ fontSize: '21.6px', fontFamily: '"Open Sans", sans-serif' }}
+            style={{ 
+              fontSize: 'clamp(14px, 2vw, 21.6px)', 
+              fontFamily: '"Open Sans", sans-serif',
+              wordWrap: 'break-word'
+            }}
           >
             Usia koreksi adalah penyesuaian usia pada BBLR (&lt;2.500 gr) jika kelahiran &lt; 37 Minggu agar penilaian pertumbuhan dan perkembangannya sesuai dengan usia seharusnya
           </p>
@@ -43,7 +48,13 @@ const Page7 = () => {
             <img 
               src={equationImg} 
               alt="Usia Koreksi Equation"
-              style={{ width: '1043.3px', height: '84.3px', objectFit: 'contain' }}
+              style={{ 
+                width: '100%', 
+                maxWidth: '1043.3px', 
+                height: 'auto',
+                maxHeight: '84.3px',
+                objectFit: 'contain' 
+              }}
             />
           </div>
 
@@ -51,11 +62,15 @@ const Page7 = () => {
             <div className="flex-1">
               <h3 
                 className="text-white font-bold mb-3"
-                style={{ fontSize: '21px', fontFamily: 'Poppins, sans-serif' }}
+                style={{ fontSize: 'clamp(16px, 2vw, 21px)', fontFamily: 'Poppins, sans-serif' }}
               >Keterangan</h3>
               <ul 
                 className="text-white space-y-2"
-                style={{ fontSize: '19.5px', fontFamily: 'Poppins, sans-serif' }}
+                style={{ 
+                  fontSize: 'clamp(14px, 1.8vw, 19.5px)', 
+                  fontFamily: 'Poppins, sans-serif',
+                  wordWrap: 'break-word'
+                }}
               >
                 <li className="flex items-start gap-2">
                   <span>•</span>
@@ -75,11 +90,15 @@ const Page7 = () => {
             <div className="flex-1">
               <h3 
                 className="text-white font-bold mb-3"
-                style={{ fontSize: '21px', fontFamily: 'Poppins, sans-serif' }}
+                style={{ fontSize: 'clamp(16px, 2vw, 21px)', fontFamily: 'Poppins, sans-serif' }}
               >Contoh:</h3>
               <p 
                 className="text-white leading-relaxed"
-                style={{ fontSize: '19.5px', fontFamily: 'Poppins, sans-serif' }}
+                style={{ 
+                  fontSize: 'clamp(14px, 1.8vw, 19.5px)', 
+                  fontFamily: 'Poppins, sans-serif',
+                  wordWrap: 'break-word'
+                }}
               >
                 Bayi lahir pada usia kehamilan 32 minggu.<br />
                 Saat ini usia bayi 3 bulan (12 minggu).<br />
