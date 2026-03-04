@@ -88,9 +88,9 @@ const Page1 = () => {
       </div>
 
       {/* Mobile Layout - Hidden on desktop */}
-      <div className="flex lg:hidden flex-1 flex-col items-center px-6 py-4">
+      <div className="flex lg:hidden flex-1 flex-col items-center px-6 py-4 overflow-hidden min-h-[calc(100vh-140px)]">
         {/* Baby Mobile Image - Center */}
-        <div className="flex-1 flex items-center justify-center w-full">
+        <div className="flex items-center justify-center w-full" style={{ maxHeight: '35vh' }}>
           <img 
             src={babyMobileSvg} 
             alt="Baby Illustration" 
@@ -101,7 +101,7 @@ const Page1 = () => {
 
         {/* Description Text */}
         <p 
-          className="text-gray-700 text-center leading-relaxed italic mb-6 px-4"
+          className="text-gray-700 text-center leading-relaxed italic mb-4 px-4"
           style={{
             fontSize: 'clamp(16px, 5vw, 22px)',
             fontFamily: 'Poppins, sans-serif'
@@ -113,7 +113,7 @@ const Page1 = () => {
         {/* MULAI Button */}
         <button
           onClick={handleMulaiClick}
-          className="font-bold rounded-full hover:opacity-90 transition-all transform hover:scale-105 mb-8 px-8 py-4"
+          className="font-bold rounded-full hover:opacity-90 transition-all transform hover:scale-105 px-8 py-4"
           style={{ 
             backgroundColor: '#4e6aff',
             border: '3px solid #ede9e9',

@@ -1,6 +1,9 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
 import pregnantImg from '../assets/images/6/Pregnant.svg';
+import faktorIbuMobile from '../assets/images/6/faktor-ibu-mobile.png';
+import faktorJaninMobile from '../assets/images/6/faktor-janin-mobile.png';
+import faktorLingkunganMobile from '../assets/images/6/faktor-lingkungan-mobile.png';
 
 const Page6 = () => {
   const boxes = [
@@ -13,7 +16,8 @@ const Page6 = () => {
         'Status gizi kurang',
         'Jarak kehamilan terlalu dekat dan riwayat melahirkan BBLR',
         'Kebiasaan tidak sehat (merokok, alkohol, narkoba)'
-      ]
+      ],
+      image: faktorIbuMobile
     },
     {
       id: 2,
@@ -23,7 +27,8 @@ const Page6 = () => {
         'Infeksi pada janin sejak dalam kandungan',
         'Kehamilan kembar atau lebih',
         'Kelainan pembentukan organ tubuh sejak lahir'
-      ]
+      ],
+      image: faktorJaninMobile
     },
     {
       id: 3,
@@ -32,34 +37,60 @@ const Page6 = () => {
         'Tinggal di daerah dataran tinggi',
         'Terpapar radiasi',
         'Terkena zat atau bahan beracun'
-      ]
+      ],
+      image: faktorLingkunganMobile
     }
   ];
 
   return (
     <BaseLayout currentPage={6} showLogo={false}>
-      <HeaderWithLogo contentPosition="center">
-        <div className="flex items-center gap-4">
+      {/* Desktop Header */}
+      <div className="hidden lg:block">
+        <HeaderWithLogo contentPosition="center">
+          <div className="flex items-center gap-4">
+            <h1 
+              className="font-bold"
+              style={{ 
+                color: '#004aad',
+                fontSize: '52.2px',
+                fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
+              }}
+            >
+              HAL HAL YANG MENYEBABKAN BBLR
+            </h1>
+            <img 
+              src={pregnantImg} 
+              alt="Pregnant woman illustration" 
+              style={{ width: '161.9px', height: '258.7px' }}
+            />
+          </div>
+        </HeaderWithLogo>
+      </div>
+
+      {/* Mobile Header */}
+      <div className="lg:hidden py-2 px-4">
+        <div className="flex items-center justify-start gap-3">
           <h1 
-            className="font-bold"
+            className="font-bold text-left"
             style={{ 
               color: '#004aad',
-              fontSize: '52.2px',
+              fontSize: 'clamp(24px, 6vw, 36px)',
               fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
             }}
           >
-            HAL HAL YANG MENYEBABKAN BBLR
+            HAL HAL YANG<br/>MENYEBABKAN BBLR
           </h1>
           <img 
             src={pregnantImg} 
             alt="Pregnant woman illustration" 
-            style={{ width: '161.9px', height: '258.7px' }}
+            style={{ width: 'clamp(50px, 14vw, 80px)', height: 'auto' }}
           />
         </div>
-      </HeaderWithLogo>
+      </div>
 
-      <div className="flex-1 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full">
+      <div className="flex-1 flex items-start lg:items-center justify-center px-4 sm:px-8 lg:px-16 pt-0 pb-2 lg:py-8 overflow-hidden min-h-[calc(100vh-200px)]">
+        {/* Desktop: 3 columns */}
+        <div className="hidden lg:grid grid-cols-3 gap-6 max-w-6xl w-full">
           {boxes.map((box, index) => (
             <div 
               key={box.id}
@@ -88,13 +119,71 @@ const Page6 = () => {
                 className="text-white space-y-2 flex-1 p-4"
                 style={{ fontSize: '21.6px', fontFamily: 'Poppins, sans-serif' }}
               >
-                {box.items.map((item, index) => (
-                  <li key={index} className="flex items-start gap-2">
+                {box.items.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
                     <span>•</span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: Stacked with images outside box on left - 40/60 ratio */}
+        <div className="lg:hidden flex flex-col gap-2 w-full max-w-md px-2 overflow-hidden">
+          {boxes.map((box, index) => (
+            <div key={box.id} className="flex flex-row items-stretch gap-2">
+              {/* Image outside box on left - 40% */}
+              <div 
+                className={`flex items-center justify-center ${
+                  index === 1 ? 'animate-slide-left' : index === 2 ? 'animate-slide-right-delay' : 'animate-slide-left-delay'
+                }`}
+                style={{ width: '40%', minWidth: '100px' }}
+              >
+                <img 
+                  src={box.image} 
+                  alt={box.title}
+                  style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                />
+              </div>
+
+              {/* Box on right - 60% */}
+              <div 
+                className={`rounded-xl flex flex-col overflow-hidden ${
+                  index === 1 ? 'animate-slide-left' : index === 2 ? 'animate-slide-right-delay' : 'animate-slide-left-delay'
+                }`}
+                style={{ 
+                  backgroundColor: '#16b4a9',
+                  border: '2px solid #000000',
+                  width: '60%'
+                }}
+              >
+                {/* Title */}
+                <h2 
+                  className="text-white font-bold text-center p-1"
+                  style={{ 
+                    fontSize: 'clamp(12px, 3.5vw, 16px)',
+                    fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
+                  }}
+                >
+                  {box.title}
+                </h2>
+                
+                <div className="w-full h-px" style={{ backgroundColor: '#000000' }}></div>
+                
+                <ul 
+                  className="text-white space-y-0 p-2"
+                  style={{ fontSize: 'clamp(8px, 2.5vw, 11px)', fontFamily: 'Poppins, sans-serif' }}
+                >
+                  {box.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-1 leading-tight">
+                      <span>•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>

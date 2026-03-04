@@ -7,7 +7,7 @@ import tandaBahayaImg from '../assets/images/2/Tanda Bahaya BBLR.png';
 
 const Page2 = () => {
   return (
-    <BaseLayout currentPage={2} hideNext={true} showLogo={true}>
+    <BaseLayout currentPage={2} hideNext={true} showLogo={false}>
       {/* Desktop Header - Hidden on mobile */}
       <div className="hidden lg:block">
         <HeaderWithLogo contentPosition="center">
@@ -38,13 +38,13 @@ const Page2 = () => {
         </h1>
       </div>
 
-      <div className="flex-1 flex flex-col px-4 sm:px-8 lg:px-16 py-4">
-        <div className="flex-1 flex flex-col items-center justify-center gap-6 max-w-5xl mx-auto w-full">
+      <div className="flex-1 flex flex-col px-4 sm:px-8 lg:px-16 py-4 overflow-hidden min-h-[calc(100vh-180px)]">
+        <div className="flex-1 flex flex-col items-center justify-center gap-4 max-w-5xl mx-auto w-full">
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             <a
               href="/apa-itu-bblr"
-              className="rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-md hover:shadow-xl transition-all transform hover:scale-105 min-h-[360px]"
+              className="rounded-3xl p-6 flex flex-col items-center justify-center text-center shadow-md hover:shadow-xl transition-all transform hover:scale-105 min-h-[200px] lg:min-h-[360px]"
               style={{ backgroundColor: '#ffde59' }}
             >
               <div className="flex-1 flex items-center justify-center w-full mb-4">
@@ -68,7 +68,7 @@ const Page2 = () => {
 
             <a
               href="/pertumbuhan-perkembangan"
-              className="rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-md hover:shadow-xl transition-all transform hover:scale-105 min-h-[360px]"
+              className="rounded-3xl p-6 flex flex-col items-center justify-center text-center shadow-md hover:shadow-xl transition-all transform hover:scale-105 min-h-[200px] lg:min-h-[360px]"
               style={{ backgroundColor: '#ff7264' }}
             >
               <div className="flex-1 flex items-center justify-center w-full mb-4">
@@ -94,7 +94,7 @@ const Page2 = () => {
           <div className="w-full md:w-1/2">
             <a
               href="/tanda-bahaya-bblr"
-              className="rounded-3xl p-8 flex flex-col items-center justify-center text-center shadow-md hover:shadow-xl transition-all transform hover:scale-105 min-h-[360px] relative"
+              className="rounded-3xl p-6 flex flex-col items-center justify-center text-center shadow-md hover:shadow-xl transition-all transform hover:scale-105 min-h-[200px] lg:min-h-[360px] relative"
               style={{ backgroundColor: '#00c99f' }}
             >
               <div className="flex-1 flex items-start justify-center w-full mb-4">

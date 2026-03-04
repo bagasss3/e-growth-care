@@ -19,7 +19,7 @@ const HeaderWithLogo = ({ children, contentPosition = 'center' }) => {
         src={kemenkesLogo}
         alt="Kemenkes Logo" 
         className="w-auto cursor-pointer hover:opacity-80 transition-opacity"
-        style={{ height: 'clamp(80px, 12vh, 112px)' }}
+        style={{ height: 'clamp(96px, 10vw, 140px)' }}
         onClick={handleLogoClick}
       />
       

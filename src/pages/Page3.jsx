@@ -1,5 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
+import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
 import pertumbuhanImg from '../assets/images/3/pertumbuhan-bayi.png';
 import perkembanganImg from '../assets/images/3/perkembangan-bayi.png';
 
@@ -24,7 +25,7 @@ const Page3 = () => {
   ];
 
   return (
-    <BaseLayout currentPage={3} showLogo={true} hideNext={true}>
+    <BaseLayout currentPage={3} showLogo={false} hideNext={true}>
       {/* Desktop Header - Hidden on mobile */}
       <div className="hidden lg:block">
         <HeaderWithLogo contentPosition="center">
@@ -43,7 +44,16 @@ const Page3 = () => {
       </div>
 
       {/* Mobile Header - Hidden on desktop */}
-      <div className="lg:hidden text-center py-4">
+      <div className="lg:hidden flex flex-col items-center py-4">
+        {/* Logo for mobile */}
+        <a href="/" className="mb-4">
+          <img 
+            src={kemenkesLogo} 
+            alt="Kemenkes Logo" 
+            className="h-auto"
+            style={{ height: 'clamp(96px, 10vw, 140px)' }}
+          />
+        </a>
         <h1 
           className="font-bold text-center animate-slide-up"
           style={{ 
@@ -57,8 +67,8 @@ const Page3 = () => {
         </h1>
       </div>
 
-      <div className="flex-1 flex flex-col px-4 sm:px-8 lg:px-16 py-4">
-        <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex flex-col px-4 sm:px-8 lg:px-16 py-2 overflow-hidden min-h-[calc(100vh-180px)]">
+        <div className="flex-1 flex items-center justify-center overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-16 max-w-4xl w-full">
             {sections.map((section) => (
               section.path ? (
@@ -69,7 +79,7 @@ const Page3 = () => {
                   style={{ 
                     backgroundColor: 'transparent',
                     border: `4px solid ${section.outlineColor}`,
-                    minHeight: 'clamp(200px, 35vh, 320px)'
+                    minHeight: 'clamp(160px, 28vh, 260px)'
                   }}
                 >
                   <div className="mb-4 lg:mb-6 flex items-center justify-center">
@@ -104,7 +114,7 @@ const Page3 = () => {
                   style={{ 
                     backgroundColor: 'transparent',
                     border: `4px solid ${section.outlineColor}`,
-                    minHeight: 'clamp(200px, 35vh, 320px)'
+                    minHeight: 'clamp(160px, 28vh, 260px)'
                   }}
                 >
                   <div className="mb-4 lg:mb-6 flex items-center justify-center">
