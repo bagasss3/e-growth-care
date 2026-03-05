@@ -33,7 +33,7 @@ const Page3 = () => {
             className="font-bold text-center animate-slide-up"
             style={{ 
               color: '#004aad',
-              fontSize: '42.3px',
+              fontSize: 'clamp(28px, 3vw, 42.3px)',
               fontFamily: '"ITC Motter Corpus", "Motter Corpus", Georgia, serif'
             }}
           >

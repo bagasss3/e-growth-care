@@ -52,7 +52,7 @@ const Page6 = () => {
               className="font-bold"
               style={{ 
                 color: '#004aad',
-                fontSize: '52.2px',
+                fontSize: 'clamp(32px, 3.5vw, 52.2px)',
                 fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
               }}
             >
@@ -106,7 +106,7 @@ const Page6 = () => {
               <h2 
                 className="text-white font-bold text-center p-4"
                 style={{ 
-                  fontSize: '39.4px',
+                  fontSize: 'clamp(24px, 2.5vw, 39.4px)',
                   fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
                 }}
               >
@@ -117,7 +117,7 @@ const Page6 = () => {
               
               <ul 
                 className="text-white space-y-2 flex-1 p-4"
-                style={{ fontSize: '21.6px', fontFamily: 'Poppins, sans-serif' }}
+                style={{ fontSize: 'clamp(14px, 1.5vw, 21.6px)', fontFamily: 'Poppins, sans-serif' }}
               >
                 {box.items.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2">

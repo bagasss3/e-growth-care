@@ -15,7 +15,7 @@ const Page2 = () => {
             className="font-bold animate-slide-up"
             style={{ 
               color: '#004aad',
-              fontSize: '61.7px',
+              fontSize: 'clamp(36px, 4vw, 61.7px)',
               fontFamily: '"ITC Motter Corpus", "Motter Corpus", Georgia, serif'
             }}
           >

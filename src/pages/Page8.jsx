@@ -134,7 +134,7 @@ const Page8 = () => {
             <div className="flex flex-col items-center gap-3 animate-slide-left-delay-1">
               <h2 
                 className="text-center font-bold"
-                style={{ color: '#000000', fontSize: '24px', fontFamily: '"Open Sans", sans-serif' }}
+                style={{ color: '#000000', fontSize: 'clamp(18px, 2vw, 24px)', fontFamily: '"Open Sans", sans-serif' }}
               >
                 BUKU KIA
               </h2>
@@ -150,7 +150,7 @@ const Page8 = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:opacity-80 transition-opacity"
-                style={{ color: '#000000', fontSize: '16px', fontFamily: '"Open Sans", sans-serif' }}
+                style={{ color: '#000000', fontSize: 'clamp(12px, 1.5vw, 16px)', fontFamily: '"Open Sans", sans-serif' }}
               >
                 DOWNLOAD DISINI
               </a>
@@ -160,7 +160,7 @@ const Page8 = () => {
             <div className="flex flex-col items-center gap-3 animate-slide-right-delay-1">
               <h2 
                 className="text-center font-bold"
-                style={{ color: '#000000', fontSize: '20px', fontFamily: '"Open Sans", sans-serif' }}
+                style={{ color: '#000000', fontSize: 'clamp(16px, 1.8vw, 20px)', fontFamily: '"Open Sans", sans-serif' }}
               >
                 BUKU KIA KHUSUS BAYI KECIL
               </h2>
@@ -176,7 +176,7 @@ const Page8 = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:opacity-80 transition-opacity"
-                style={{ color: '#000000', fontSize: '16px', fontFamily: '"Open Sans", sans-serif' }}
+                style={{ color: '#000000', fontSize: 'clamp(12px, 1.5vw, 16px)', fontFamily: '"Open Sans", sans-serif' }}
               >
                 DOWNLOAD DISINI
               </a>

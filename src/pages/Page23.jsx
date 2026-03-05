@@ -1,5 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
+import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
 import warningImg from '../assets/images/23/warning.svg';
 import statisticImg from '../assets/images/23/statistic.svg';
 import baikImg from '../assets/images/23/baik.svg';
@@ -59,38 +60,39 @@ const Page23 = () => {
 
   return (
     <BaseLayout currentPage={23} showLogo={false}>
-      <HeaderWithLogo contentPosition="center">
-        <div className="flex items-center gap-4 mt-4">
-          <img 
-            src={warningImg} 
-            alt="Warning" 
-            className="animate-slide-up"
-            style={{ width: '142.7px', height: '124.2px', objectFit: 'contain' }}
-          />
-          
-          <h1 
-            className="font-bold text-black animate-slide-up"
-            style={{ fontSize: 'clamp(36px, 5vw, 64px)', fontFamily: '"Open Sans", sans-serif' }}
-          >
-            TANDA BAHAYA
-          </h1>
-          
-          <img 
-            src={warningImg} 
-            alt="Warning" 
-            className="animate-slide-up"
-            style={{ width: '142.7px', height: '124.2px', objectFit: 'contain' }}
-          />
-          
-          <img 
-            src={statisticImg} 
-            alt="Statistic" 
-            className="w-10 h-10 sm:w-12 sm:h-12 ml-4"
-          />
-        </div>
-      </HeaderWithLogo>
+      {/* Desktop Layout */}
+      <div className="hidden lg:flex flex-1 flex-col items-center px-4 sm:px-8 lg:px-16 py-8">
+        <HeaderWithLogo contentPosition="center">
+          <div className="flex items-center gap-4 mt-4">
+            <img 
+              src={warningImg} 
+              alt="Warning" 
+              className="animate-slide-up"
+              style={{ width: 'clamp(60px, 8vw, 142.7px)', height: 'auto', objectFit: 'contain' }}
+            />
+            
+            <h1 
+              className="font-bold text-black animate-slide-up"
+              style={{ fontSize: 'clamp(24px, 3vw, 64px)', fontFamily: '"Open Sans", sans-serif' }}
+            >
+              TANDA BAHAYA
+            </h1>
+            
+            <img 
+              src={warningImg} 
+              alt="Warning" 
+              className="animate-slide-up"
+              style={{ width: 'clamp(60px, 8vw, 142.7px)', height: 'auto', objectFit: 'contain' }}
+            />
+            
+            <img 
+              src={statisticImg} 
+              alt="Statistic" 
+              className="w-8 h-8 lg:w-10 lg:h-10 ml-2"
+            />
+          </div>
+        </HeaderWithLogo>
 
-      <div className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16 py-8">
         <div className="flex gap-6 max-w-7xl w-full items-stretch">
           {boxes.map((box, index) => (
             <div 
@@ -112,7 +114,7 @@ const Page23 = () => {
                 style={{ backgroundColor: box.color }}
               >
                 {box.type === 'images' && (
-                  <div className="flex flex-col items-center gap-0 justify-center flex-1">
+                  <div className="flex flex-col items-center gap-3 justify-center flex-1">
                     {box.images.map((img, index) => (
                       <img 
                         key={index}
@@ -157,6 +159,113 @@ const Page23 = () => {
                   <p 
                     className="text-black font-bold"
                     style={{ fontSize: 'clamp(18px, 2.5vw, 33px)', fontFamily: '"Open Sans", sans-serif' }}
+                  >
+                    {box.text}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile Layout */}
+      <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-140px)]">
+        {/* Logo */}
+        <a href="/" className="mb-2">
+          <img 
+            src={kemenkesLogo} 
+            alt="Logo" 
+            className="w-auto"
+            style={{ height: 'clamp(72px, 8vw, 100px)' }}
+          />
+        </a>
+
+        {/* Header with Warning Icons */}
+        <div className="flex items-center justify-center gap-2 mb-4 animate-slide-up">
+          <img 
+            src={warningImg} 
+            alt="Warning" 
+            style={{ width: 'clamp(40px, 10vw, 60px)', height: 'auto', objectFit: 'contain' }}
+          />
+          <h1 
+            className="font-bold text-black"
+            style={{ fontSize: 'clamp(20px, 6vw, 32px)', fontFamily: '"Open Sans", sans-serif' }}
+          >
+            TANDA BAHAYA
+          </h1>
+          <img 
+            src={warningImg} 
+            alt="Warning" 
+            style={{ width: 'clamp(40px, 10vw, 60px)', height: 'auto', objectFit: 'contain' }}
+          />
+        </div>
+
+        {/* Content Boxes - Stacked */}
+        <div className="flex flex-col gap-4 items-center">
+          {boxes.map((box, index) => (
+            <div 
+              key={box.id} 
+              className={`flex flex-col ${index === 0 ? 'animate-slide-up-delay-1' : index === 1 ? 'animate-slide-up-delay-2' : index === 2 ? 'animate-slide-up-delay-3' : 'animate-slide-up-delay-4'}`}
+              style={{ width: '90%' }}
+            >
+              <h2 
+                className="font-bold mb-2 text-black"
+                style={{ fontSize: 'clamp(16px, 5vw, 24px)', fontFamily: '"Open Sans", sans-serif' }}
+              >
+                {box.title}
+              </h2>
+              
+              <div 
+                className="p-4 flex flex-col rounded-xl"
+                style={{ backgroundColor: box.color }}
+              >
+                {box.type === 'images' && (
+                  <div className="flex flex-row items-center justify-center gap-2">
+                    {box.images.map((img, idx) => (
+                      <img 
+                        key={idx}
+                        src={img.src} 
+                        alt={img.alt}
+                        style={{ width: '32%', height: 'auto', objectFit: 'contain' }}
+                        className="rounded-lg"
+                      />
+                    ))}
+                  </div>
+                )}
+                
+                {box.type === 'list' && box.id === 2 && (
+                  <ul 
+                    className="text-black font-bold space-y-1"
+                    style={{ fontSize: 'clamp(12px, 4vw, 16px)', fontFamily: '"Open Sans", sans-serif' }}
+                  >
+                    {box.items.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span>•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                
+                {box.type === 'list' && box.id === 4 && (
+                  <ul 
+                    className="text-white font-bold space-y-1"
+                    style={{ fontSize: 'clamp(12px, 4vw, 16px)', fontFamily: '"Open Sans", sans-serif' }}
+                  >
+                    {box.items.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span>•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                
+                {box.type === 'text' && (
+                  <p 
+                    className="text-black font-bold"
+                    style={{ fontSize: 'clamp(14px, 4.5vw, 18px)', fontFamily: '"Open Sans", sans-serif' }}
                   >
                     {box.text}
                   </p>

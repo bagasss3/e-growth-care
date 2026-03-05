@@ -21,7 +21,7 @@ const Page1 = () => {
               className="font-bold mb-4 lg:mb-6"
               style={{ 
                 color: '#16b4a9',
-                fontSize: '76px',
+                fontSize: 'clamp(48px, 6vw, 76px)',
                 fontFamily: '"Archivo Black", sans-serif'
               }}
             >
@@ -31,7 +31,7 @@ const Page1 = () => {
             <p 
               className="font-bold text-black mb-6 lg:mb-8"
               style={{
-                fontSize: '34px',
+                fontSize: 'clamp(24px, 3vw, 34px)',
                 fontFamily: 'Poppins, sans-serif'
               }}
             >
@@ -41,7 +41,7 @@ const Page1 = () => {
             <p 
               className="text-gray-700 mb-8 lg:mb-12 max-w-2xl mx-0 leading-relaxed italic"
               style={{
-                fontSize: '20px',
+                fontSize: 'clamp(14px, 2vw, 20px)',
                 fontFamily: 'Poppins, sans-serif'
               }}
             >
@@ -63,7 +63,7 @@ const Page1 = () => {
                   className="underline underline-offset-4"
                   style={{
                     textShadow: '3px 3px 0px #000000, 6px 6px 0px rgba(0,0,0,0.4)',
-                    fontSize: '58.4px',
+                    fontSize: 'clamp(36px, 4vw, 58.4px)',
                     fontFamily: '"Lilita One", cursive'
                   }}
                 >

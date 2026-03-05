@@ -20,12 +20,12 @@ const Page24 = () => {
                   alt="Exclamation"
                   className="absolute animate-slide-up-delay-1"
                   style={{ 
-                    width: 'clamp(80px, 12vw, 175.4px)', 
+                    width: 'clamp(50px, 8vw, 120px)', 
                     height: 'auto',
-                    maxHeight: '147.6px',
+                    maxHeight: '100px',
                     transform: 'rotate(25deg)',
-                    top: 'clamp(-100px, -10vw, -140px)',
-                    right: 'clamp(-30px, -5vw, -60px)'
+                    top: '-80px',
+                    right: '-10px'
                   }}
                 />
               </span>
