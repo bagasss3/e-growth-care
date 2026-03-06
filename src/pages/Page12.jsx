@@ -55,7 +55,7 @@ const Page12 = () => {
               className="text-gray-800 leading-relaxed"
               style={{ fontSize: 'clamp(16px, 2.5vw, 25px)', fontFamily: '"Open Sans", sans-serif' }}
             >
-              Berat badan menunjukkan status gizi dan kesehatan bayi, sehingga perlu ditimbang secara rutin 1 bulan sekali untuk memantau pertumbuhan.
+              Berat badan menunjukkan status gizi dan kesehatan bayi, sehingga perlu ditimbang secara rutin <strong>1 bulan sekali</strong> untuk memantau pertumbuhan.
             </p>
           </div>
         </div>
@@ -131,7 +131,7 @@ const Page12 = () => {
             className="text-gray-800 leading-relaxed"
             style={{ fontSize: 'clamp(12px, 3.5vw, 16px)', fontFamily: '"Open Sans", sans-serif' }}
           >
-            Berat badan menunjukkan status gizi dan kesehatan bayi, sehingga perlu ditimbang secara rutin 1 bulan sekali untuk memantau pertumbuhan.
+            Berat badan menunjukkan status gizi dan kesehatan bayi, sehingga perlu ditimbang secara rutin <strong>1 bulan sekali</strong> untuk memantau pertumbuhan.
           </p>
         </div>
 

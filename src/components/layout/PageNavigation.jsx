@@ -11,7 +11,7 @@ const PAGE_ROUTES = {
   6: '/penyebab-bblr',
   7: '/usia-koreksi',
   8: '/buku-kia',
-  9: '/cara-perawatan-bblr',
+  9: '/cara-perawatan-bblr',  // Page 9 (no number!)
   10: '/cara-perawatan-bblr-2',
   11: '/cara-perawatan-bblr-3',
   12: '/cara-perawatan-bblr-4',

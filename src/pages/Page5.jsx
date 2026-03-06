@@ -225,7 +225,7 @@ const Page5 = () => {
                       textShadow: '1px 1px 0px rgba(0,0,0,0.5)'
                     }}
                   >
-                    JANGKA<br/>PENDEK
+                    DAMPAK JANGKA PENDEK
                   </h3>
                   <img 
                     src={clockIcon} 
@@ -278,7 +278,7 @@ const Page5 = () => {
                       textShadow: '1px 1px 0px rgba(0,0,0,0.5)'
                     }}
                   >
-                    JANGKA<br/>PANJANG
+                    DAMPAK JANGKA PANJANG
                   </h3>
                   <img 
                     src={stockUpIcon} 

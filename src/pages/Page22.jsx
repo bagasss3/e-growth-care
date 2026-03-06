@@ -61,6 +61,7 @@ const Page22 = () => {
       currentPage={22} 
       showLogo={false}
       showBackToMenu={true}
+      hideNext={true}
     >
       {/* Desktop Layout */}
       <div className="hidden lg:block">

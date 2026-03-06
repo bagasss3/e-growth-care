@@ -26,7 +26,7 @@ const Page8 = () => {
                 wordWrap: 'break-word'
               }}
             >
-              Buku KIA Khusus Bayi Kecil (Buku KBK) adalah panduan tambahan bagi ibu/pengasuh bayi dengan berat lahir &lt;2500 gram dengan usia kehamilan &lt;37 minggu, yang berisi pencatatan dan edukasi khusus, serta digunakan bersama dengan Buku KIA. jika bayi BBLR yang lahir cukup bulan tetap menggunakan Buku KIA untuk pemantauan tumbuh kembang dan kesehatan bayi.
+              Buku KIA Khusus Bayi Kecil (Buku KBK) adalah panduan tambahan bagi ibu/pengasuh <strong>bayi dengan berat lahir &lt;2500 gram dengan usia kehamilan &lt;37 minggu</strong>, yang berisi pencatatan dan edukasi khusus, serta digunakan bersama dengan Buku KIA. <strong>Jika bayi BBLR yang lahir cukup bulan tetap menggunakan Buku KIA</strong> untuk pemantauan tumbuh kembang dan kesehatan bayi.
             </p>
           </div>
         </HeaderWithLogo>
@@ -61,7 +61,7 @@ const Page8 = () => {
                   className="underline hover:opacity-80 transition-opacity"
                   style={{ color: '#000000', fontSize: 'clamp(16px, 1.8vw, 20px)', fontFamily: '"Open Sans", sans-serif' }}
                 >
-                  DOWNLOAD DISINI
+                  <strong>DOWNLOAD DISINI</strong>
                 </a>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Page8 = () => {
                   className="underline hover:opacity-80 transition-opacity"
                   style={{ color: '#000000', fontSize: 'clamp(16px, 1.8vw, 20px)', fontFamily: '"Open Sans", sans-serif' }}
                 >
-                  DOWNLOAD DISINI
+                  <strong>DOWNLOAD DISINI</strong>
                 </a>
               </div>
               <h2 
@@ -123,7 +123,7 @@ const Page8 = () => {
                   wordWrap: 'break-word'
                 }}
               >
-                Buku KIA Khusus Bayi Kecil (Buku KBK) adalah panduan tambahan bagi ibu/pengasuh bayi dengan berat lahir &lt;2500 gram dengan usia kehamilan &lt;37 minggu, yang berisi pencatatan dan edukasi khusus, serta digunakan bersama dengan Buku KIA. jika bayi BBLR yang lahir cukup bulan tetap menggunakan Buku KIA untuk pemantauan tumbuh kembang dan kesehatan bayi.
+                Buku KIA Khusus Bayi Kecil (Buku KBK) adalah panduan tambahan bagi ibu/pengasuh <strong>bayi dengan berat lahir &lt;2500 gram dengan usia kehamilan &lt;37 minggu</strong>, yang berisi pencatatan dan edukasi khusus, serta digunakan bersama dengan Buku KIA. <strong>Jika bayi BBLR yang lahir cukup bulan tetap menggunakan Buku KIA</strong> untuk pemantauan tumbuh kembang dan kesehatan bayi.
               </p>
             </div>
           </div>
@@ -152,7 +152,7 @@ const Page8 = () => {
                 className="underline hover:opacity-80 transition-opacity"
                 style={{ color: '#000000', fontSize: 'clamp(12px, 1.5vw, 16px)', fontFamily: '"Open Sans", sans-serif' }}
               >
-                DOWNLOAD DISINI
+                <strong>DOWNLOAD DISINI</strong>
               </a>
             </div>
 
@@ -178,7 +178,7 @@ const Page8 = () => {
                 className="underline hover:opacity-80 transition-opacity"
                 style={{ color: '#000000', fontSize: 'clamp(12px, 1.5vw, 16px)', fontFamily: '"Open Sans", sans-serif' }}
               >
-                DOWNLOAD DISINI
+                <strong>DOWNLOAD DISINI</strong>
               </a>
             </div>
           </div>
@@ -199,7 +199,7 @@ const Page8 = () => {
               fontFamily: 'Poppins, sans-serif'
             }}
           >
-            Buku KIA Khusus Bayi Kecil (Buku KBK) adalah panduan tambahan bagi ibu/pengasuh bayi dengan berat lahir &lt;2500 gram dengan usia kehamilan &lt;37 minggu, yang berisi pencatatan dan edukasi khusus, serta digunakan bersama dengan Buku KIA. jika bayi BBLR yang lahir cukup bulan tetap menggunakan Buku KIA untuk pemantauan tumbuh kembang dan kesehatan bayi.
+            Buku KIA Khusus Bayi Kecil (Buku KBK) adalah panduan tambahan bagi ibu/pengasuh <strong>bayi dengan berat lahir &lt;2500 gram dengan usia kehamilan &lt;37 minggu</strong>, yang berisi pencatatan dan edukasi khusus, serta digunakan bersama dengan Buku KIA. <strong>Jika bayi BBLR yang lahir cukup bulan tetap menggunakan Buku KIA</strong> untuk pemantauan tumbuh kembang dan kesehatan bayi.
           </p>
         </div>
 
@@ -238,7 +238,7 @@ const Page8 = () => {
                   fontFamily: '"Open Sans", sans-serif'
                 }}
               >
-                DOWNLOAD DISINI
+                <strong>DOWNLOAD DISINI</strong>
               </a>
             </div>
           </div>
@@ -276,7 +276,7 @@ const Page8 = () => {
                   fontFamily: '"Open Sans", sans-serif'
                 }}
               >
-                DOWNLOAD DISINI
+                <strong>DOWNLOAD DISINI</strong>
               </a>
             </div>
           </div>

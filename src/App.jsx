@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useNavigation } from './hooks/useNavigation';
 import Page1 from './pages/Page1';
 import Page2 from './pages/Page2';
 import Page3 from './pages/Page3';
@@ -24,9 +25,15 @@ import Page22 from './pages/Page22';
 import Page23 from './pages/Page23';
 import Page24 from './pages/Page24';
 
+function NavigationHandler() {
+  useNavigation();
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <NavigationHandler />
       <Routes>
         <Route path="/" element={<Page1 />} />
         <Route path="/menu" element={<Page2 />} />

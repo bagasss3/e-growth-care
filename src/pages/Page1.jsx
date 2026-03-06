@@ -90,7 +90,7 @@ const Page1 = () => {
       {/* Mobile Layout - Hidden on desktop */}
       <div className="flex lg:hidden flex-1 flex-col items-center px-6 py-4 overflow-hidden min-h-[calc(100vh-140px)]">
         {/* Baby Mobile Image - Center */}
-        <div className="flex items-center justify-center w-full" style={{ maxHeight: '35vh' }}>
+        <div className="flex items-center justify-center w-full" style={{ maxHeight: '35vh', marginBottom: 'clamp(24px, 6vh, 48px)' }}>
           <img 
             src={babyMobileSvg} 
             alt="Baby Illustration" 

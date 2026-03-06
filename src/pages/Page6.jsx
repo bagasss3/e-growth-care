@@ -88,7 +88,7 @@ const Page6 = () => {
         </div>
       </div>
 
-      <div className="flex-1 flex items-start lg:items-center justify-center px-4 sm:px-8 lg:px-16 pt-0 pb-2 lg:py-8 overflow-hidden min-h-[calc(100vh-200px)]">
+      <div className="flex-1 flex items-start lg:items-center justify-center px-4 sm:px-8 lg:px-16 pt-2 lg:py-8 overflow-hidden">
         {/* Desktop: 3 columns */}
         <div className="hidden lg:grid grid-cols-3 gap-6 max-w-6xl w-full">
           {boxes.map((box, index) => (
@@ -131,24 +131,24 @@ const Page6 = () => {
         </div>
 
         {/* Mobile: Stacked with images outside box on left - 40/60 ratio */}
-        <div className="lg:hidden flex flex-col gap-2 w-full max-w-md px-2 overflow-hidden">
+        <div className="lg:hidden flex flex-col gap-4 w-full max-w-md px-2 overflow-hidden flex-1 justify-center py-4">
           {boxes.map((box, index) => (
-            <div key={box.id} className="flex flex-row items-stretch gap-2">
-              {/* Image outside box on left - 40% */}
+            <div key={box.id} className="flex flex-row items-stretch gap-3">
+              {/* Image outside box on left - 45% */}
               <div 
                 className={`flex items-center justify-center ${
                   index === 1 ? 'animate-slide-left' : index === 2 ? 'animate-slide-right-delay' : 'animate-slide-left-delay'
                 }`}
-                style={{ width: '40%', minWidth: '100px' }}
+                style={{ width: '45%', minWidth: '120px' }}
               >
                 <img 
                   src={box.image} 
                   alt={box.title}
-                  style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
+                  style={{ width: '100%', height: 'auto', objectFit: 'contain', maxHeight: '150px' }}
                 />
               </div>
 
-              {/* Box on right - 60% */}
+              {/* Box on right - 55% */}
               <div 
                 className={`rounded-xl flex flex-col overflow-hidden ${
                   index === 1 ? 'animate-slide-left' : index === 2 ? 'animate-slide-right-delay' : 'animate-slide-left-delay'
@@ -156,7 +156,7 @@ const Page6 = () => {
                 style={{ 
                   backgroundColor: '#16b4a9',
                   border: '2px solid #000000',
-                  width: '60%'
+                  width: '55%'
                 }}
               >
                 {/* Title */}
@@ -173,11 +173,11 @@ const Page6 = () => {
                 <div className="w-full h-px" style={{ backgroundColor: '#000000' }}></div>
                 
                 <ul 
-                  className="text-white space-y-0 p-2"
-                  style={{ fontSize: 'clamp(8px, 2.5vw, 11px)', fontFamily: 'Poppins, sans-serif' }}
+                  className="text-white space-y-1 p-2 flex-1 flex flex-col justify-center"
+                  style={{ fontSize: 'clamp(9px, 2.8vw, 12px)', fontFamily: 'Poppins, sans-serif' }}
                 >
                   {box.items.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-1 leading-tight">
+                    <li key={idx} className="flex items-start gap-1">
                       <span>•</span>
                       <span>{item}</span>
                     </li>

@@ -19,9 +19,9 @@ const Page13 = () => {
       }
     >
       {/* Desktop Layout */}
-      <div className="hidden lg:flex flex-1 flex-row px-4 sm:px-8 lg:px-16 pt-0 pb-8 gap-4">
+      <div className="hidden lg:flex flex-1 flex-row px-4 sm:px-8 lg:px-16 pt-0 pb-8 gap-6 xl:gap-8">
         {/* Left Side - 30% */}
-        <div className="lg:w-[30%] flex flex-col">
+        <div className="lg:w-[35%] xl:w-[30%] flex flex-col z-10">
           <h1 
             className="font-bold text-black mb-4 animate-slide-up"
             style={{ fontSize: 'clamp(20px, 3vw, 51.4px)', fontFamily: '"Open Sans", sans-serif' }}
@@ -34,14 +34,14 @@ const Page13 = () => {
             style={{ 
               backgroundColor: '#004aad',
               width: '100%',
-              maxWidth: '480px'
+              maxWidth: '100%'
             }}
           >
             <p 
               className="text-white leading-relaxed text-center"
               style={{ fontSize: 'clamp(12px, 1.8vw, 20.3px)', fontFamily: '"Open Sans", sans-serif' }}
             >
-              Kurva Fenton adalah standar pengukuran pertumbuhan yang direkomendasikan Kemenkes untuk Bayi BBLR dengan usia kehamilan &lt;37 minggu. Pertumbuhan didefinisikan sebagai perubahan ukuran, jumlah, dan besar tubuh yang dapat diukur melalui berat badan dan panjang badan.
+              Kurva Fenton adalah standar pengukuran pertumbuhan yang direkomendasikan Kemenkes untuk <strong>Bayi BBLR dengan usia kehamilan &lt;37 minggu</strong>. Pertumbuhan didefinisikan sebagai perubahan ukuran, jumlah, dan besar tubuh yang dapat diukur melalui berat badan dan panjang badan.
             </p>
           </div>
 
@@ -54,14 +54,14 @@ const Page13 = () => {
           </div>
         </div>
 
-        {/* Right Side - 70% */}
-        <div className="lg:w-[70%] flex flex-col items-center justify-center" style={{ marginTop: '-20px' }}>
-          <div className="flex flex-row items-center justify-center gap-1 w-full animate-slide-up-delay-1">
+        {/* Right Side - 65% */}
+        <div className="lg:w-[65%] xl:w-[70%] flex flex-col items-center justify-center overflow-hidden" style={{ marginTop: '-20px' }}>
+          <div className="flex flex-row items-center justify-center gap-2 w-full animate-slide-up-delay-1 px-2">
             <img 
               src={kurvaPerempuanImg} 
               alt="Kurva Perempuan"
+              className="lg:max-w-[48%] xl:max-w-[50%]"
               style={{ 
-                width: 'clamp(250px, 45vw, 500px)', 
                 height: 'auto',
                 maxHeight: '70vh',
                 objectFit: 'contain' 
@@ -70,8 +70,8 @@ const Page13 = () => {
             <img 
               src={kurvaLakiImg} 
               alt="Kurva Laki-laki"
+              className="lg:max-w-[48%] xl:max-w-[50%]"
               style={{ 
-                width: 'clamp(250px, 45vw, 500px)', 
                 height: 'auto',
                 maxHeight: '70vh',
                 objectFit: 'contain' 
@@ -130,7 +130,7 @@ const Page13 = () => {
               fontFamily: '"Open Sans", sans-serif' 
             }}
           >
-            Kurva Fenton adalah standar pengukuran pertumbuhan yang direkomendasikan Kemenkes untuk Bayi BBLR dengan usia kehamilan &lt;37 minggu. Pertumbuhan didefinisikan sebagai perubahan ukuran, jumlah, dan besar tubuh yang dapat diukur melalui berat badan dan panjang badan.
+            Kurva Fenton adalah standar pengukuran pertumbuhan yang direkomendasikan Kemenkes untuk <strong>Bayi BBLR dengan usia kehamilan &lt;37 minggu</strong>. Pertumbuhan didefinisikan sebagai perubahan ukuran, jumlah, dan besar tubuh yang dapat diukur melalui berat badan dan panjang badan.
           </p>
         </div>
 
