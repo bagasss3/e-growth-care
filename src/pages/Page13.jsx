@@ -13,7 +13,7 @@ const Page13 = () => {
       showLogo={false}
       footerText={
         <span className="animate-slide-up-delay-2 hidden lg:inline" style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(12px, 1.8vw, 23.6px)' }}>
-          Kurva Fenton digunakan sampai usia koreksi 50 minggu, kemudian dilanjutkan dengan kurva<br />
+          Kurva Fenton digunakan sampai <strong>usia koreksi 50 minggu</strong>, kemudian dilanjutkan dengan kurva<br />
           WHO (Buku KIA) dengan tetap memakai usia koreksi hingga bayi berusia 24 bulan (2 tahun)
         </span>
       }
@@ -166,7 +166,7 @@ const Page13 = () => {
             fontFamily: 'Poppins, sans-serif' 
           }}
         >
-          Kurva Fenton digunakan sampai usia koreksi 50 minggu, kemudian dilanjutkan dengan kurva WHO (Buku KIA) dengan tetap memakai usia koreksi hingga bayi berusia 24 bulan (2 tahun)
+          Kurva Fenton digunakan sampai <strong>usia koreksi 50 minggu</strong>, kemudian dilanjutkan dengan kurva WHO (Buku KIA) dengan tetap memakai usia koreksi hingga bayi berusia 24 bulan (2 tahun)
         </p>
       </div>
     </BaseLayout>

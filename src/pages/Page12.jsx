@@ -5,7 +5,7 @@ import posterImg from '../assets/images/12/poster.png';
 
 const Page12 = () => {
   return (
-    <BaseLayout currentPage={12} showLogo={false}>
+    <BaseLayout currentPage={12} showLogo={false} hideNext={true} showBackToMenu={true}>
       {/* Desktop Layout */}
       <div className="hidden lg:flex flex-1 flex-row px-4 sm:px-8 lg:px-16 py-4 gap-6 overflow-hidden">
         {/* Left Column */}
@@ -121,10 +121,11 @@ const Page12 = () => {
 
         {/* Content Box - Mobile */}
         <div 
-          className="rounded-2xl p-4 border-2 border-black mb-4"
+          className="rounded-2xl p-4 border-2 border-black mb-4 mx-auto"
           style={{ 
             backgroundColor: '#ffc2a4',
-            width: '100%'
+            width: '100%',
+            maxWidth: '400px'
           }}
         >
           <p 

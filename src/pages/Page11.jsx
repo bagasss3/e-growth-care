@@ -127,10 +127,10 @@ const Page11 = () => {
           {/* Link Box */}
           <div className="flex justify-center">
             <a 
-              href="https://bit.ly/6LangkahCuciiTangan"
+              href="https://www.youtube.com/watch?v=L08to1kT39U"
               target="_blank"
               rel="noopener noreferrer"
-              className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity"
+              className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity underline"
               style={{ 
                 backgroundColor: '#ffde59',
                 fontSize: 'clamp(14px, 1.5vw, 20px)',
@@ -139,7 +139,7 @@ const Page11 = () => {
                 wordBreak: 'break-all'
               }}
             >
-              https://bit.ly/6LangkahCuciiTangan
+              Panduan 6 Langkah Mencuci Tangan
             </a>
           </div>
         </div>
@@ -205,10 +205,11 @@ const Page11 = () => {
 
         {/* Content Box - Mobile */}
         <div 
-          className="rounded-2xl p-4 border-2 border-black mb-4"
+          className="rounded-2xl p-4 border-2 border-black mb-4 mx-auto"
           style={{ 
             backgroundColor: '#ffc2a4',
-            width: '100%'
+            width: '100%',
+            maxWidth: '400px'
           }}
         >
           <ul 
@@ -301,10 +302,10 @@ const Page11 = () => {
         {/* Link Box */}
         <div className="flex justify-center">
           <a 
-            href="https://bit.ly/6LangkahCuciiTangan"
+            href="https://www.youtube.com/watch?v=L08to1kT39U"
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity"
+            className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity underline"
             style={{ 
               backgroundColor: '#ffde59',
               fontSize: 'clamp(14px, 3.5vw, 20px)',
@@ -313,7 +314,7 @@ const Page11 = () => {
               wordBreak: 'break-all'
             }}
           >
-            https://bit.ly/6LangkahCuciiTangan
+            Panduan 6 Langkah Mencuci Tangan
           </a>
         </div>
       </div>

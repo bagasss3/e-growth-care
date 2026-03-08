@@ -19,7 +19,7 @@ const Page3 = () => {
       title: 'PERKEMBANGAN BAYI',
       image: perkembanganImg,
       outlineColor: '#4e6aff',
-      path: '/pertumbuhan-bayi',
+      path: '/perkembangan-bayi',
       animationClass: 'animate-slide-up-delay-2',
     },
   ];
@@ -102,9 +102,7 @@ const Page3 = () => {
                       fontFamily: 'Poppins, sans-serif'
                     }}
                   >
-                    <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
-                      {section.title}
-                    </span>
+                    {section.title}
                   </h3>
                 </a>
               ) : (
@@ -137,9 +135,7 @@ const Page3 = () => {
                       fontFamily: 'Poppins, sans-serif'
                     }}
                   >
-                    <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
-                      {section.title}
-                    </span>
+                    {section.title}
                   </h3>
                 </div>
               )

@@ -20,7 +20,7 @@ const PAGE_ROUTES = [
   '/pengukuran-panjang-badan', // Page 15
   '/pengukuran-lingkar-kepala', // Page 16
   '/mengukur-antropometri-bayi-kecil', // Page 17
-  '/pertumbuhan-bayi',    // Page 18
+  '/perkembangan-bayi',    // Page 18
   '/usia-koreksi-2-bulan', // Page 19
   '/usia-koreksi-4-bulan', // Page 20
   '/usia-koreksi-6-bulan', // Page 21
@@ -31,14 +31,12 @@ const PAGE_ROUTES = [
 
 // Special navigation mappings - MUST MATCH PageNavigation.jsx
 const SPECIAL_NEXT_PAGES = {
-  7: 9,    // Page 7 -> Page 9 (skip 8)
-  12: 8,   // Page 12 -> Page 8
+  // Empty - normal flow now
 };
 
 const SPECIAL_PREV_PAGES = {
   4: 2,    // Page 4 -> back to Page 2 (Menu)
-  9: 7,    // Page 9 -> back to Page 7
-  8: 12,   // Page 8 -> back to Page 12
+  9: 8,    // Page 9 -> back to Page 8
   13: 3,   // Page 13 -> back to Page 3
   14: 13,  // Page 14 -> back to Page 13
   15: 14,  // Page 15 -> back to Page 14
@@ -57,7 +55,7 @@ const SPECIAL_PREV_PAGES = {
 const PAGES_WITHOUT_NEXT = [
   1,   // Landing page - no next
   2,   // Menu - hideNext=true
-  8,   // Buku KIA - hideNext=true
+  12,  // Page 12 - has Kembali Ke Menu button
   17,  // Antropometri - hideNext=true
   22,  // Video Stimulasi - hideNext=true
   24,  // Lapor Faskes - last page, no next
@@ -194,6 +192,18 @@ export const useNavigation = () => {
   // Handle click on screen edges (desktop)
   useEffect(() => {
     const handleClick = (e) => {
+      // Ignore clicks on interactive elements (buttons, links, inputs, etc.)
+      const target = e.target;
+      const isInteractive = target.closest('a') || 
+                            target.closest('button') || 
+                            target.tagName === 'A' || 
+                            target.tagName === 'BUTTON' ||
+                            target.tagName === 'INPUT' ||
+                            target.tagName === 'TEXTAREA' ||
+                            target.tagName === 'SELECT';
+      
+      if (isInteractive) return;
+
       const screenWidth = window.innerWidth;
       const clickX = e.clientX;
       const edgeThreshold = screenWidth * 0.15; // 15% of screen width

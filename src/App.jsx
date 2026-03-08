@@ -52,7 +52,7 @@ function App() {
         <Route path="/pengukuran-panjang-badan" element={<Page15 />} />
         <Route path="/pengukuran-lingkar-kepala" element={<Page16 />} />
         <Route path="/mengukur-antropometri-bayi-kecil" element={<Page17 />} />
-        <Route path="/pertumbuhan-bayi" element={<Page18 />} />
+        <Route path="/perkembangan-bayi" element={<Page18 />} />
         <Route path="/usia-koreksi-2-bulan" element={<Page19 />} />
         <Route path="/usia-koreksi-4-bulan" element={<Page20 />} />
         <Route path="/usia-koreksi-6-bulan" element={<Page21 />} />

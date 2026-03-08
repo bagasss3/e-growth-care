@@ -54,7 +54,7 @@ const Page10 = () => {
 
           {/* Link under QR */}
           <a 
-            href="https://bit.ly/MetodeKangguruu"
+            href="https://www.youtube.com/watch?v=nXgpD2xr0kk"
             target="_blank"
             rel="noopener noreferrer"
             className="text-center hover:opacity-80 transition-opacity underline"
@@ -64,7 +64,7 @@ const Page10 = () => {
               fontFamily: '"Open Sans", sans-serif'
             }}
           >
-            https://bit.ly/MetodeKangguruu
+            Panduan Perawatan Metode Kangguru (PMK)
           </a>
         </div>
 
@@ -81,9 +81,6 @@ const Page10 = () => {
                 maxWidth: 'clamp(300px, 30vw, 634.3px)'
               }}
             />
-            <p className="absolute bottom-2 left-2 text-sm font-bold text-gray-800">
-              (RSI, 2026)
-            </p>
           </div>
         </div>
       </div>
@@ -197,10 +194,10 @@ const Page10 = () => {
         {/* Link Box */}
         <div className="flex justify-center">
           <a 
-            href="https://bit.ly/MetodeKangguruu"
+            href="https://www.youtube.com/watch?v=nXgpD2xr0kk"
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity"
+            className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity underline"
             style={{ 
               backgroundColor: '#ffde59',
               fontSize: 'clamp(14px, 3.5vw, 20px)',
@@ -209,7 +206,7 @@ const Page10 = () => {
               wordBreak: 'break-all'
             }}
           >
-            https://bit.ly/MetodeKangguruu
+            Panduan Perawatan Metode Kangguru (PMK)
           </a>
         </div>
       </div>

@@ -7,8 +7,8 @@ import posterImg from '../assets/images/9/poster.png';
 const Page9 = () => {
   return (
     <BaseLayout currentPage={9} showLogo={false}>
-      {/* Desktop Layout - Responsive: side-by-side on xl+, stacked on lg-xl */}
-      <div className="hidden lg:flex flex-1 flex-col xl:flex-row px-4 sm:px-8 lg:px-16 py-4 gap-6 overflow-y-auto">
+      {/* Desktop Layout - Side by side on all desktop sizes */}
+      <div className="hidden lg:flex flex-1 flex-row px-4 sm:px-8 lg:px-16 py-4 gap-6 overflow-y-auto">
         {/* Left Column */}
         <div className="flex-1 flex flex-col min-w-0">
           {/* Title - Top Left */}
@@ -79,7 +79,7 @@ const Page9 = () => {
 
           {/* Link under QR */}
           <a 
-            href="https://bit.ly/CaraMenyusuiYangBenar"
+            href="https://www.youtube.com/watch?v=dWb3RgGhiUg"
             target="_blank"
             rel="noopener noreferrer"
             className="text-center hover:opacity-80 transition-opacity underline"
@@ -89,7 +89,7 @@ const Page9 = () => {
               fontFamily: '"Open Sans", sans-serif'
             }}
           >
-            https://bit.ly/CaraMenyusuiYangBenar
+            Panduan Cara Menyusui yang Benar
           </a>
         </div>
 
@@ -106,9 +106,6 @@ const Page9 = () => {
                 maxWidth: 'clamp(300px, 30vw, 634.3px)'
               }}
             />
-            <p className="absolute bottom-2 left-2 text-sm font-bold text-gray-800">
-              (RSI, 2026)
-            </p>
           </div>
         </div>
       </div>
@@ -151,8 +148,28 @@ const Page9 = () => {
               fontFamily: '"Open Sans", sans-serif'
             }}
           >
-            Pemberian Nutrisi Bayi
+            Pemberian Nutrisi dan meningkatkan daya tahan tubuh bayi
           </h2>
+        </div>
+
+        {/* Content Box - ASI Info */}
+        <div 
+          className="rounded-2xl p-4 border-2 border-black mb-4 mx-auto"
+          style={{ 
+            backgroundColor: '#ffc2a4',
+            width: '100%',
+            maxWidth: '400px'
+          }}
+        >
+          <p 
+            className="text-gray-800 leading-relaxed"
+            style={{ 
+              fontSize: 'clamp(12px, 3.5vw, 16px)', 
+              fontFamily: 'Poppins, sans-serif'
+            }}
+          >
+            Bayi dapat diberikan ASI saat setelah lahir dan untuk memastikan asupan yang cukup, ibu perlu menyusui secara teratur setiap sekitar 4 jam sekali.
+          </p>
         </div>
 
         {/* Poster */}
@@ -222,10 +239,10 @@ const Page9 = () => {
         {/* Link Box */}
         <div className="flex justify-center">
           <a 
-            href="https://bit.ly/CaraMenyusuiYangBenar"
+            href="https://www.youtube.com/watch?v=dWb3RgGhiUg"
             target="_blank"
             rel="noopener noreferrer"
-            className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity"
+            className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity underline"
             style={{ 
               backgroundColor: '#ffde59',
               fontSize: 'clamp(14px, 3.5vw, 20px)',
@@ -234,7 +251,7 @@ const Page9 = () => {
               wordBreak: 'break-all'
             }}
           >
-            https://bit.ly/CaraMenyusuiYangBenar
+            Panduan Cara Menyusui yang Benar
           </a>
         </div>
       </div>

@@ -11,20 +11,18 @@ const Page5 = () => {
       <div className="hidden lg:block">
         <HeaderWithLogo contentPosition="center">
           <div 
-            className="rounded-3xl px-6 pb-6 pt-4 flex flex-col items-center gap-4 animate-slide-left"
+            className="rounded-3xl px-6 pb-6 pt-4 flex flex-col items-center gap-4 animate-slide-left lg:max-w-[500px] xl:max-w-[700px]"
             style={{ 
               backgroundColor: '#16b4a9', 
               marginTop: '24px',
-              width: 'clamp(320px, 80vw, 848.2px)',
-              maxWidth: '100%'
+              width: '100%'
             }}
           >
             <img 
               src={babyImg} 
               alt="Baby illustration"
+              className="w-full max-w-[400px] xl:max-w-[550px]"
               style={{ 
-                width: '100%', 
-                maxWidth: '550.8px',
                 height: 'auto', 
                 maxHeight: '201.2px',
                 objectFit: 'contain' 
@@ -32,16 +30,14 @@ const Page5 = () => {
             />
             
             <p 
-              className="text-white leading-relaxed text-center"
+              className="text-white leading-relaxed text-center w-full max-w-[400px] xl:max-w-[550px]"
               style={{ 
-                fontSize: 'clamp(16px, 2.5vw, 22px)', 
+                fontSize: 'clamp(14px, 2vw, 20px)', 
                 fontFamily: 'Poppins, sans-serif',
-                width: '100%',
-                maxWidth: '550.8px',
                 wordWrap: 'break-word'
               }}
             >
-              Bayi Berat Badan Lahir Rendah (BBLR) adalah bayi yang lahir dengan berat badan kurang dari 2.500 gram
+              Bayi Berat Badan Lahir Rendah (BBLR) adalah bayi yang lahir dengan berat badan kurang dari 2.500 gram, baik yang lahir cukup bulan (≥ 37 Minggu) maupun kurang bulan (&lt;37 minggu).
             </p>
           </div>
         </HeaderWithLogo>
@@ -84,29 +80,27 @@ const Page5 = () => {
               wordWrap: 'break-word'
             }}
           >
-            Bayi Berat Badan Lahir Rendah (BBLR) adalah bayi yang lahir dengan berat badan kurang dari 2.500 gram
+            Bayi Berat Badan Lahir Rendah (BBLR) adalah bayi yang lahir dengan berat badan kurang dari 2.500 gram, baik yang lahir cukup bulan (≥ 37 Minggu) maupun kurang bulan (&lt;37 minggu).
           </p>
         </div>
       </div>
 
-      <div className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16 py-2 mt-2 overflow-hidden">
+      <div className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-8 xl:px-16 py-2 mt-2 overflow-hidden w-full">
         {/* Desktop: Wide box side by side */}
-        <div className="hidden lg:block">
+        <div className="hidden lg:flex w-full justify-center">
           <div 
-            className="rounded-3xl p-6 animate-slide-right"
+            className="rounded-3xl p-6 animate-slide-right w-full lg:max-w-[700px] xl:max-w-[1000px] 2xl:max-w-[1400px]"
             style={{ 
-              backgroundColor: '#16b4a9',
-              width: 'clamp(320px, 95vw, 1499.6px)',
-              maxWidth: '100%'
+              backgroundColor: '#16b4a9'
             }}
           >
-            <div className="flex flex-col md:flex-row">
-              <div className="flex-1 p-4">
-                <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="flex flex-col lg:flex-row">
+              <div className="flex-1 p-2 lg:p-3 xl:p-4">
+                <div className="flex items-center justify-center gap-2 lg:gap-3 mb-3 lg:mb-4">
                   <h3 
                     className="text-white font-bold"
                     style={{ 
-                      fontSize: 'clamp(20px, 3vw, 31.8px)',
+                      fontSize: 'clamp(16px, 2vw, 28px)',
                       fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
                       textShadow: '2px 2px 0px rgba(0,0,0,0.5)'
                     }}
@@ -116,14 +110,14 @@ const Page5 = () => {
                   <img 
                     src={clockIcon} 
                     alt="Clock icon" 
-                    style={{ width: 'clamp(24px, 3vw, 32px)', height: 'clamp(24px, 3vw, 32px)' }}
+                    style={{ width: 'clamp(20px, 2.5vw, 28px)', height: 'clamp(20px, 2.5vw, 28px)' }}
                   />
                 </div>
                 
                 <ul 
-                  className="text-white space-y-2" 
+                  className="text-white space-y-1 lg:space-y-2" 
                   style={{ 
-                    fontSize: 'clamp(16px, 2.5vw, 30.1px)', 
+                    fontSize: 'clamp(14px, 1.8vw, 22px)', 
                     fontFamily: 'Poppins, sans-serif',
                     wordWrap: 'break-word'
                   }}
@@ -151,15 +145,15 @@ const Page5 = () => {
                 </ul>
               </div>
 
-              <div className="hidden md:block w-px bg-white mx-4 self-stretch"></div>
-              <div className="block md:hidden h-px bg-white my-4"></div>
+              <div className="hidden lg:block w-px bg-white mx-2 xl:mx-4 self-stretch"></div>
+              <div className="block lg:hidden h-px bg-white my-3"></div>
 
-              <div className="flex-1 p-4">
-                <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="flex-1 p-2 lg:p-3 xl:p-4">
+                <div className="flex items-center justify-center gap-2 lg:gap-3 mb-3 lg:mb-4">
                   <h3 
                     className="text-white font-bold"
                     style={{ 
-                      fontSize: 'clamp(20px, 3vw, 31.8px)',
+                      fontSize: 'clamp(16px, 2vw, 28px)',
                       fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
                       textShadow: '2px 2px 0px rgba(0,0,0,0.5)'
                     }}
@@ -169,14 +163,14 @@ const Page5 = () => {
                   <img 
                     src={stockUpIcon} 
                     alt="Stock up icon" 
-                    style={{ width: 'clamp(24px, 3vw, 32px)', height: 'clamp(24px, 3vw, 32px)' }}
+                    style={{ width: 'clamp(20px, 2.5vw, 28px)', height: 'clamp(20px, 2.5vw, 28px)' }}
                   />
                 </div>
                 
                 <ul 
-                  className="text-white space-y-2" 
+                  className="text-white space-y-1 lg:space-y-2" 
                   style={{ 
-                    fontSize: 'clamp(16px, 2.5vw, 30.1px)', 
+                    fontSize: 'clamp(14px, 1.8vw, 22px)', 
                     fontFamily: 'Poppins, sans-serif',
                     wordWrap: 'break-word'
                   }}
@@ -216,21 +210,22 @@ const Page5 = () => {
             <div className="flex flex-row gap-2">
               {/* Dampak Jangka Pendek */}
               <div className="flex-1 p-1">
-                <div className="flex items-center justify-center gap-1 mb-2 flex-wrap">
+                <div className="flex items-center justify-center gap-1 mb-2 overflow-hidden">
                   <h3 
                     className="text-white font-bold text-center"
                     style={{ 
-                      fontSize: 'clamp(10px, 3vw, 14px)',
+                      fontSize: 'clamp(8px, 2.5vw, 12px)',
                       fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
-                      textShadow: '1px 1px 0px rgba(0,0,0,0.5)'
+                      textShadow: '1px 1px 0px rgba(0,0,0,0.5)',
+                      lineHeight: '1.2'
                     }}
                   >
-                    DAMPAK JANGKA PENDEK
+                    DAMPAK<br/>JANGKA PENDEK
                   </h3>
                   <img 
                     src={clockIcon} 
                     alt="Clock icon" 
-                    style={{ width: 'clamp(14px, 4vw, 20px)', height: 'clamp(14px, 4vw, 20px)' }}
+                    style={{ width: 'clamp(12px, 3.5vw, 18px)', height: 'clamp(12px, 3.5vw, 18px)', flexShrink: 0 }}
                   />
                 </div>
                 
@@ -265,25 +260,26 @@ const Page5 = () => {
                 </ul>
               </div>
 
-              <div className="w-px bg-white"></div>
+              <div className="w-px min-w-[2px] bg-white self-stretch mx-1"></div>
 
               {/* Dampak Jangka Panjang */}
               <div className="flex-1 p-1">
-                <div className="flex items-center justify-center gap-1 mb-2 flex-wrap">
+                <div className="flex items-center justify-center gap-1 mb-2 overflow-hidden">
                   <h3 
                     className="text-white font-bold text-center"
                     style={{ 
-                      fontSize: 'clamp(10px, 3vw, 14px)',
+                      fontSize: 'clamp(8px, 2.5vw, 12px)',
                       fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
-                      textShadow: '1px 1px 0px rgba(0,0,0,0.5)'
+                      textShadow: '1px 1px 0px rgba(0,0,0,0.5)',
+                      lineHeight: '1.2'
                     }}
                   >
-                    DAMPAK JANGKA PANJANG
+                    DAMPAK<br/>JANGKA PANJANG
                   </h3>
                   <img 
                     src={stockUpIcon} 
                     alt="Stock up icon" 
-                    style={{ width: 'clamp(14px, 4vw, 20px)', height: 'clamp(14px, 4vw, 20px)' }}
+                    style={{ width: 'clamp(12px, 3.5vw, 18px)', height: 'clamp(12px, 3.5vw, 18px)', flexShrink: 0 }}
                   />
                 </div>
                 

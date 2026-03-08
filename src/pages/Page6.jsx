@@ -67,6 +67,13 @@ const Page6 = () => {
         </HeaderWithLogo>
       </div>
 
+      {/* Mobile: Logo in header */}
+      <div className="lg:hidden">
+        <HeaderWithLogo contentPosition="center">
+          <div />
+        </HeaderWithLogo>
+      </div>
+
       {/* Mobile Header */}
       <div className="lg:hidden py-2 px-4">
         <div className="flex items-center justify-start gap-3">

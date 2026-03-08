@@ -6,7 +6,7 @@ import bukuKBKImg from '../assets/images/8/BukuKBK.png';
 
 const Page8 = () => {
   return (
-    <BaseLayout currentPage={8} showLogo={false} showBackToMenu={true} hideNext={true}>
+    <BaseLayout currentPage={8} showLogo={false}>
       {/* Very Large screens (1600px+): Logo left, Header center */}
       <div className="hidden 2xl:block">
         <HeaderWithLogo contentPosition="center">

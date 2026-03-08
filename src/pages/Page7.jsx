@@ -115,6 +115,13 @@ const Page7 = () => {
         </div>
       </div>
 
+      {/* Mobile: Logo in header */}
+      <div className="lg:hidden">
+        <HeaderWithLogo contentPosition="center">
+          <div />
+        </HeaderWithLogo>
+      </div>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden">
         {/* Header under logo - Same style as web */}

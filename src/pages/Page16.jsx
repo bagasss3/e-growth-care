@@ -34,6 +34,7 @@ const Page16 = () => {
     <BaseLayout 
       currentPage={16} 
       showLogo={false}
+      footerText={<em className="animate-fade-in-delay-2" style={{ fontSize: 'clamp(12px, 1.5vw, 18px)' }}>Kemenkes, 2021</em>}
     >
       {/* Desktop Layout */}
       <div className="hidden lg:block">

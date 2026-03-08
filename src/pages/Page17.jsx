@@ -42,7 +42,7 @@ const Page17 = () => {
           />
 
           <a 
-            href="https://bit.ly/AntropometriBBLR"
+            href="https://drive.google.com/file/d/1ZiLcA3SzpC84_GNMCcFLQCepNKs7XLRR/view"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:opacity-80 transition-opacity"
@@ -53,7 +53,7 @@ const Page17 = () => {
               wordWrap: 'break-word'
             }}
           >
-            https://bit.ly/AntropometriBBLR
+            Panduan Pengukuran Antropometri Bayi Kecil
           </a>
         </div>
       </div>
@@ -110,7 +110,7 @@ const Page17 = () => {
         {/* Link */}
         <div className="flex justify-center">
           <a 
-            href="https://bit.ly/AntropometriBBLR"
+            href="https://drive.google.com/file/d/1ZiLcA3SzpC84_GNMCcFLQCepNKs7XLRR/view"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:opacity-80 transition-opacity text-center"
@@ -121,7 +121,7 @@ const Page17 = () => {
               wordBreak: 'break-all'
             }}
           >
-            https://bit.ly/AntropometriBBLR
+            Panduan Pengukuran Antropometri Bayi Kecil
           </a>
         </div>
       </div>

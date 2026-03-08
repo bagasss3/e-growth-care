@@ -60,9 +60,7 @@ const Page2 = () => {
                 />
               </div>
               <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: 'clamp(16px, 5vw, 20.3px)', fontFamily: '"Open Sans", sans-serif' }}>
-                <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
-                  Bayi Berat Lahir Rendah (BBLR)
-                </span>
+                Bayi Berat Lahir Rendah (BBLR)
               </h3>
             </a>
 
@@ -84,9 +82,7 @@ const Page2 = () => {
                 />
               </div>
               <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: 'clamp(16px, 5vw, 20.3px)', fontFamily: '"Open Sans", sans-serif' }}>
-                <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
-                  Tumbuh Kembang Bayi Berat Badan Lahir Rendah (BBLR)
-                </span>
+                Tumbuh Kembang Bayi Berat Badan Lahir Rendah (BBLR)
               </h3>
             </a>
           </div>
@@ -117,9 +113,7 @@ const Page2 = () => {
                   style={{ width: 'clamp(20px, 6vw, 28px)', height: 'clamp(20px, 6vw, 28px)' }}
                 />
                 <h3 className="font-bold text-gray-800 leading-tight" style={{ fontSize: 'clamp(16px, 5vw, 20.3px)', fontFamily: '"Open Sans", sans-serif' }}>
-                  <span className="underline underline-offset-4 decoration-2" style={{ textDecorationSkipInk: 'none', WebkitTextDecorationSkip: 'none' }}>
-                    Tanda Bahaya BBLR
-                  </span>
+                  Tanda Bahaya BBLR
                 </h3>
               </div>
             </a>

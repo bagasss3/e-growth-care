@@ -5,6 +5,7 @@ import headerImg from '../assets/images/18/header.svg';
 import usia2Img from '../assets/images/18/usia2.svg';
 import usia4Img from '../assets/images/18/usia4.svg';
 import usia6Img from '../assets/images/18/usia6.svg';
+import videoPanduanImg from '../assets/images/18/videopanduan.svg';
 
 const Page18 = () => {
   return (
@@ -34,45 +35,71 @@ const Page18 = () => {
             Perkembangan adalah bertambahnya kemampuan (skill) dalam struktur dan fungsi pada anak. Stimulasi harus dilakukan setiap hari melalui kegiatan bermain yang menyenangkan dan sesuai dengan usia bayi
           </p>
 
-          <div className="flex items-end justify-center gap-4 md:gap-8 w-full max-w-6xl flex-wrap">
-            <div className="flex-shrink-0 animate-pop-in-delay-1">
+          {/* 2x2 Grid */}
+          <div className="grid grid-cols-2 gap-4 md:gap-8 w-full max-w-4xl">
+            <a 
+              href="/usia-koreksi-2-bulan" 
+              className="flex items-center justify-center animate-pop-in-delay-1 hover:scale-105 transition-transform"
+            >
               <img 
                 src={usia2Img} 
                 alt="Usia 2"
                 style={{ 
-                  width: 'clamp(200px, 30vw, 509.5px)', 
+                  width: 'clamp(180px, 35vw, 400px)', 
                   height: 'auto',
-                  maxHeight: '442.4px',
+                  maxHeight: '350px',
                   objectFit: 'contain' 
                 }}
               />
-            </div>
+            </a>
 
-            <div className="flex-shrink-0 animate-pop-in-delay-2" style={{ marginBottom: '-20px' }}>
+            <a 
+              href="/usia-koreksi-4-bulan" 
+              className="flex items-center justify-center animate-pop-in-delay-2 hover:scale-105 transition-transform"
+            >
               <img 
                 src={usia4Img} 
                 alt="Usia 4"
                 style={{ 
-                  width: 'clamp(200px, 30vw, 509.5px)', 
+                  width: 'clamp(180px, 35vw, 400px)', 
                   height: 'auto',
-                  maxHeight: '442.4px',
+                  maxHeight: '350px',
                   objectFit: 'contain' 
                 }}
               />
-            </div>
+            </a>
 
-            <div className="flex-shrink-0 animate-pop-in-delay-3">
+            <a 
+              href="/usia-koreksi-6-bulan" 
+              className="flex items-center justify-center animate-pop-in-delay-3 hover:scale-105 transition-transform"
+            >
               <img 
                 src={usia6Img} 
                 alt="Usia 6"
                 style={{ 
-                  width: 'clamp(200px, 30vw, 509.5px)', 
+                  width: 'clamp(180px, 35vw, 400px)', 
                   height: 'auto',
-                  maxHeight: '442.4px',
+                  maxHeight: '350px',
                   objectFit: 'contain' 
                 }}
               />
-            </div>
+            </a>
+
+            <a 
+              href="/video-stimulasi-bayi" 
+              className="flex items-center justify-center animate-pop-in-delay-4 hover:scale-105 transition-transform"
+            >
+              <img 
+                src={videoPanduanImg} 
+                alt="Video Panduan"
+                style={{ 
+                  width: 'clamp(180px, 35vw, 400px)', 
+                  height: 'auto',
+                  maxHeight: '350px',
+                  objectFit: 'contain' 
+                }}
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -113,36 +140,42 @@ const Page18 = () => {
           Perkembangan adalah bertambahnya kemampuan (skill) dalam struktur dan fungsi pada anak. Stimulasi harus dilakukan setiap hari melalui kegiatan bermain yang menyenangkan dan sesuai dengan usia bayi
         </p>
 
-        {/* Images Grid - 2 on top, 1 below */}
-        <div className="flex flex-col items-center gap-3">
-          {/* Row 1: Usia 2 and Usia 4 */}
-          <div className="flex flex-row justify-center gap-3 w-full">
-            <div className="animate-pop-in-delay-2" style={{ width: '48%' }}>
-              <img 
-                src={usia2Img} 
-                alt="Usia 2"
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  objectFit: 'contain' 
-                }}
-              />
-            </div>
-            <div className="animate-pop-in-delay-3" style={{ width: '48%' }}>
-              <img 
-                src={usia4Img} 
-                alt="Usia 4"
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  objectFit: 'contain' 
-                }}
-              />
-            </div>
-          </div>
+        {/* Images Grid - 2x2 */}
+        <div className="grid grid-cols-2 gap-3 w-full max-w-md mx-auto">
+          <a 
+            href="/usia-koreksi-2-bulan" 
+            className="animate-pop-in-delay-2 hover:scale-105 transition-transform"
+          >
+            <img 
+              src={usia2Img} 
+              alt="Usia 2"
+              style={{ 
+                width: '100%', 
+                height: 'auto',
+                objectFit: 'contain' 
+              }}
+            />
+          </a>
 
-          {/* Row 2: Usia 6 */}
-          <div className="animate-pop-in-delay-4" style={{ width: '48%' }}>
+          <a 
+            href="/usia-koreksi-4-bulan" 
+            className="animate-pop-in-delay-3 hover:scale-105 transition-transform"
+          >
+            <img 
+              src={usia4Img} 
+              alt="Usia 4"
+              style={{ 
+                width: '100%', 
+                height: 'auto',
+                objectFit: 'contain' 
+              }}
+            />
+          </a>
+
+          <a 
+            href="/usia-koreksi-6-bulan" 
+            className="animate-pop-in-delay-4 hover:scale-105 transition-transform"
+          >
             <img 
               src={usia6Img} 
               alt="Usia 6"
@@ -152,7 +185,22 @@ const Page18 = () => {
                 objectFit: 'contain' 
               }}
             />
-          </div>
+          </a>
+
+          <a 
+            href="/video-stimulasi-bayi" 
+            className="animate-pop-in-delay-5 hover:scale-105 transition-transform"
+          >
+            <img 
+              src={videoPanduanImg} 
+              alt="Video Panduan"
+              style={{ 
+                width: '100%', 
+                height: 'auto',
+                objectFit: 'contain' 
+              }}
+            />
+          </a>
         </div>
       </div>
     </BaseLayout>

@@ -20,7 +20,7 @@ const PAGE_ROUTES = {
   15: '/pengukuran-panjang-badan',
   16: '/pengukuran-lingkar-kepala',
   17: '/mengukur-antropometri-bayi-kecil',
-  18: '/pertumbuhan-bayi',
+  18: '/perkembangan-bayi',
   19: '/usia-koreksi-2-bulan',
   20: '/usia-koreksi-4-bulan',
   21: '/usia-koreksi-6-bulan',
@@ -31,8 +31,6 @@ const PAGE_ROUTES = {
 
 // Special page routing (for branching navigation)
 const SPECIAL_NEXT_PAGES = {
-  7: 9,    // Page 7 -> Page 9
-  12: 8,   // Page 12 -> Page 8
   13: 14,  // Page 13 -> Page 14
   14: 15,  // Page 14 -> Page 15
   15: 16,  // Page 15 -> Page 16
@@ -47,8 +45,7 @@ const SPECIAL_NEXT_PAGES = {
 
 const SPECIAL_PREV_PAGES = {
   4: 2,    // Page 4 -> back to Page 2 (Menu)
-  9: 7,    // Page 9 -> back to Page 7
-  8: 12,   // Page 8 -> back to Page 12
+  9: 8,    // Page 9 -> back to Page 8
   13: 3,   // Page 13 -> back to Page 3
   14: 13,  // Page 14 -> back to Page 13
   15: 14,  // Page 15 -> back to Page 14

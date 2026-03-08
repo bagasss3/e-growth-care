@@ -2,7 +2,6 @@ import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
 import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
 import warningImg from '../assets/images/23/warning.svg';
-import statisticImg from '../assets/images/23/statistic.svg';
 import baikImg from '../assets/images/23/baik.svg';
 import hatiHatiImg from '../assets/images/23/hati-hati.svg';
 import bahayaImg from '../assets/images/23/bahaya.svg';
@@ -61,9 +60,9 @@ const Page23 = () => {
   return (
     <BaseLayout currentPage={23} showLogo={false}>
       {/* Desktop Layout */}
-      <div className="hidden lg:flex flex-1 flex-col items-center px-4 sm:px-8 lg:px-16 py-8">
+      <div className="hidden lg:block">
         <HeaderWithLogo contentPosition="center">
-          <div className="flex items-center gap-4 mt-4">
+          <div className="flex items-center gap-4">
             <img 
               src={warningImg} 
               alt="Warning" 
@@ -84,16 +83,12 @@ const Page23 = () => {
               className="animate-slide-up"
               style={{ width: 'clamp(60px, 8vw, 142.7px)', height: 'auto', objectFit: 'contain' }}
             />
-            
-            <img 
-              src={statisticImg} 
-              alt="Statistic" 
-              className="w-8 h-8 lg:w-10 lg:h-10 ml-2"
-            />
           </div>
         </HeaderWithLogo>
+      </div>
 
-        <div className="flex gap-6 max-w-7xl w-full items-stretch">
+      <div className="hidden lg:flex flex-1 flex-col items-center px-4 sm:px-8 lg:px-16 py-8">
+        <div className="flex gap-6 max-w-7xl w-full items-stretch justify-center">
           {boxes.map((box, index) => (
             <div 
               key={box.id} 
@@ -167,6 +162,75 @@ const Page23 = () => {
             </div>
           ))}
         </div>
+
+        {/* Video Guide Section - Desktop */}
+        <div className="flex flex-col items-center mt-8 animate-slide-up-delay-5">
+          {/* Text with down arrows */}
+          <div className="flex items-center justify-center gap-2 mb-3">
+            {/* Left Arrow */}
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ width: 'clamp(20px, 2vw, 30px)', height: 'clamp(20px, 2vw, 30px)' }}
+            >
+              <path 
+                d="M12 5V19M12 19L5 12M12 19L19 12" 
+                stroke="#000000" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+            
+            <p 
+              className="text-center"
+              style={{ 
+                fontSize: 'clamp(16px, 2vw, 26.3px)',
+                fontFamily: '"Open Sans", sans-serif',
+                color: '#000000'
+              }}
+            >
+              Tonton Panduan Secara Video disini
+            </p>
+            
+            {/* Right Arrow */}
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ width: 'clamp(20px, 2vw, 30px)', height: 'clamp(20px, 2vw, 30px)' }}
+            >
+              <path 
+                d="M12 5V19M12 19L5 12M12 19L19 12" 
+                stroke="#000000" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+
+          {/* Link Box */}
+          <a 
+            href="https://drive.google.com/file/d/1jiUuOn8dKwLLlEIsJ65CEi39ubEutTSr/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 rounded-lg hover:opacity-80 transition-opacity underline text-center"
+            style={{ 
+              backgroundColor: '#ffde59',
+              fontSize: 'clamp(14px, 1.5vw, 20px)',
+              fontFamily: '"Open Sans", sans-serif',
+              color: '#000000'
+            }}
+          >
+            Panduan Edukasi Tanda Bahaya pada BBLR
+          </a>
+        </div>
       </div>
 
       {/* Mobile Layout */}
@@ -177,7 +241,7 @@ const Page23 = () => {
             src={kemenkesLogo} 
             alt="Logo" 
             className="w-auto"
-            style={{ height: 'clamp(72px, 8vw, 100px)' }}
+            style={{ height: 'clamp(96px, 10vw, 140px)' }}
           />
         </a>
 
@@ -273,6 +337,78 @@ const Page23 = () => {
               </div>
             </div>
           ))}
+
+          {/* Video Guide Section - After Tanda Bahaya Lainnya box */}
+          <div className="flex flex-col items-center w-full mt-2 animate-pop-in-delay-5">
+            {/* Text with down arrows */}
+            <div className="flex items-center justify-center gap-2 mb-2">
+              {/* Left Arrow */}
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ width: 'clamp(20px, 5vw, 30px)', height: 'clamp(20px, 5vw, 30px)' }}
+              >
+                <path 
+                  d="M12 5V19M12 19L5 12M12 19L19 12" 
+                  stroke="#000000" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+              
+              <p 
+                className="text-center"
+                style={{ 
+                  fontSize: 'clamp(16px, 4vw, 26.3px)',
+                  fontFamily: '"Open Sans", sans-serif',
+                  color: '#000000'
+                }}
+              >
+                Tonton Panduan Secara Video disini
+              </p>
+              
+              {/* Right Arrow */}
+              <svg 
+                width="24" 
+                height="24" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ width: 'clamp(20px, 5vw, 30px)', height: 'clamp(20px, 5vw, 30px)' }}
+              >
+                <path 
+                  d="M12 5V19M12 19L5 12M12 19L19 12" 
+                  stroke="#000000" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+
+            {/* Link Box */}
+            <div className="flex justify-center w-full px-4">
+              <a 
+                href="https://drive.google.com/file/d/1jiUuOn8dKwLLlEIsJ65CEi39ubEutTSr/view"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity underline text-center"
+                style={{ 
+                  backgroundColor: '#ffde59',
+                  fontSize: 'clamp(14px, 3.5vw, 20px)',
+                  fontFamily: '"Open Sans", sans-serif',
+                  color: '#000000',
+                  wordBreak: 'break-word'
+                }}
+              >
+                Panduan Edukasi Tanda Bahaya pada BBLR
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </BaseLayout>
