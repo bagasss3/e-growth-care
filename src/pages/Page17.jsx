@@ -9,6 +9,7 @@ const Page17 = () => {
       currentPage={17} 
       showLogo={false}
       showBackToMenu={true}
+      backToMenuUrl="/pertumbuhan-perkembangan"
       hideNext={true}
     >
       {/* Desktop Layout */}

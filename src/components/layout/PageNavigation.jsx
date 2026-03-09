@@ -60,7 +60,7 @@ const SPECIAL_PREV_PAGES = {
   24: 23,  // Page 24 -> back to Page 23
 };
 
-const PageNavigation = ({ currentPage, hidePrevious = false, hideNext = false, showBackToMenu = false, footerText = null }) => {
+const PageNavigation = ({ currentPage, hidePrevious = false, hideNext = false, showBackToMenu = false, backToMenuUrl = '/menu', footerText = null }) => {
   // Use special routing if defined, otherwise use default
   const prevPage = SPECIAL_PREV_PAGES[currentPage] || (currentPage > 1 ? currentPage - 1 : null);
   const nextPageNum = SPECIAL_NEXT_PAGES[currentPage] || (currentPage < Object.keys(PAGE_ROUTES).length ? currentPage + 1 : null);
@@ -112,7 +112,7 @@ const PageNavigation = ({ currentPage, hidePrevious = false, hideNext = false, s
       <div>
         {showBackToMenu && (
           <Link
-            to="/menu"
+            to={backToMenuUrl}
             className="px-6 py-3 bg-[#16b4a9] text-white font-bold rounded-full shadow-md hover:shadow-lg transition-shadow text-sm sm:text-base"
           >
             Kembali Ke Menu Utama

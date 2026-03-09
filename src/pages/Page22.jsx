@@ -61,6 +61,7 @@ const Page22 = () => {
       currentPage={22} 
       showLogo={false}
       showBackToMenu={true}
+      backToMenuUrl="/pertumbuhan-perkembangan"
       hideNext={true}
     >
       {/* Desktop Layout */}

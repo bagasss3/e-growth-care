@@ -11,6 +11,7 @@ const BaseLayout = ({
   showNavbar = true,
   showLogo = true,
   showBackToMenu = false,
+  backToMenuUrl = '/menu',
   footerText = null,
   className = ''
 }) => {
@@ -48,6 +49,7 @@ const BaseLayout = ({
           hidePrevious={hidePrevious}
           hideNext={hideNext}
           showBackToMenu={showBackToMenu}
+          backToMenuUrl={backToMenuUrl}
           footerText={footerText}
         />
       )}
