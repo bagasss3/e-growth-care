@@ -1,6 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import exclamationImg from '../assets/images/24/exclamatioin.svg';
-import ambulanceVideo from '../assets/images/24/ambulance.mp4';
+import ambulanceSvg from '../assets/images/24/ambulance.svg';
 
 const Page24 = () => {
   return (
@@ -149,12 +149,9 @@ const Page24 = () => {
         </div>
 
         <div className="w-full max-w-2xl animate-slide-up-delay-2">
-          <video 
-            src={ambulanceVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img 
+            src={ambulanceSvg}
+            alt="Ambulance"
             className="w-full h-auto rounded-2xl"
           />
         </div>

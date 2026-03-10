@@ -44,7 +44,7 @@ const SPECIAL_NEXT_PAGES = {
 };
 
 const SPECIAL_PREV_PAGES = {
-  4: 2,    // Page 4 -> back to Page 2 (Menu)
+  4: 1,    // Page 4 -> back to Page 1 (Home/Menu)
   9: 8,    // Page 9 -> back to Page 8
   13: 3,   // Page 13 -> back to Page 3
   14: 13,  // Page 14 -> back to Page 13
@@ -56,11 +56,11 @@ const SPECIAL_PREV_PAGES = {
   20: 19,  // Page 20 -> back to Page 19
   21: 20,  // Page 21 -> back to Page 20
   22: 21,  // Page 22 -> back to Page 21
-  23: 2,   // Page 23 -> back to Page 2 (Menu)
+  23: 1,   // Page 23 -> back to Page 1 (Home/Menu)
   24: 23,  // Page 24 -> back to Page 23
 };
 
-const PageNavigation = ({ currentPage, hidePrevious = false, hideNext = false, showBackToMenu = false, backToMenuUrl = '/menu', footerText = null }) => {
+const PageNavigation = ({ currentPage, hidePrevious = false, hideNext = false, showBackToMenu = false, backToMenuUrl = '/', footerText = null }) => {
   // Use special routing if defined, otherwise use default
   const prevPage = SPECIAL_PREV_PAGES[currentPage] || (currentPage > 1 ? currentPage - 1 : null);
   const nextPageNum = SPECIAL_NEXT_PAGES[currentPage] || (currentPage < Object.keys(PAGE_ROUTES).length ? currentPage + 1 : null);

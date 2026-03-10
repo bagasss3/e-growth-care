@@ -35,7 +35,7 @@ const SPECIAL_NEXT_PAGES = {
 };
 
 const SPECIAL_PREV_PAGES = {
-  4: 2,    // Page 4 -> back to Page 2 (Menu)
+  4: 1,    // Page 4 -> back to Page 1 (Home/Menu)
   9: 8,    // Page 9 -> back to Page 8
   13: 3,   // Page 13 -> back to Page 3
   14: 13,  // Page 14 -> back to Page 13
@@ -47,13 +47,13 @@ const SPECIAL_PREV_PAGES = {
   20: 19,  // Page 20 -> back to Page 19
   21: 20,  // Page 21 -> back to Page 20
   22: 21,  // Page 22 -> back to Page 21
-  23: 2,   // Page 23 -> back to Page 2 (Menu)
+  23: 1,   // Page 23 -> back to Page 1 (Home/Menu)
   24: 23,  // Page 24 -> back to Page 23
 };
 
 // Pages that should NOT have NEXT navigation (no next button)
 const PAGES_WITHOUT_NEXT = [
-  2,   // Menu - hideNext=true
+  1,   // Home/Landing - now includes menu, no next button
   12,  // Page 12 - has Kembali Ke Menu button
   17,  // Antropometri - hideNext=true
   22,  // Video Stimulasi - hideNext=true
@@ -62,8 +62,7 @@ const PAGES_WITHOUT_NEXT = [
 
 // Pages that should NOT have PREVIOUS navigation (no prev button)
 const PAGES_WITHOUT_PREV = [
-  1,   // Landing page - no prev
-  2,   // Menu - hidePrevious=true
+  1,   // Landing page - no prev (merged with menu)
 ];
 
 export const useNavigation = () => {

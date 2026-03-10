@@ -56,7 +56,7 @@ const Page5 = () => {
         <img 
           src={babyImg} 
           alt="Baby illustration"
-          className="animate-slide-left border-2 border-black rounded-2xl"
+          className="animate-slide-left border-2 border-black rounded-2xl mx-auto"
           style={{ 
             width: 'clamp(200px, 60vw, 400px)',
             height: 'auto',
