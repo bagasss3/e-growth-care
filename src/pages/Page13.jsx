@@ -1,5 +1,5 @@
 import BaseLayout from '../components/layout/BaseLayout';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import kurvaFentonMobileImg from '../assets/images/13/KurvaFenton-Mobile.png';
 import trademarkImg from '../assets/images/13/trademark.svg';
 import kurvaPerempuanImg from '../assets/images/13/kurva-perempuan.png';
@@ -81,18 +81,13 @@ const Page13 = () => {
         </div>
       </div>
 
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-2" />
+      </div>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-180px)]">
-        {/* Logo */}
-        <a href="/" className="mb-4">
-          <img 
-            src={kemenkesLogo} 
-            alt="Kemenkes Logo" 
-            className="w-auto"
-            style={{ height: 'clamp(96px, 10vw, 140px)' }}
-          />
-        </a>
-
         {/* Kurva Fenton Image + Trademark Row - Header */}
         <div className="flex items-center justify-center gap-4 mb-2">
           <img 
@@ -107,6 +102,7 @@ const Page13 = () => {
           <img 
             src={trademarkImg} 
             alt="Trademark"
+            className="border border-black rounded-lg"
             style={{ 
               width: 'clamp(100px, 25vw, 150px)', 
               height: 'auto',
@@ -117,7 +113,7 @@ const Page13 = () => {
 
         {/* Content Box - Smaller width */}
         <div 
-          className="rounded-xl p-3 mb-3 mx-auto"
+          className="rounded-xl p-3 mb-3 mx-auto border-2 border-black"
           style={{ 
             backgroundColor: '#004aad',
             width: '90%'
@@ -139,6 +135,7 @@ const Page13 = () => {
           <img 
             src={kurvaPerempuanImg} 
             alt="Kurva Perempuan"
+            className="border border-black rounded-lg"
             style={{ 
               width: '48%', 
               maxWidth: '280px',
@@ -149,6 +146,7 @@ const Page13 = () => {
           <img 
             src={kurvaLakiImg} 
             alt="Kurva Laki-laki"
+            className="border border-black rounded-lg"
             style={{ 
               width: '48%', 
               maxWidth: '280px',
@@ -160,7 +158,7 @@ const Page13 = () => {
 
         {/* Footer Text - Mobile */}
         <p 
-          className="text-center text-gray-800 leading-relaxed lg:hidden"
+          className="text-center text-gray-800 leading-relaxed lg:hidden italic"
           style={{ 
             fontSize: 'clamp(9px, 2.5vw, 12px)', 
             fontFamily: 'Poppins, sans-serif' 

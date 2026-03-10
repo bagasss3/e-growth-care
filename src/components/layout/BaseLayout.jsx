@@ -1,7 +1,6 @@
-import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 import PageNavigation from './PageNavigation';
-import kemenkesLogo from '../../assets/images/kemenkeas-logo.svg';
+import Logo from './Logo';
 
 const BaseLayout = ({ 
   children, 
@@ -15,26 +14,14 @@ const BaseLayout = ({
   footerText = null,
   className = ''
 }) => {
-  const navigate = useNavigate();
-
-  const handleLogoClick = () => {
-    navigate('/');
-  };
-
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#e7f9f1' }}>
       {/* Navbar */}
       {showNavbar && <Navbar />}
 
       {showLogo && (
-        <div className="w-full px-4 sm:px-8 lg:px-12 py-4">
-          <img 
-            src={kemenkesLogo} 
-            alt="Kemenkes Logo" 
-            className="w-auto cursor-pointer hover:opacity-80 transition-opacity"
-            style={{ height: 'clamp(96px, 10vw, 140px)' }}
-            onClick={handleLogoClick}
-          />
+        <div className="w-full py-4">
+          <Logo />
         </div>
       )}
 

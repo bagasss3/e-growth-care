@@ -53,7 +53,6 @@ const SPECIAL_PREV_PAGES = {
 
 // Pages that should NOT have NEXT navigation (no next button)
 const PAGES_WITHOUT_NEXT = [
-  1,   // Landing page - no next
   2,   // Menu - hideNext=true
   12,  // Page 12 - has Kembali Ke Menu button
   17,  // Antropometri - hideNext=true

@@ -1,6 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 
 const videos = [
   { id: 'lVHXbDFzpWg', title: 'Video 1' },
@@ -98,18 +98,13 @@ const Page22 = () => {
         </div>
       </div>
 
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-2" />
+      </div>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-140px)]">
-        {/* Logo */}
-        <a href="/" className="mb-2">
-          <img 
-            src={kemenkesLogo} 
-            alt="Logo" 
-            className="w-auto"
-            style={{ height: 'clamp(72px, 8vw, 100px)' }}
-          />
-        </a>
-
         {/* Header */}
         <h1 
           className="font-bold text-center leading-tight mb-4"

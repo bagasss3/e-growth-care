@@ -1,15 +1,8 @@
-import { useNavigate } from 'react-router-dom';
 import BaseLayout from '../components/layout/BaseLayout';
 import babySvg from '../assets/images/1/Baby.svg';
 import babyMobileSvg from '../assets/images/1/Baby-mobile.svg';
 
 const Page1 = () => {
-  const navigate = useNavigate();
-
-  const handleMulaiClick = () => {
-    navigate('/menu');
-  };
-
   return (
     <BaseLayout showNavbar={true} hidePrevious={true} hideNext={true}>
       {/* Desktop Layout - Hidden on mobile */}
@@ -49,28 +42,7 @@ const Page1 = () => {
               Bayi Berat Lahir Rendah (BBLR) secara mandiri, mudah, dan berkelanjutan
             </p>
             
-            <div className="w-full flex justify-center">
-              <button
-                onClick={handleMulaiClick}
-                className="px-24 py-6 text-3xl lg:text-4xl font-bold rounded-full hover:opacity-90 transition-all transform hover:scale-105"
-                style={{ 
-                  backgroundColor: '#4e6aff',
-                  border: '4px solid #ede9e9',
-                  color: '#ffffff'
-                }}
-              >
-                <span 
-                  className="underline underline-offset-4"
-                  style={{
-                    textShadow: '3px 3px 0px #000000, 6px 6px 0px rgba(0,0,0,0.4)',
-                    fontSize: 'clamp(36px, 4vw, 58.4px)',
-                    fontFamily: '"Lilita One", cursive'
-                  }}
-                >
-                  MULAI
-                </span>
-              </button>
-            </div>
+
           </div>
 
           <div className="flex-1 w-1/2 flex justify-end items-end h-full relative overflow-visible">
@@ -88,7 +60,7 @@ const Page1 = () => {
       </div>
 
       {/* Mobile Layout - Hidden on desktop */}
-      <div className="flex lg:hidden flex-1 flex-col items-center px-6 py-4 overflow-hidden min-h-[calc(100vh-140px)]">
+      <div className="flex lg:hidden flex-1 flex-col px-6 py-4 overflow-hidden min-h-[calc(100vh-140px)]">
         {/* Baby Mobile Image - Center */}
         <div className="flex items-center justify-center w-full" style={{ maxHeight: '35vh', marginBottom: 'clamp(24px, 6vh, 48px)' }}>
           <img 
@@ -101,7 +73,7 @@ const Page1 = () => {
 
         {/* Description Text */}
         <p 
-          className="text-gray-700 text-center leading-relaxed italic mb-4 px-4"
+          className="text-gray-700 text-left leading-relaxed italic mb-4 px-4"
           style={{
             fontSize: 'clamp(16px, 5vw, 22px)',
             fontFamily: 'Poppins, sans-serif'
@@ -109,31 +81,6 @@ const Page1 = () => {
         >
           Panduan praktis untuk memantau pertumbuhan dan perkembangan Bayi Berat Lahir Rendah (BBLR) secara mandiri, mudah, dan berkelanjutan
         </p>
-
-        {/* MULAI Button */}
-        <button
-          onClick={handleMulaiClick}
-          className="font-bold rounded-full hover:opacity-90 transition-all transform hover:scale-105 px-8 py-4"
-          style={{ 
-            backgroundColor: '#4e6aff',
-            border: '3px solid #ede9e9',
-            color: '#ffffff',
-            minWidth: '200px',
-            width: '70vw',
-            maxWidth: '400px'
-          }}
-        >
-          <span 
-            className="underline underline-offset-4"
-            style={{
-              textShadow: '2px 2px 0px #000000, 4px 4px 0px rgba(0,0,0,0.4)',
-              fontSize: 'clamp(24px, 8vw, 36px)',
-              fontFamily: 'Poppins, sans-serif'
-            }}
-          >
-            MULAI
-          </span>
-        </button>
       </div>
     </BaseLayout>
   );

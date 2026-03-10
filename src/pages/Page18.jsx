@@ -1,6 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import headerImg from '../assets/images/18/header.svg';
 import usia2Img from '../assets/images/18/usia2.svg';
 import usia4Img from '../assets/images/18/usia4.svg';
@@ -28,12 +28,20 @@ const Page18 = () => {
         </HeaderWithLogo>
 
         <div className="flex-1 flex flex-col items-center px-4 sm:px-8 lg:px-16 py-4">
-          <p 
-            className="text-gray-700 leading-relaxed text-center max-w-3xl mb-8 italic"
-            style={{ fontSize: 'clamp(14px, 2vw, 20.2px)', fontFamily: 'Poppins, sans-serif' }}
+          <div 
+            className="max-w-3xl mb-8 p-4 border-2 border-black rounded-xl"
           >
-            Perkembangan adalah bertambahnya kemampuan (skill) dalam struktur dan fungsi pada anak. Stimulasi harus dilakukan setiap hari melalui kegiatan bermain yang menyenangkan dan sesuai dengan usia bayi
-          </p>
+            <p 
+              className="text-gray-700 leading-relaxed text-center italic"
+              style={{ 
+                fontSize: 'clamp(14px, 2vw, 20.2px)', 
+                fontFamily: 'Poppins, sans-serif',
+                textShadow: '1px 1px 3px rgba(0,0,0,0.3)'
+              }}
+            >
+              Perkembangan adalah bertambahnya kemampuan (skill) dalam struktur dan fungsi pada anak. Stimulasi harus dilakukan setiap hari melalui kegiatan bermain yang menyenangkan dan sesuai dengan usia bayi
+            </p>
+          </div>
 
           {/* 2x2 Grid */}
           <div className="grid grid-cols-2 gap-4 md:gap-8 w-full max-w-4xl">
@@ -104,18 +112,13 @@ const Page18 = () => {
         </div>
       </div>
 
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-2" />
+      </div>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-140px)]">
-        {/* Logo */}
-        <a href="/" className="mb-2">
-          <img 
-            src={kemenkesLogo} 
-            alt="Logo" 
-            className="w-auto"
-            style={{ height: 'clamp(72px, 8vw, 100px)' }}
-          />
-        </a>
-
         {/* Header Image */}
         <div className="flex justify-center mb-3 animate-pop-in">
           <img 
@@ -130,15 +133,20 @@ const Page18 = () => {
         </div>
 
         {/* Description */}
-        <p 
-          className="text-gray-700 leading-relaxed text-center mb-4 italic animate-pop-in-delay-1"
-          style={{ 
-            fontSize: 'clamp(11px, 3.2vw, 16px)', 
-            fontFamily: 'Poppins, sans-serif' 
-          }}
+        <div 
+          className="mb-4 p-3 border-2 border-black rounded-xl"
         >
-          Perkembangan adalah bertambahnya kemampuan (skill) dalam struktur dan fungsi pada anak. Stimulasi harus dilakukan setiap hari melalui kegiatan bermain yang menyenangkan dan sesuai dengan usia bayi
-        </p>
+          <p 
+            className="text-gray-700 leading-relaxed text-center italic animate-pop-in-delay-1"
+            style={{ 
+              fontSize: 'clamp(11px, 3.2vw, 16px)', 
+              fontFamily: 'Poppins, sans-serif',
+              textShadow: '1px 1px 3px rgba(0,0,0,0.3)'
+            }}
+          >
+            Perkembangan adalah bertambahnya kemampuan (skill) dalam struktur dan fungsi pada anak. Stimulasi harus dilakukan setiap hari melalui kegiatan bermain yang menyenangkan dan sesuai dengan usia bayi
+          </p>
+        </div>
 
         {/* Images Grid - 2x2 */}
         <div className="grid grid-cols-2 gap-3 w-full max-w-md mx-auto">

@@ -1,5 +1,5 @@
 import BaseLayout from '../components/layout/BaseLayout';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import number4Img from '../assets/images/12/number4.svg';
 import posterImg from '../assets/images/12/poster.png';
 
@@ -53,7 +53,7 @@ const Page12 = () => {
           >
             <p 
               className="text-gray-800 leading-relaxed"
-              style={{ fontSize: 'clamp(16px, 2.5vw, 25px)', fontFamily: '"Open Sans", sans-serif' }}
+              style={{ fontSize: 'clamp(16px, 2.5vw, 25px)', fontFamily: '"Open Sans", sans-serif', textShadow: '1px 1px 3px rgba(0,0,0,0.3)' }}
             >
               Berat badan menunjukkan status gizi dan kesehatan bayi, sehingga perlu ditimbang secara rutin <strong>1 bulan sekali</strong> untuk memantau pertumbuhan.
             </p>
@@ -77,18 +77,13 @@ const Page12 = () => {
         </div>
       </div>
 
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-2" />
+      </div>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-180px)]">
-        {/* Logo */}
-        <a href="/" className="mb-4">
-          <img 
-            src={kemenkesLogo} 
-            alt="Kemenkes Logo" 
-            className="w-auto"
-            style={{ height: 'clamp(96px, 10vw, 140px)' }}
-          />
-        </a>
-
         {/* Header */}
         <h1 
           className="font-bold mb-4 animate-slide-left"
@@ -130,7 +125,7 @@ const Page12 = () => {
         >
           <p 
             className="text-gray-800 leading-relaxed"
-            style={{ fontSize: 'clamp(12px, 3.5vw, 16px)', fontFamily: '"Open Sans", sans-serif' }}
+            style={{ fontSize: 'clamp(12px, 3.5vw, 16px)', fontFamily: '"Open Sans", sans-serif', textShadow: '1px 1px 3px rgba(0,0,0,0.3)' }}
           >
             Berat badan menunjukkan status gizi dan kesehatan bayi, sehingga perlu ditimbang secara rutin <strong>1 bulan sekali</strong> untuk memantau pertumbuhan.
           </p>

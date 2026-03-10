@@ -1,5 +1,5 @@
 import BaseLayout from '../components/layout/BaseLayout';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import number3Img from '../assets/images/11/number3.svg';
 import posterImg from '../assets/images/11/poster.png';
 
@@ -53,7 +53,7 @@ const Page11 = () => {
           >
             <ul 
               className="text-gray-800 space-y-3"
-              style={{ fontSize: 'clamp(16px, 2.5vw, 25px)', fontFamily: '"Open Sans", sans-serif' }}
+              style={{ fontSize: 'clamp(16px, 2.5vw, 25px)', fontFamily: '"Open Sans", sans-serif', textShadow: '1px 1px 3px rgba(0,0,0,0.3)' }}
             >
               <li className="flex items-start gap-2">
                 <span>•</span>
@@ -161,18 +161,13 @@ const Page11 = () => {
         </div>
       </div>
 
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-2" />
+      </div>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-180px)]">
-        {/* Logo */}
-        <a href="/" className="mb-4">
-          <img 
-            src={kemenkesLogo} 
-            alt="Kemenkes Logo" 
-            className="w-auto"
-            style={{ height: 'clamp(96px, 10vw, 140px)' }}
-          />
-        </a>
-
         {/* Header */}
         <h1 
           className="font-bold mb-4 animate-slide-left"
@@ -214,7 +209,7 @@ const Page11 = () => {
         >
           <ul 
             className="text-gray-800 space-y-2"
-            style={{ fontSize: 'clamp(12px, 3.5vw, 16px)', fontFamily: '"Open Sans", sans-serif' }}
+            style={{ fontSize: 'clamp(12px, 3.5vw, 16px)', fontFamily: '"Open Sans", sans-serif', textShadow: '1px 1px 3px rgba(0,0,0,0.3)' }}
           >
             <li className="flex items-start gap-2">
               <span>•</span>

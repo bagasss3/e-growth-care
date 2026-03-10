@@ -1,6 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import bookKiaImg from '../assets/images/8/BookKia.png';
 import bukuKBKImg from '../assets/images/8/BukuKBK.png';
 
@@ -103,12 +103,7 @@ const Page8 = () => {
           {/* Logo + Header Row */}
           <div className="flex flex-row items-start gap-4 mb-6">
             {/* Logo on Left */}
-            <img 
-              src={kemenkesLogo}
-              alt="Kemenkes Logo" 
-              style={{ height: 'clamp(96px, 10vw, 140px)' }}
-              className="w-auto flex-shrink-0"
-            />
+            <Logo />
             
             {/* Header Box - takes remaining space */}
             <div 

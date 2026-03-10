@@ -1,5 +1,5 @@
 import BaseLayout from '../components/layout/BaseLayout';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import number2Img from '../assets/images/10/number2.svg';
 import qrImg from '../assets/images/10/qr.png';
 import posterImg from '../assets/images/10/poster.png';
@@ -85,18 +85,13 @@ const Page10 = () => {
         </div>
       </div>
 
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-2" />
+      </div>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-180px)]">
-        {/* Logo */}
-        <a href="/" className="mb-4">
-          <img 
-            src={kemenkesLogo} 
-            alt="Kemenkes Logo" 
-            className="w-auto"
-            style={{ height: 'clamp(96px, 10vw, 140px)' }}
-          />
-        </a>
-
         {/* Header */}
         <h1 
           className="font-bold mb-4 animate-slide-left"

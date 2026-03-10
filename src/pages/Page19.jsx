@@ -1,6 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import babyImg from '../assets/images/19/baby.svg';
 
 const Page19 = () => {
@@ -32,9 +32,9 @@ const Page19 = () => {
         <HeaderWithLogo contentPosition="center">
           <div className="flex flex-col sm:flex-row items-center gap-4 overflow-hidden">
             <div 
-              className="rounded-2xl px-8 py-3 flex items-center justify-center"
+              className="rounded-2xl px-8 py-3 flex items-center justify-center border-2 border-black"
               style={{ 
-                backgroundColor: '#2ebbbf',
+                backgroundColor: '#1a8a8d',
                 width: 'clamp(200px, 50vw, 600px)',
                 maxWidth: '100%'
               }}
@@ -77,7 +77,7 @@ const Page19 = () => {
                 }}
               >
                 <div 
-                  className="p-4 text-center flex items-center justify-center"
+                  className="p-4 text-center flex items-center justify-center border-2 border-black"
                   style={{ backgroundColor: '#5d7dff', minHeight: '120px' }}
                 >
                   <h2 
@@ -93,7 +93,7 @@ const Page19 = () => {
                 </div>
                 
                 <div 
-                  className="p-8 flex items-center justify-center flex-1"
+                  className="p-8 flex items-center justify-center flex-1 border-2 border-black border-t-0"
                   style={{ backgroundColor: box.bodyColor }}
                 >
                   <p 
@@ -113,24 +113,19 @@ const Page19 = () => {
         </div>
       </div>
 
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-2" />
+      </div>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-140px)]">
-        {/* Logo */}
-        <a href="/" className="mb-2">
-          <img 
-            src={kemenkesLogo} 
-            alt="Logo" 
-            className="w-auto"
-            style={{ height: 'clamp(72px, 8vw, 100px)' }}
-          />
-        </a>
-
         {/* Header with Text and Baby Image */}
         <div className="flex flex-row items-center justify-center gap-3 mb-4">
           <div 
-            className="rounded-xl px-4 py-2 flex items-center justify-center"
+            className="rounded-xl px-4 py-2 flex items-center justify-center border-2 border-black"
             style={{ 
-              backgroundColor: '#2ebbbf'
+              backgroundColor: '#1a8a8d'
             }}
           >
             <h1 
@@ -170,7 +165,7 @@ const Page19 = () => {
             >
               {/* Title */}
               <div 
-                className="p-3 text-center"
+                className="p-3 text-center border-2 border-black"
                 style={{ backgroundColor: '#5d7dff' }}
               >
                 <h2 
@@ -187,7 +182,7 @@ const Page19 = () => {
               
               {/* Body */}
               <div 
-                className="p-4 flex items-center justify-center"
+                className="p-4 flex items-center justify-center border-2 border-black border-t-0"
                 style={{ backgroundColor: box.bodyColor }}
               >
                 <p 

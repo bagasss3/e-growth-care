@@ -34,7 +34,8 @@ const Page5 = () => {
               style={{ 
                 fontSize: 'clamp(14px, 2vw, 20px)', 
                 fontFamily: 'Poppins, sans-serif',
-                wordWrap: 'break-word'
+                wordWrap: 'break-word',
+                textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
               }}
             >
               Bayi Berat Badan Lahir Rendah (BBLR) adalah bayi yang lahir dengan berat badan kurang dari 2.500 gram, baik yang lahir cukup bulan (≥ 37 Minggu) maupun kurang bulan (&lt;37 minggu).
@@ -51,11 +52,11 @@ const Page5 = () => {
       </div>
 
       {/* Mobile: Baby and Box below header */}
-      <div className="lg:hidden flex flex-col items-center px-4 py-2 overflow-hidden">
+      <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden">
         <img 
           src={babyImg} 
           alt="Baby illustration"
-          className="animate-slide-left"
+          className="animate-slide-left border-2 border-black rounded-2xl"
           style={{ 
             width: 'clamp(200px, 60vw, 400px)',
             height: 'auto',
@@ -65,19 +66,20 @@ const Page5 = () => {
           }}
         />
         <div 
-          className="rounded-3xl px-6 py-4 flex flex-col items-center animate-slide-left"
+          className="rounded-3xl px-6 py-4 flex flex-col items-center animate-slide-left border-2 border-black"
           style={{ 
-            backgroundColor: '#16b4a9',
+            backgroundColor: 'transparent',
             width: 'clamp(300px, 90vw, 600px)',
             maxWidth: '100%'
           }}
         >
           <p 
-            className="text-white leading-relaxed text-center"
+            className="text-gray-800 leading-relaxed text-center"
             style={{ 
               fontSize: 'clamp(14px, 4vw, 18px)', 
               fontFamily: 'Poppins, sans-serif',
-              wordWrap: 'break-word'
+              wordWrap: 'break-word',
+              textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
             }}
           >
             Bayi Berat Badan Lahir Rendah (BBLR) adalah bayi yang lahir dengan berat badan kurang dari 2.500 gram, baik yang lahir cukup bulan (≥ 37 Minggu) maupun kurang bulan (&lt;37 minggu).
@@ -102,7 +104,7 @@ const Page5 = () => {
                     style={{ 
                       fontSize: 'clamp(16px, 2vw, 28px)',
                       fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
-                      textShadow: '2px 2px 0px rgba(0,0,0,0.5)'
+                      textShadow: '2px 2px 0px rgba(0,0,0,0.5), 1px 1px 2px rgba(0,0,0,0.1)'
                     }}
                   >
                     DAMPAK JANGKA PENDEK
@@ -119,7 +121,8 @@ const Page5 = () => {
                   style={{ 
                     fontSize: 'clamp(14px, 1.8vw, 22px)', 
                     fontFamily: 'Poppins, sans-serif',
-                    wordWrap: 'break-word'
+                    wordWrap: 'break-word',
+                    textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
                   }}
                 >
                   <li className="flex items-start gap-2">
@@ -155,7 +158,7 @@ const Page5 = () => {
                     style={{ 
                       fontSize: 'clamp(16px, 2vw, 28px)',
                       fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
-                      textShadow: '2px 2px 0px rgba(0,0,0,0.5)'
+                      textShadow: '2px 2px 0px rgba(0,0,0,0.5), 1px 1px 2px rgba(0,0,0,0.1)'
                     }}
                   >
                     DAMPAK JANGKA PANJANG
@@ -172,7 +175,8 @@ const Page5 = () => {
                   style={{ 
                     fontSize: 'clamp(14px, 1.8vw, 22px)', 
                     fontFamily: 'Poppins, sans-serif',
-                    wordWrap: 'break-word'
+                    wordWrap: 'break-word',
+                    textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
                   }}
                 >
                   <li className="flex items-start gap-2">
@@ -202,7 +206,7 @@ const Page5 = () => {
           <div 
             className="rounded-3xl p-3 animate-slide-right"
             style={{ 
-              backgroundColor: '#16b4a9',
+              backgroundColor: '#169f96',
               width: '100%',
               maxWidth: '100%'
             }}
@@ -216,7 +220,7 @@ const Page5 = () => {
                     style={{ 
                       fontSize: 'clamp(8px, 2.5vw, 12px)',
                       fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
-                      textShadow: '1px 1px 0px rgba(0,0,0,0.5)',
+                      textShadow: '1px 1px 0px rgba(0,0,0,0.5), 1px 1px 2px rgba(0,0,0,0.1)',
                       lineHeight: '1.2'
                     }}
                   >
@@ -234,7 +238,8 @@ const Page5 = () => {
                   style={{ 
                     fontSize: 'clamp(9px, 2.8vw, 12px)', 
                     fontFamily: 'Poppins, sans-serif',
-                    wordWrap: 'break-word'
+                    wordWrap: 'break-word',
+                    textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
                   }}
                 >
                   <li className="flex items-start gap-1">
@@ -270,7 +275,7 @@ const Page5 = () => {
                     style={{ 
                       fontSize: 'clamp(8px, 2.5vw, 12px)',
                       fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
-                      textShadow: '1px 1px 0px rgba(0,0,0,0.5)',
+                      textShadow: '1px 1px 0px rgba(0,0,0,0.5), 1px 1px 2px rgba(0,0,0,0.1)',
                       lineHeight: '1.2'
                     }}
                   >
@@ -288,7 +293,8 @@ const Page5 = () => {
                   style={{ 
                     fontSize: 'clamp(9px, 2.8vw, 12px)', 
                     fontFamily: 'Poppins, sans-serif',
-                    wordWrap: 'break-word'
+                    wordWrap: 'break-word',
+                    textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
                   }}
                 >
                   <li className="flex items-start gap-1">

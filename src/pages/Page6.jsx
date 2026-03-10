@@ -82,7 +82,8 @@ const Page6 = () => {
             style={{ 
               color: '#004aad',
               fontSize: 'clamp(24px, 6vw, 36px)',
-              fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
+              fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
+              textShadow: '1px 1px 3px rgba(0,0,0,0.3)'
             }}
           >
             HAL HAL YANG<br/>MENYEBABKAN BBLR
@@ -105,7 +106,7 @@ const Page6 = () => {
                 index === 1 ? 'animate-slide-left' : index === 2 ? 'animate-slide-right-delay' : 'animate-slide-left-delay'
               }`}
               style={{ 
-                backgroundColor: '#16b4a9',
+                backgroundColor: '#169f96',
                 border: '2px solid #000000'
               }}
             >
@@ -151,7 +152,7 @@ const Page6 = () => {
                 <img 
                   src={box.image} 
                   alt={box.title}
-                  style={{ width: '100%', height: 'auto', objectFit: 'contain', maxHeight: '150px' }}
+                  className="h-full w-auto object-contain max-h-[200px]"
                 />
               </div>
 
@@ -161,7 +162,7 @@ const Page6 = () => {
                   index === 1 ? 'animate-slide-left' : index === 2 ? 'animate-slide-right-delay' : 'animate-slide-left-delay'
                 }`}
                 style={{ 
-                  backgroundColor: '#16b4a9',
+                  backgroundColor: '#169f96',
                   border: '2px solid #000000',
                   width: '55%'
                 }}
@@ -171,7 +172,8 @@ const Page6 = () => {
                   className="text-white font-bold text-center p-1"
                   style={{ 
                     fontSize: 'clamp(12px, 3.5vw, 16px)',
-                    fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif'
+                    fontFamily: '"Lilita One", "LilitaOne", Impact, sans-serif',
+                    textShadow: '1px 1px 3px rgba(0,0,0,0.3)'
                   }}
                 >
                   {box.title}
@@ -181,7 +183,7 @@ const Page6 = () => {
                 
                 <ul 
                   className="text-white space-y-1 p-2 flex-1 flex flex-col justify-center"
-                  style={{ fontSize: 'clamp(9px, 2.8vw, 12px)', fontFamily: 'Poppins, sans-serif' }}
+                  style={{ fontSize: 'clamp(9px, 2.8vw, 12px)', fontFamily: 'Poppins, sans-serif', textShadow: '1px 1px 3px rgba(0,0,0,0.3)' }}
                 >
                   {box.items.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-1">

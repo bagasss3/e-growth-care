@@ -1,6 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import image1 from '../assets/images/14/1.png';
 import image2 from '../assets/images/14/2.png';
 import image3 from '../assets/images/14/3.png';
@@ -62,7 +62,7 @@ const Page14 = () => {
               />
               <p 
                 className="text-gray-800 text-center leading-relaxed mt-4 px-2"
-                style={{ fontSize: 'clamp(10px, 1.5vw, 20px)', fontFamily: 'Poppins, sans-serif' }}
+                style={{ fontSize: 'clamp(10px, 1.5vw, 20px)', fontFamily: 'Poppins, sans-serif', textShadow: '1px 1px 3px rgba(0,0,0,0.3)' }}
               >
                 Gunakan timbangan bayi yang terstandar. Lebih baik menggunakan timbangan bayi digital bila tersedia.
               </p>
@@ -76,7 +76,7 @@ const Page14 = () => {
               />
               <p 
                 className="text-gray-800 text-center leading-relaxed mt-4 px-2"
-                style={{ fontSize: 'clamp(10px, 1.5vw, 20px)', fontFamily: 'Poppins, sans-serif' }}
+                style={{ fontSize: 'clamp(10px, 1.5vw, 20px)', fontFamily: 'Poppins, sans-serif', textShadow: '1px 1px 3px rgba(0,0,0,0.3)' }}
               >
                 Pastikan timbangan telah ditara terlebih dahulu sehingga menunjukkan angka nol sebelum bayi ditimbang
               </p>
@@ -90,7 +90,7 @@ const Page14 = () => {
               />
               <p 
                 className="text-gray-800 text-center leading-relaxed mt-4 px-2"
-                style={{ fontSize: 'clamp(10px, 1.5vw, 20px)', fontFamily: 'Poppins, sans-serif' }}
+                style={{ fontSize: 'clamp(10px, 1.5vw, 20px)', fontFamily: 'Poppins, sans-serif', textShadow: '1px 1px 3px rgba(0,0,0,0.3)' }}
               >
                 Timbang bayi dengan keadaan tanpa busana. Lakukan penimbangan 2-3 kali dan catat nilai reratanya.
               </p>
@@ -99,18 +99,13 @@ const Page14 = () => {
         </div>
       </div>
 
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-2" />
+      </div>
+
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-180px)]">
-        {/* Logo */}
-        <a href="/" className="mb-2">
-          <img 
-            src={kemenkesLogo} 
-            alt="Logo" 
-            className="w-auto"
-            style={{ height: 'clamp(72px, 8vw, 100px)' }}
-          />
-        </a>
-
         {/* Main Header */}
         <h1 
           className="font-bold text-center leading-tight mb-1 animate-reveal-left-right"
@@ -157,7 +152,8 @@ const Page14 = () => {
                 style={{ 
                   width: '48%',
                   fontSize: 'clamp(10px, 3vw, 16px)', 
-                  fontFamily: 'Poppins, sans-serif' 
+                  fontFamily: 'Poppins, sans-serif',
+                  textShadow: '1px 1px 3px rgba(0,0,0,0.3)'
                 }}
               >
                 {item.text}

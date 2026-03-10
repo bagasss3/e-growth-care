@@ -1,6 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import pertumbuhanImg from '../assets/images/3/pertumbuhan-bayi.png';
 import perkembanganImg from '../assets/images/3/perkembangan-bayi.png';
 
@@ -33,8 +33,10 @@ const Page3 = () => {
             className="font-bold text-center animate-slide-up"
             style={{ 
               color: '#004aad',
-              fontSize: 'clamp(28px, 3vw, 42.3px)',
-              fontFamily: '"ITC Motter Corpus", "Motter Corpus", Georgia, serif'
+              fontSize: 'clamp(32px, 3.5vw, 48px)',
+              fontFamily: '"ITC Motter Corpus", "Motter Corpus", Impact, sans-serif',
+              fontWeight: 900,
+              letterSpacing: '2px'
             }}
           >
             <div>PERTUMBUHAN &</div>
@@ -43,23 +45,21 @@ const Page3 = () => {
         </HeaderWithLogo>
       </div>
 
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-4" />
+      </div>
+
       {/* Mobile Header - Hidden on desktop */}
-      <div className="lg:hidden flex flex-col items-center py-4">
-        {/* Logo for mobile */}
-        <a href="/" className="mb-4">
-          <img 
-            src={kemenkesLogo} 
-            alt="Kemenkes Logo" 
-            className="h-auto"
-            style={{ height: 'clamp(96px, 10vw, 140px)' }}
-          />
-        </a>
+      <div className="lg:hidden flex flex-col py-4">
         <h1 
           className="font-bold text-center animate-slide-up"
           style={{ 
             color: '#004aad',
-            fontSize: 'clamp(24px, 7vw, 36px)',
-            fontFamily: '"ITC Motter Corpus", "Motter Corpus", Georgia, serif'
+            fontSize: 'clamp(28px, 8vw, 40px)',
+            fontFamily: '"ITC Motter Corpus", "Motter Corpus", Impact, sans-serif',
+            fontWeight: 900,
+            letterSpacing: '2px'
           }}
         >
           <div>PERTUMBUHAN &</div>

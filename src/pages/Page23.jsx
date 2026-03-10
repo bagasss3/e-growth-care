@@ -1,6 +1,6 @@
 import BaseLayout from '../components/layout/BaseLayout';
 import HeaderWithLogo from '../components/layout/HeaderWithLogo';
-import kemenkesLogo from '../assets/images/kemenkeas-logo.svg';
+import Logo from '../components/layout/Logo';
 import warningImg from '../assets/images/23/warning.svg';
 import baikImg from '../assets/images/23/baik.svg';
 import hatiHatiImg from '../assets/images/23/hati-hati.svg';
@@ -11,7 +11,7 @@ const Page23 = () => {
     {
       id: 1,
       title: 'Pemantauan Pertumbuhan',
-      color: '#00c99f',
+      color: '#169f96',
       type: 'images',
       images: [
         { src: baikImg, alt: 'Baik' },
@@ -105,7 +105,7 @@ const Page23 = () => {
               </div>
               
               <div 
-                className="p-6 flex flex-col flex-1 rounded-2xl"
+                className="p-6 flex flex-col flex-1 rounded-2xl border-2 border-black"
                 style={{ backgroundColor: box.color }}
               >
                 {box.type === 'images' && (
@@ -162,89 +162,15 @@ const Page23 = () => {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Video Guide Section - Desktop */}
-        <div className="flex flex-col items-center mt-8 animate-slide-up-delay-5">
-          {/* Text with down arrows */}
-          <div className="flex items-center justify-center gap-2 mb-3">
-            {/* Left Arrow */}
-            <svg 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-              style={{ width: 'clamp(20px, 2vw, 30px)', height: 'clamp(20px, 2vw, 30px)' }}
-            >
-              <path 
-                d="M12 5V19M12 19L5 12M12 19L19 12" 
-                stroke="#000000" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
-            </svg>
-            
-            <p 
-              className="text-center"
-              style={{ 
-                fontSize: 'clamp(16px, 2vw, 26.3px)',
-                fontFamily: '"Open Sans", sans-serif',
-                color: '#000000'
-              }}
-            >
-              Tonton Panduan Secara Video disini
-            </p>
-            
-            {/* Right Arrow */}
-            <svg 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-              style={{ width: 'clamp(20px, 2vw, 30px)', height: 'clamp(20px, 2vw, 30px)' }}
-            >
-              <path 
-                d="M12 5V19M12 19L5 12M12 19L19 12" 
-                stroke="#000000" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-
-          {/* Link Box */}
-          <a 
-            href="https://drive.google.com/file/d/1jiUuOn8dKwLLlEIsJ65CEi39ubEutTSr/view"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 rounded-lg hover:opacity-80 transition-opacity underline text-center"
-            style={{ 
-              backgroundColor: '#ffde59',
-              fontSize: 'clamp(14px, 1.5vw, 20px)',
-              fontFamily: '"Open Sans", sans-serif',
-              color: '#000000'
-            }}
-          >
-            Panduan Edukasi Tanda Bahaya pada BBLR
-          </a>
-        </div>
+      {/* Mobile: Logo */}
+      <div className="lg:hidden py-2">
+        <Logo className="mb-2" />
       </div>
 
       {/* Mobile Layout */}
       <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-140px)]">
-        {/* Logo */}
-        <a href="/" className="mb-2">
-          <img 
-            src={kemenkesLogo} 
-            alt="Logo" 
-            className="w-auto"
-            style={{ height: 'clamp(96px, 10vw, 140px)' }}
-          />
-        </a>
-
         {/* Header with Warning Icons */}
         <div className="flex items-center justify-center gap-2 mb-4 animate-slide-up">
           <img 
@@ -281,7 +207,7 @@ const Page23 = () => {
               </h2>
               
               <div 
-                className="p-4 flex flex-col rounded-xl"
+                className="p-4 flex flex-col rounded-xl border-2 border-black"
                 style={{ backgroundColor: box.color }}
               >
                 {box.type === 'images' && (
@@ -337,78 +263,6 @@ const Page23 = () => {
               </div>
             </div>
           ))}
-
-          {/* Video Guide Section - After Tanda Bahaya Lainnya box */}
-          <div className="flex flex-col items-center w-full mt-2 animate-pop-in-delay-5">
-            {/* Text with down arrows */}
-            <div className="flex items-center justify-center gap-2 mb-2">
-              {/* Left Arrow */}
-              <svg 
-                width="24" 
-                height="24" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ width: 'clamp(20px, 5vw, 30px)', height: 'clamp(20px, 5vw, 30px)' }}
-              >
-                <path 
-                  d="M12 5V19M12 19L5 12M12 19L19 12" 
-                  stroke="#000000" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                />
-              </svg>
-              
-              <p 
-                className="text-center"
-                style={{ 
-                  fontSize: 'clamp(16px, 4vw, 26.3px)',
-                  fontFamily: '"Open Sans", sans-serif',
-                  color: '#000000'
-                }}
-              >
-                Tonton Panduan Secara Video disini
-              </p>
-              
-              {/* Right Arrow */}
-              <svg 
-                width="24" 
-                height="24" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ width: 'clamp(20px, 5vw, 30px)', height: 'clamp(20px, 5vw, 30px)' }}
-              >
-                <path 
-                  d="M12 5V19M12 19L5 12M12 19L19 12" 
-                  stroke="#000000" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-
-            {/* Link Box */}
-            <div className="flex justify-center w-full px-4">
-              <a 
-                href="https://drive.google.com/file/d/1jiUuOn8dKwLLlEIsJ65CEi39ubEutTSr/view"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block px-4 py-2 rounded-lg hover:opacity-80 transition-opacity underline text-center"
-                style={{ 
-                  backgroundColor: '#ffde59',
-                  fontSize: 'clamp(14px, 3.5vw, 20px)',
-                  fontFamily: '"Open Sans", sans-serif',
-                  color: '#000000',
-                  wordBreak: 'break-word'
-                }}
-              >
-                Panduan Edukasi Tanda Bahaya pada BBLR
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </BaseLayout>
