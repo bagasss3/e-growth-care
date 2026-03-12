@@ -162,7 +162,7 @@ export const useNavigation = () => {
     };
 
     const handleSwipe = () => {
-      const swipeThreshold = 50; // Minimum distance for swipe
+      const swipeThreshold = 150; // Minimum distance for swipe - increased to prevent accidental navigation when zooming
       const diff = touchStartX.current - touchEndX.current;
 
       if (Math.abs(diff) > swipeThreshold) {
