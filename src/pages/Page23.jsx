@@ -5,6 +5,8 @@ import warningImg from '../assets/images/23/warning.svg';
 import baikImg from '../assets/images/23/baik.svg';
 import hatiHatiImg from '../assets/images/23/hati-hati.svg';
 import bahayaImg from '../assets/images/23/bahaya.svg';
+import exclamationImg from '../assets/images/24/exclamatioin.svg';
+import ambulanceSvg from '../assets/images/24/ambulance.svg';
 
 const Page23 = () => {
   const boxes = [
@@ -58,7 +60,7 @@ const Page23 = () => {
   ];
 
   return (
-    <BaseLayout currentPage={23} showLogo={false}>
+    <BaseLayout currentPage={23} showLogo={false} hideNext={true} showBackToMenu={true}>
       {/* Desktop Layout */}
       <div className="hidden lg:block">
         <HeaderWithLogo contentPosition="center">
@@ -162,6 +164,115 @@ const Page23 = () => {
             </div>
           ))}
         </div>
+
+        {/* Video Guide Section - Merged from Page 24 */}
+        <div className="flex flex-col items-center mt-12 animate-slide-up">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ width: 'clamp(20px, 2vw, 30px)', height: 'clamp(20px, 2vw, 30px)' }}
+            >
+              <path 
+                d="M12 5V19M12 19L5 12M12 19L19 12" 
+                stroke="#000000" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+            
+            <p 
+              className="text-center"
+              style={{ 
+                fontSize: 'clamp(16px, 4vw, 26.3px)',
+                fontFamily: '"Open Sans", sans-serif',
+                color: '#000000'
+              }}
+            >
+              Tonton Panduan Secara Video disini
+            </p>
+            
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ width: 'clamp(20px, 2vw, 30px)', height: 'clamp(20px, 2vw, 30px)' }}
+            >
+              <path 
+                d="M12 5V19M12 19L5 12M12 19L19 12" 
+                stroke="#000000" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+
+          <a 
+            href="https://drive.google.com/file/d/1jiUuOn8dKwLLlEIsJ65CEi39ubEutTSr/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 lg:px-6 lg:py-3 rounded-lg hover:opacity-80 transition-opacity underline text-center mb-8"
+            style={{ 
+              backgroundColor: '#ffde59',
+              fontSize: 'clamp(14px, 3.5vw, 20px)',
+              fontFamily: '"Open Sans", sans-serif',
+              color: '#000000',
+              wordBreak: 'break-word'
+            }}
+          >
+            Panduan Edukasi Tanda Bahaya pada BBLR
+          </a>
+        </div>
+
+        {/* Lapor Faskes Section - Merged from Page 24 */}
+        <div className="relative text-center mb-8 animate-slide-up">
+          <div className="relative">
+            <p 
+              className="text-black font-bold leading-tight"
+              style={{ fontSize: 'clamp(14px, 3.5vw, 39.9px)', fontFamily: '"Open Sans", sans-serif' }}
+            >
+              APABILA MENEMUKAN{' '}
+              <span className="text-red-600 relative inline-block">
+                TANDA BAHAYA,
+                <img 
+                  src={exclamationImg} 
+                  alt="Exclamation"
+                  className="absolute animate-slide-up-delay-1 pointer-events-none"
+                  style={{ 
+                    width: 'clamp(30px, 8vw, 60px)', 
+                    height: 'auto',
+                    maxHeight: '60px',
+                    transform: 'rotate(10deg)',
+                    top: 'clamp(-50px, -12vw, -30px)',
+                    right: 'clamp(5px, 2vw, 20px)',
+                    zIndex: 10
+                  }}
+                />
+              </span>
+            </p>
+            <p 
+              className="text-black font-bold leading-tight"
+              style={{ fontSize: 'clamp(20px, 3.5vw, 39.9px)', fontFamily: '"Open Sans", sans-serif' }}
+            >
+              SEGERA LAPOR KE FASILITAS KESEHATAN TERDEKAT
+            </p>
+          </div>
+        </div>
+
+        <div className="w-full max-w-2xl animate-slide-up-delay-2">
+          <img 
+            src={ambulanceSvg}
+            alt="Ambulance"
+            className="w-full h-auto rounded-2xl"
+          />
+        </div>
       </div>
 
       {/* Mobile: Logo */}
@@ -170,7 +281,7 @@ const Page23 = () => {
       </div>
 
       {/* Mobile Layout */}
-      <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden min-h-[calc(100vh-140px)]">
+      <div className="lg:hidden flex flex-col px-4 py-2 overflow-hidden">
         {/* Header with Warning Icons */}
         <div className="flex items-center justify-center gap-2 mb-4 animate-slide-up">
           <img 
@@ -192,7 +303,7 @@ const Page23 = () => {
         </div>
 
         {/* Content Boxes - Stacked */}
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-col gap-4 items-center mb-8">
           {boxes.map((box, index) => (
             <div 
               key={box.id} 
@@ -263,6 +374,115 @@ const Page23 = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Video Guide Section - Merged from Page 24 (Mobile) */}
+        <div className="flex flex-col items-center mb-8 animate-slide-up">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ width: 'clamp(20px, 5vw, 30px)', height: 'clamp(20px, 5vw, 30px)' }}
+            >
+              <path 
+                d="M12 5V19M12 19L5 12M12 19L19 12" 
+                stroke="#000000" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+            
+            <p 
+              className="text-center"
+              style={{ 
+                fontSize: 'clamp(14px, 4vw, 20px)',
+                fontFamily: '"Open Sans", sans-serif',
+                color: '#000000'
+              }}
+            >
+              Tonton Panduan Secara Video disini
+            </p>
+            
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              style={{ width: 'clamp(20px, 5vw, 30px)', height: 'clamp(20px, 5vw, 30px)' }}
+            >
+              <path 
+                d="M12 5V19M12 19L5 12M12 19L19 12" 
+                stroke="#000000" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
+
+          <a 
+            href="https://drive.google.com/file/d/1jiUuOn8dKwLLlEIsJ65CEi39ubEutTSr/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-lg hover:opacity-80 transition-opacity underline text-center mb-6"
+            style={{ 
+              backgroundColor: '#ffde59',
+              fontSize: 'clamp(12px, 3.5vw, 16px)',
+              fontFamily: '"Open Sans", sans-serif',
+              color: '#000000',
+              wordBreak: 'break-word'
+            }}
+          >
+            Panduan Edukasi Tanda Bahaya pada BBLR
+          </a>
+        </div>
+
+        {/* Lapor Faskes Section - Merged from Page 24 (Mobile) */}
+        <div className="relative text-center mb-6 animate-slide-up">
+          <div className="relative">
+            <p 
+              className="text-black font-bold leading-tight"
+              style={{ fontSize: 'clamp(12px, 3.5vw, 18px)', fontFamily: '"Open Sans", sans-serif' }}
+            >
+              APABILA MENEMUKAN{' '}
+              <span className="text-red-600 relative inline-block">
+                TANDA BAHAYA,
+                <img 
+                  src={exclamationImg} 
+                  alt="Exclamation"
+                  className="absolute animate-slide-up-delay-1 pointer-events-none"
+                  style={{ 
+                    width: 'clamp(25px, 6vw, 40px)', 
+                    height: 'auto',
+                    maxHeight: '40px',
+                    transform: 'rotate(10deg)',
+                    top: 'clamp(-35px, -10vw, -20px)',
+                    right: 'clamp(2px, 1vw, 10px)',
+                    zIndex: 10
+                  }}
+                />
+              </span>
+            </p>
+            <p 
+              className="text-black font-bold leading-tight"
+              style={{ fontSize: 'clamp(14px, 3.5vw, 20px)', fontFamily: '"Open Sans", sans-serif' }}
+            >
+              SEGERA LAPOR KE FASILITAS KESEHATAN TERDEKAT
+            </p>
+          </div>
+        </div>
+
+        <div className="w-full max-w-xl mx-auto animate-slide-up-delay-2 mb-8">
+          <img 
+            src={ambulanceSvg}
+            alt="Ambulance"
+            className="w-full h-auto rounded-2xl"
+          />
         </div>
       </div>
     </BaseLayout>

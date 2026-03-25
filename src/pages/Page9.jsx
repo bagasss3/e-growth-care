@@ -73,7 +73,7 @@ const Page9 = () => {
                   textShadow: '1px 1px 3px rgba(0,0,0,0.3)'
                 }}
               >
-                Bayi dapat diberikan ASI saat setelah lahir dan untuk memastikan asupan yang cukup, ibu perlu menyusui secara teratur setiap sekitar 4 jam sekali.
+                Bayi dapat diberikan ASI saat setelah lahir dan untuk memastikan asupan yang cukup, ibu perlu menyusui secara teratur setiap sekitar 2 - 3 jam sekali.
               </p>
             </div>
           </div>
@@ -165,7 +165,7 @@ const Page9 = () => {
               textShadow: '1px 1px 3px rgba(0,0,0,0.3)'
             }}
           >
-            Bayi dapat diberikan ASI saat setelah lahir dan untuk memastikan asupan yang cukup, ibu perlu menyusui secara teratur setiap sekitar 4 jam sekali.
+            Bayi dapat diberikan ASI saat setelah lahir dan untuk memastikan asupan yang cukup, ibu perlu menyusui secara teratur setiap sekitar 2 - 3 jam sekali.
           </p>
         </div>
 

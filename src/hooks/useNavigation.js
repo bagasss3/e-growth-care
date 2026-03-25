@@ -48,7 +48,7 @@ const SPECIAL_PREV_PAGES = {
   21: 20,  // Page 21 -> back to Page 20
   22: 21,  // Page 22 -> back to Page 21
   23: 1,   // Page 23 -> back to Page 1 (Home/Menu)
-  24: 23,  // Page 24 -> back to Page 23
+  24: 23,  // Page 24 (redirect) -> back to Page 23
 };
 
 // Pages that should NOT have NEXT navigation (no next button)
@@ -57,12 +57,13 @@ const PAGES_WITHOUT_NEXT = [
   12,  // Page 12 - has Kembali Ke Menu button
   17,  // Antropometri - hideNext=true
   22,  // Video Stimulasi - hideNext=true
-  24,  // Lapor Faskes - last page, no next
+  23,  // Tanda Bahaya - merged with Lapor Faskes, last page
 ];
 
 // Pages that should NOT have PREVIOUS navigation (no prev button)
 const PAGES_WITHOUT_PREV = [
   1,   // Landing page - no prev (merged with menu)
+  24,  // Redirect page - no prev button needed
 ];
 
 export const useNavigation = () => {
@@ -70,6 +71,9 @@ export const useNavigation = () => {
   const location = useLocation();
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const touchStartY = useRef(0);
+  const touchStartTime = useRef(0);
+  const isMultiTouch = useRef(false);
 
   // Get current page number
   const getCurrentPage = useCallback(() => {
@@ -153,20 +157,48 @@ export const useNavigation = () => {
   // Handle touch swipe
   useEffect(() => {
     const handleTouchStart = (e) => {
-      touchStartX.current = e.changedTouches[0].screenX;
+      // Track if this is a multi-touch gesture (pinch zoom)
+      isMultiTouch.current = e.touches.length > 1;
+      
+      touchStartX.current = e.touches[0].screenX;
+      touchStartY.current = e.touches[0].screenY;
+      touchStartTime.current = Date.now();
+    };
+
+    const handleTouchMove = (e) => {
+      // If at any point we have multiple touches, mark as multi-touch
+      if (e.touches.length > 1) {
+        isMultiTouch.current = true;
+      }
     };
 
     const handleTouchEnd = (e) => {
-      touchEndX.current = e.changedTouches[0].screenX;
-      handleSwipe();
+      // Don't navigate if this was a multi-touch gesture (zoom)
+      if (isMultiTouch.current) return;
+      
+      // Don't navigate if touch was too brief (likely a tap) or too long (likely a scroll)
+      const touchDuration = Date.now() - touchStartTime.current;
+      if (touchDuration < 100 || touchDuration > 800) return;
+      
+      // Get the end position
+      const touchEndX = e.changedTouches[0].screenX;
+      const touchEndY = e.changedTouches[0].screenY;
+      
+      // Calculate horizontal and vertical distance
+      const diffX = touchStartX.current - touchEndX;
+      const diffY = touchStartY.current - touchEndY;
+      
+      // Only handle horizontal swipes (ignore vertical scrolling)
+      if (Math.abs(diffX) > Math.abs(diffY)) {
+        handleSwipe(diffX);
+      }
     };
 
-    const handleSwipe = () => {
-      const swipeThreshold = 150; // Minimum distance for swipe - increased to prevent accidental navigation when zooming
-      const diff = touchStartX.current - touchEndX.current;
+    const handleSwipe = (diffX) => {
+      const swipeThreshold = 150; // Minimum distance for swipe
 
-      if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
+      if (Math.abs(diffX) > swipeThreshold) {
+        if (diffX > 0) {
           // Swiped left - go to next page (if enabled)
           if (!isNextEnabled()) return;
           goToNext();
@@ -178,11 +210,13 @@ export const useNavigation = () => {
       }
     };
 
-    window.addEventListener('touchstart', handleTouchStart);
-    window.addEventListener('touchend', handleTouchEnd);
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
 
     return () => {
       window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
       window.removeEventListener('touchend', handleTouchEnd);
     };
   }, [goToNext, goToPrev, isNextEnabled, isPrevEnabled]);

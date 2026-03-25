@@ -56,8 +56,8 @@ const SPECIAL_PREV_PAGES = {
   20: 19,  // Page 20 -> back to Page 19
   21: 20,  // Page 21 -> back to Page 20
   22: 21,  // Page 22 -> back to Page 21
-  23: 1,   // Page 23 -> back to Page 1 (Home/Menu)
-  24: 23,  // Page 24 -> back to Page 23
+  23: 1,   // Page 23 (merged) -> back to Page 1 (Home/Menu)
+  24: 23,  // Page 24 (redirect) -> back to Page 23
 };
 
 const PageNavigation = ({ currentPage, hidePrevious = false, hideNext = false, showBackToMenu = false, backToMenuUrl = '/', footerText = null }) => {
