@@ -21,7 +21,7 @@ const Page1 = () => {
                 fontFamily: '"Archivo Black", sans-serif'
               }}
             >
-              E-GROWTHCARE
+              E-GROWTHEDU
             </h1>
             
             <p 
@@ -41,8 +41,7 @@ const Page1 = () => {
                 fontFamily: 'Poppins, sans-serif'
               }}
             >
-              Panduan praktis untuk memantau pertumbuhan dan perkembangan 
-              Bayi Berat Lahir Rendah (BBLR) secara mandiri, mudah, dan berkelanjutan
+              Panduan Edukasi BBLR: Memahami Kondisi, Perawatan, dan Kebutuhan Bayi
             </p>
           </div>
 
@@ -68,7 +67,7 @@ const Page1 = () => {
             src={babyMobileSvg} 
             alt="Baby Illustration" 
             className="w-full h-auto object-contain"
-            style={{ maxHeight: '40vh' }}
+            style={{ maxHeight: '70vh' }}
           />
         </div>
 
@@ -80,7 +79,7 @@ const Page1 = () => {
             fontFamily: 'Poppins, sans-serif'
           }}
         >
-          Panduan praktis untuk memantau pertumbuhan dan perkembangan Bayi Berat Lahir Rendah (BBLR) secara mandiri, mudah, dan berkelanjutan
+          Panduan Edukasi BBLR: Memahami Kondisi, Perawatan, dan Kebutuhan Bayi
         </p>
       </div>
 
